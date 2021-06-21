@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>신용등급</h2>
+    <h3>국내외 신용등급 및 현황</h3>
+    <h4>유관기관 신용등급</h4>
+    <table border="1" rules="groups">
+        <caption>국내 신용등급이력</caption>
+        <colgroup>
+            <col />
+        </colgroup>
+        <colgroup>
+            <col />
+            <col />
+            <col />
+        </colgroup>
+        <colgroup>
+            <col />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col" id="division">구분</th>
+                <th scope="col" id="company">한국기업평가</th>
+                <th scope="col" id="credit">한국신용평가</th>
+                <th scope="col" id="nice">나이스신용평가</th>
+                <th scope="col" id="note">비고</th>
+            </tr>
+            <tr>
+                <th scope="row" id="first">최초등급</th>
+                <td headers="company first">AAA('01.10.11)</td>
+                <td headers="credit first">AAA('01.10.19)</td>
+                <td headers="nice first">AAA('04.03.10)</td>
+                <td headers="note first">없음</td>
+            </tr>
+            <tr>
+                <th scope="row" id="last">최종등급</th>
+                <td headers="company last">AAA('20.06.22)</td>
+                <td headers="credit last">AAA('20.06.22)</td>
+                <td headers="nice last">AAA('20.06.22)</td>
+                <td headers="note last">없음</td>
+            </tr>
+        </thead>
+    </table>
+</body>
+</html>

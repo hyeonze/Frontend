@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        td{width:100px;height:100px;text-align:center}
+    </style>
+</head>
+<body>
+<!-- th 내 scope : 가로제목인지 세로제목인지(웹접근성) -->
+<!-- 표 제목은 항상 넣어주고 보기 싫을 때는 CSS로 처리 -->
+<!-- 내용상 가로로 표를 나눌 때 : thead, tfoot, tbody -->
+<!-- 내용상 세로로 표를 나눌 때 : colgroup -->
+<!-- scope / id, headers -->
+<table border="1" summary="5개 투자회사별 매매수량, 매도수량에 대한 통계">
+    <caption>코스닥선물 투자자별 매매동향</caption>
+    <thead>
+        <tr>
+            <th scope="col" rowspan="2">구분</th>
+            <th scope="col" colspan="3">매매수량</th>
+            <th scope="col" colspan="3">매도수량</th>
+            <th scope="col" rowspan="2">합계</th>
+            <th scope="col" rowspan="2">순매수</th>
+        </tr>
+        <tr>
+            <th scope="col">신규</th>
+            <th scope="col">판매</th>
+            <th scope="col">소계</th>
+            <th scope="col">신규</th>
+            <th scope="col">판매</th>
+            <th scope="col">소계</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th scope="row">합계</th>
+            <td>47</td>
+            <td>90</td>
+            <td>137</td>
+            <td>6</td>
+            <td>42</td>
+            <td>48</td>
+            <td>250</td>
+            <td>24</td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <th scope="row">선물회사</th>
+            <td>48</td>
+            <td>6</td>
+            <td>53</td>
+            <td>6</td>
+            <td>42</td>
+            <td>48</td>
+            <td>101</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <th scope="row">증권회사</th>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <th scope="row">은행</th>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <th scope="row">투자신탁</th>
+            <td>0</td>
+            <td>84</td>
+            <td>84</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>149</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <th scope="row">보험회사</th>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </tbody>
+</table>
+<hr />
+<table border="1" summary="CALCULATOR">
+    <caption>CALCULATOR</caption>
+    <tbody>
+        <tr>
+            <th>NumLock</th>
+            <th>/</th>
+            <th>*</th>
+            <th>-</th>
+        </tr>
+        <tr>
+            <th>7</th>
+            <td>8</td>
+            <td>9</td>
+            <td rowspan="2">+</td>
+        </tr>
+        <tr>
+            <th>4</th>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td>2</td>
+            <td>3</td>
+            <th rowspan="2">Enter</th>
+        </tr>
+        <tr>
+            <th colspan="2">0</th>
+            <th>.</th>
+        </tr>
+    </tbody>
+</table>
+<hr />
+<h2>신용등급</h2>
+<h3>국내외 신용등급 및 현황</h3>
+<h4>국내외 신용등급 보유현황</h4>
+<table border="1" rules="groups">
+    <caption>국내외 신용등급 보유현황</caption>
+    <colgroup>
+        <col />
+    </colgroup>
+    <colgroup>
+        <col />
+        <col />
+        <col />
+    </colgroup>
+    <colgroup>
+        <col />
+        <col />
+        <col />
+    </colgroup>
+    <thead>
+        <tr>
+            <th scope="col" id="division">구분</th>
+            <th scope="col" colspan="3" id="domestic">국내신용등급</th>
+            <th scope="col" colspan="3" id="international">국제신용등급</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" id="agency">평가기관</th>
+            <td>한국기업평가</td>
+            <td>한국신용평가</td>
+            <td>나이스신용평가</td>
+            <td>Moody's</td>
+            <td>S&P</td>
+            <td>Fitch</td>
+        </tr>
+        <tr>
+            <th scope="row" id="credit">신용등급</th>
+            <td headers="domestic credit">AAA</td>
+            <td headers="domestic credit">AAA</td>
+            <td headers="domestic credit">AAA</td>
+            <td headers="domestic credit">Aa2</td>
+            <td headers="domestic credit">AA</td>
+            <td headers="domestic credit">AA-</td>
+        </tr>
+        <tr>
+            <th scope="row" id="outlook">등급전망</th>
+            <td headers="domestic outlook">안정적</td>
+            <td headers="domestic outlook">안정적</td>
+            <td headers="domestic outlook">안정적</td>
+            <td headers="domestic outlook">Stable</td>
+            <td headers="domestic outlook">Stable</td>
+            <td headers="domestic outlook">Stable</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
