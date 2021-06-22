@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form - 회원가입</title>
+</head>
+<body>
+<!-- input type="tel" -->
+<!-- label을 넣지 못할 경우(tel 뒷자리, select 등) title입력(웹접근성) -->
+<!-- type-size 속성으로 칸 크기 조절 -->
+<!-- type-maxlength 속성으로 최대입력글자수 조절 -->
+
+<!-- input type="radio" / input type="checkbox" -->
+<!-- label이 뒤에 옴(내용 클릭 시 버튼클릭 됨), 일치된 name속성이 필요함(같은 name중 1개 선택) -->
+<!-- checked속성으로 초기선택 설정, 속성의 값을 생략하는 경우는 속성과 속성값이 같은 경우임(HTML5) -->
+
+<!-- input type="email" -->
+<!-- 이메일 형식의 키패트가 뜸 -->
+
+<!-- select -->
+<!-- optgroup -->
+<!-- input type="file", multiple 속성으로 여러개 선택 가능 -->
+<!-- input type="reset" -->
+<!-- input type="button" / <button type=""></button> -->
+<!-- input type="hidden" 화면에 보이지 않고 서버에 전송할 내용 -->
+    <p><strong>*</strong>는 필수 입력 항목입니다.</p>
+    <form action="서버주소" method="POST">
+        <fieldset>
+            <legend>회원가입양식</legend>
+            <ol>
+                <li>
+                    <label for="userId"><strong>*</strong>아이디</label>
+                    <input type="text" id="userId" required placeholder="아이디" autofocus/>
+                    <input type="image" src="images/overalp.jpg" alt="중복검사" />
+                </li>
+                <li>
+                    <label for="userPw"><strong>*</strong>비밀번호</label>
+                    <input type="password" id="userPw" required placeholder="비밀번호" />
+                </li>
+                <li>
+                    <label for="phone"><strong>*</strong>전화번호</label>
+                    <input type="tel" id="phone" size="10" maxlength="3" title="지역번호 입력" /> - 
+                    <input type="tel" size="10" maxlength="4" title="전화번호 앞자리 입력" /> - 
+                    <input type="tel" size="10" maxlength="4" title="전화번호 뒷자리 입력" />
+                </li>
+                <li>
+                    <span><strong>*</strong>수신방법</span>
+
+                    <input type="radio" id="sms" name="receive" />
+                    <label for="sms">휴대전화 SMS문자</label>
+
+                    <input type="radio" id="email" name="receive" />
+                    <label for="email">자주 사용하는 이메일</label>
+                </li>
+                <li>
+                    <span>메일링 리스트 가입</span>
+
+                    <input type="radio" id="yes" name="join" />
+                    <label for="yes">예</label>
+
+                    <input type="radio" id="no" name="join" checked/>
+                    <label for="no">아니오</label>
+                </li>
+                <li>
+                    <label for="emailAddr">이메일</label>
+                    <input type="email" id="emailAddr" placeholder="이메일아이디를 입력해주세요" /> @ 
+                    <input type="email" title="이메일 도메인명을 입력해주세요" placeholder="이메일 도메인명을 입력해주세요" />
+                    <select title="이메일 도메인 선택">
+                        <option value>직접입력</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="hotmail.com">hotmail.com</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="cell">휴대전화번호</label>
+                    <select id="cell"></select>
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="018">018</option>
+                    </select> - 
+                     <input type="tel" size="10" maxlength="4" title="휴대전화 앞자리 입력" /> - 
+                     <input type="tel" size="10" maxlength="4" title="휴대전화 뒷자리 입력" />
+                </li>
+                <li>
+                    <label for="addr">주소찾기</label>
+                    <select id="addr">
+                        <option value="">선택하세요</option>
+                        <optgroup lable="서울특별시">
+                            <option value="서초구">서초구</option>
+                            <option value="강남구">강남구</option>
+                            <option value="종로구">종로구</option>
+                            <option value="강서구">강서구</option>
+                        </optgroup>
+                        <optgroup lable="경기도">
+                            <option value="수원시">수원시</option>
+                            <option value="안양시">안양시</option>
+                            <option value="용인시">용인시</option>
+                            <option value="성남시">성남시</option>
+                        </optgroup>
+                    </select>
+                </li>
+                <li>
+                    <label for="textfield">자기소개서</label>
+                    <textarea id="textfield" cols="30" rows="5">내용...</textarea>
+                </li>
+                <li>
+                    <label for="attach">첨부파일</label>
+                    <input type="file" id="attach" multiple />
+                </li>
+                <li>
+                    <span>취미</span>
+
+                    <input type="checkbox" id="music" />
+                    <label for="music">음악감상</label>
+
+                    <input type="checkbox" id="movie" />
+                    <label for="movie">영화감상</label>
+
+                    <input type="checkbox" id="book" />
+                    <label for="book">독서</label>
+                </li>
+                <li>
+                    <input type="submit" value="확인" />
+                    <input type="reset" value="취소"/>
+                    <input type="button" value="버튼" />
+                    <input type="hidden" />
+                </li>
+                <li>
+                    <button>버튼</button>
+                    <button type="submit">확인</button>
+                    <button><img src="images/btn_search.gif" alt="검색"></button>
+                </li>
+            </ol>
+        </fieldset>
+    </form>
+</body>
+</html>

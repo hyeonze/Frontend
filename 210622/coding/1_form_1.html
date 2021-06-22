@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form - 로그인</title>
+</head>
+<body>
+<!-- fieldset 한 덩어리 -->
+<!-- 웹접근성 준수 위해 label 반드시 필요, 어떤 input에 대한 label인지 명시(for-id) -->
+<!-- input : 입력양식 -->
+<!-- value가 있는 submit버튼의 경우 label을 넣지 않아도 됨(웹접근성), label 없는 경우는총3가지 -->
+<!-- input 속성 - placeholder : 힌트 미리보기, required : 필수, autofocus : 초기커서 -->
+<!-- method : get/post-->
+    <h1><a href="#">naver</a></h1>
+</body>
+<form action="" method="">
+    <fieldset>
+        <legend>로그인</legend>
+        <ol>
+            <li>
+                <label for="userId">아이디</label>
+                <input type="text" id="userId" placeholder="아이디" required autofocus/>
+            </li>
+            <li>
+                <label for="userPw">비밀번호</label>
+                <input type="password" id="userPw" placeholder="비밀번호" required/>
+            </li>
+            <li>
+                <input type="submit" value="로그인" />
+            </li>
+        </ol>
+        <ul>
+            <li><a href="#">아이디 찾기</a></li>
+            <li><a href="#">비밀번호 찾기</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </fieldset>
+</form>
+</html>
