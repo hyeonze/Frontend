@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video</title>
+</head>
+<body>
+<!-- HTML5에서는 <video>태그로 동영상 삽입.
+속성 : src, poster, preload, autoplay, loop, controls, width, height
+단, 모바일기기에서는 자동실행 안됨.
+muted : 비디오를 재생할 때 소리는 끄고 화면만 재생. 비디오를 문서 배경으로 사용하거나 소리가 필요하지 않을 때 사용. 크롬에서는 필수 -->
+<!-- 썸네일 넣기 : poster="이미지 경로" -->
+<!-- html에서는 가로세로 단위를 사용하지 않음 -->
+<!-- 유튜브>퍼가기>복사(저작권 주의) -->
+<video width="480" height="272" muted controls poster="video/poster.jpg">
+    <source src="video/spring.mp4" type="video/mp4" />
+    <source src="video/spring.ogv" type="video/ogg" />
+    <source src="video/spring.webm" type="video/webm" />
+</video>
+<hr />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/i94p0PGUIes" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>
