@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font</title>
+    <style type="text/css">
+    .size{font-size: 30px;}
+    .basic{font-size: 16px;}
+    /* body 기본글씨크기 : 16px = 100% = 1em */
+    .family{font-family: dotum,"돋움",sans-serif;}
+    /* 기본글꼴:굴림, serif명조, san-serif고딕 */
+    .weight{font-weight: bold;}
+    strong,h3{font-weight: normal;}
+    /* , 그룹선택자 */
+    /* HTML에서 의미에 맞게 마크업 한 후 CSS에서 보이게 할지 말지 결정 */
+    .style{font-style: italic;}
+    em,address{font-style: normal;}
+    /* 원래 기울어져 있던 것들을 바로 */
+    .variant{font-variant: small-caps;}
+    /* 소문자를 작은 대문자로 */
+    .line{line-height: 300%;}
+    /* 300%로 하면 16px글자 위로 16px, 아래로 16px 여백 */
+    /* 1.5로 하고 12px글자면 위로 3px, 아래로 3px 여백 */
+    /* 글자크기에 배율 곱하고 글자크기뺀 후 /2하면 여백크기 */
+    .font{font:bold italic small-caps 20px /1.5 Dotum,"돋움",sans-serif;}
+    /* font 순서중요:font-weight font-style font-variant font-size line-height font-family */
+    .font2{font:20px Dotum,"돋움",sans-serif;}
+    /* font를 제외한 나머지 속성은 묶어서 사용하는 것 권장 */
+    .indent{text-indent: 50px}
+    /* 한 문단 첫째 줄만 들여쓰기, 음수로 하면 내어쓰기 */
+    .underline{text-decoration: underline;}
+    /* underline 밑줄, overline 윗줄, line-through 취소선 */
+    a{text-decoration: none;color: balck;}
+    /* 링크 걸려있는 것 밑줄, 파란글씨 바꾸기 */
+    .align{text-align: left;}
+    /* 가로정렬: left right center justify양쪽정렬 */
+    .letter{letter-spacing: 30px;}
+    /* 자간 */
+    .word{word-spacing: 30px;}
+    /* 단어사이거리 */
+    .top{vertical-align: top;}
+    .middle{vertical-align: middle;}
+    .bottom{vertical-align: bottom;}
+    /* 세로정렬 : top, middle, bottom(기본값) */
+    .upper{text-transform: uppercase;}
+    .lower{text-transform: lowercase;}
+    .capital{text-transform: capitalize;}
+    /* 영어 대문자, 영어 소문자, 첫 글자 대문자 */
+    .pre{white-space: pre;}
+    /* 공백처리(HTML pre엘리먼트와 동일) */
+    .nowrap{white-space: nowrap;}
+    /* 자동줄바꿈 안함 */
+    </style>
+</head>
+<body>
+    <p class="size">글자크기30</p>
+    <p class="basic">글자크기16</p>
+    <p class="family">글꼴돋움</p>
+    <p>글꼴</p>
+    <p class="weight">글자굵게</p>
+    <p><strong>강한강조</strong></p>
+    <h3>제목</h3>
+    <p class="style">글자기울임</p>
+    <p><em>약한강조</em></p>
+    <address>Copyright</address>
+    <p class="variant">Home,home</p>
+    <p class="line">줄간격, 행간 300%</p>
+    <p>기본</p>
+    <p class="font">FONT, font라는 속성에 다 값을 넣어서 사용가능하다, 이 때 순서가 중요</p>
+    <p class="font2">font 속성에서는 반드시 font-size와 font-family가 들어가야 한다.</p>
+    <p class="indent">들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50들여쓰기 50</p>
+    <p class="underline">글자밑줄</p>
+    <p><a href="#">네이버 바로가기</a></p>
+    <p class="align">가로정렬 왼쪽, 가운데, 오른쪽, 양쪽가로정렬 가로정렬 왼쪽, 가운데, 오른쪽, 양쪽가로정렬 가로정렬 왼쪽, 가운데, 오른쪽, 양쪽가로정렬 가로정렬 왼쪽, 가운데, 오른쪽, 양쪽가로정렬 가로정렬 왼쪽, 가운데, 오른쪽, 양쪽가로정렬 가로정렬 왼쪽, 가운데, 오른쪽, 양쪽가로정렬 가로정렬 왼쪽, 가운데, 오른쪽, 양쪽가로정렬가로정렬 왼쪽, 가운데, 오른쪽, 양쪽가로정렬 가로정렬 왼쪽, 가운데, 오른쪽, 양쪽가로정렬 가로정렬 왼쪽, 가운데, 오른쪽, 양쪽가로정렬 가로정렬 왼쪽, 가운데, 오른쪽, 양쪽가로정렬</p>
+    <p class="letter">자간 -3, 글자와 글자사이 간격</p>
+    <p class="word">단어와 단어사이 간격</p>
+    <p><img src="naver.gif" alt="네이버" />세로정렬</p>
+    <p><img src="naver.gif" alt="네이버" class="top" />세로정렬 위</p>
+    <p><img src="naver.gif" alt="네이버" class="middle" />세로정렬 가운데</p>
+    <p><img src="naver.gif" alt="네이버" class="bottom" />세로정렬 아래</p>
+    <p class="upper">text-transform 영문 소문자를 대문자로</p>
+    <p class="lower">TEXT-transform 대문자를 소문자로</p>
+    <p class="capital">text-transform 첫글자만 대문자로</p>
+    <p class="pre">공백문자를                       
+        
+        위해서 white-space를 
+                                   사용</p>
+    <p class="nowrap">공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 공백처리 </p>
+</body>
+</html>
