@@ -1,0 +1,3 @@
+white, black, gray(#808080), silver(#C0C0C0), blue, red, yellow, pruple, orange, green,
+lime, aqua(#00FFFF, 사이안), navy(#000080), teal(#008080, 청록색), olive(#00FF00),
+maroon(#800000, 밤색), fuchsia(FF00FF, 퓨셔, 마젠타)

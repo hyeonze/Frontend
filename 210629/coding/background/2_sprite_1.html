@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sprite</title>
+<style type="text/css">
+/* 리소스 절약을 위해 sprite이미지 사용 */
+/* display: block; 블록레벨요소로 바꾸기 inline-block; 규격있는 가로붙이기*/
+/* text-indent: -9999px; overflow: hidden; 내어쓰고; 넘치는 것 안보기; */
+h1 a{display: block; width: 443px; height: 106px;
+    text-indent: -9999px; overflow: hidden;
+    background: url(images/sp_main_4efc7a.png) no-repeat 0 -316px}
+ul li a{text-decoration: none; color: #000; font-size: 34px;}
+ul li a span{display: inline-block; width: 34px; height: 34px;
+            background: url(images/sp_main_4efc7a.png) no-repeat;}
+.air01 span{background-position: -841px -305px;}
+.air02 span{background-position: -841px -264.68px;}
+.air03 span{background-position: -841px -224.85px;}
+.air04 span{background-position: -841px -344.85px;}
+</style>
+</head>
+<body>
+<h1><a href="#">네이버</a></h1>
+<h2>미세먼지</h2>
+<ul>
+    <li class="air01"><a href="#">미세<span></span><strong>좋음</strong></a></li>
+    <li class="air02"><a href="#">미세<span></span><strong>나쁨</strong></a></li>
+    <li class="air03"><a href="#">미세<span></span><strong>매우나쁨</strong></a></li>
+    <li class="air04"><a href="#">미세<span></span><strong>보통</strong></a></li>
+</ul>
+</body>
+</html>
