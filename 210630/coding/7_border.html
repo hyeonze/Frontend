@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border</title>
+    <style type="text/css">
+    h1{width:500px; height:100px; background-color: yellow;
+        border-width: 10px;
+        border-style: solid;
+        border-color: red;}
+    /* 모아쓰기 권장(width-style-color 순) */
+    h2{width:500px; height:100px; background-color: aqua;
+        border:10px solid red;}
+    h3{width:500px; height:100px; background-color: gray;
+        /* line 21과 같은 코드
+        border-top-width:10px;
+        border-top-style:dotted;
+        border-top-color:red; */
+        border-top: 10px dotted red;
+        border-right: 10px dashed blue;
+        border-bottom: 10px double black;
+        border-left: 10px solid green;}
+    p{width:500px; height:100px; background-color: gray;
+        border-width: 10px;border-color:#000;}
+    .none{border-style: none;}
+    .hidden{border-style: hidden;}
+    /* 크롬에서는 차이 없음 */
+    .groove{border-style: groove;}
+    .ridge{border-style: ridge;}
+    .inset{border-style:inset;}
+    .outset{border-style:outset;}
+    </style>
+</head>
+<body>
+    <h1>보더 border 선, 테두리</h1>
+    <h2>보더 border 선, 테두리</h2>
+    <h3>보더 border 선, 테두리</h3>
+    <p class="none">border-style:none</p>
+    <p class="hidden">border-style:hidden</p>
+    <p class="groove">border-style:groove</p>
+    <p class="ridge">border-style:ridge</p>
+    <p class="inset">border-style:inset</p>
+    <p class="outset">border-style:outset</p>
+</body>
+</html>

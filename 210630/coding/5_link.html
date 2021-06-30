@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    /* 세로스프라이트의 경우 ol에 바로 넣어주고 line-height 맞춰줘도 됨 */
+        li{list-style: none; text-indent: 30px; line-height: 150%}
+        .l1{background: url(images/sprite.png) no-repeat 0 2%}
+        .l2{background: url(images/sprite.png) no-repeat 0 25%}
+        .l3{background: url(images/sprite.png) no-repeat 0 50%}
+        .l4{background: url(images/sprite.png) no-repeat 0 75%}
+        .l5{background: url(images/sprite.png) no-repeat 0 98%}
+        li a{color: silver; text-decoration: none;}
+        li a:hover{color: lime;}
+    </style>
+</head>
+<body>
+    <ol>
+        <li class="l1"><a href="#">양파를 고른다.</a></li>
+        <li class="l2"><a href="#">양파를 기름에 살짝 튀긴다.</a></li>
+        <li class="l3"><a href="#">마늘 3쪽을 넣는다.</a></li>
+        <li class="l4"><a href="#">3분간 더 요리한다.</a></li>
+        <li class="l5"><a href="#">맛있게 먹는다.</a></li>
+    </ol>
+</body>
+</html>

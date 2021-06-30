@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link - 가상클래스</title>
+    <style type="text/css">
+    li a{text-decoration: none; color: #000;}
+    li a:hover{text-decoration: underline; color: #f00;}
+    /* 가상클래스 a:link, a:visited, a:hover, a:active, a:focus 순서중요, 우선순위 10점 */
+    .a1 a:link{color: yellow;}/* 링크 걸렸을 때 */
+    .a1 a:visited{color: green;}/* 방문한 후 */
+    .a1 a:hover{background-color: aqua;}/* 마우스 올렸을 때 */
+    .a1 a:active{font-size: 30px;}/* 누르고 있을 때 */
+    .a1 a:focus{font-style: italic;}/* 탭해서 갔을 때 */
+    </style>
+</head>
+<body>
+<ol>
+    <li class="a1"><a href="#">menu</a></li>
+    <li class="a2"><a href="http://naver.com" target="_blank">menu</a></li>
+    <li class="a3"><a href="#">menu</a></li>
+    <li class="a4"><a href="http://naver.com" target="_blank">menu</a></li>
+</ol>
+</body>
+</html>
