@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>품질마크소개</title>
+    <style type="text/css">
+        /* 자식선택자 부모>자식{} 부모>자식>자식{} */
+        body{font-weight: bold; line-height: 200%; width: 200px;}
+        .content .intro{border-top: none;}
+        .intro > ul{background-color: aqua; font-weight: normal; text-indent: 0;}
+        li.mark{background: url(images/dot.jpg) no-repeat 0 50%}
+        .content > li{border-top: 3px dotted gray; background: url(images/icon2.jpg) no-repeat 0 12px; text-indent: 10px;}
+        .a1{color: blue;}
+        ul{list-style-type: none;}
+        a{color: gray; text-decoration: none;  text-indent: 1000px;}
+    </style>
+</head>
+<body>
+    <ul class="content">
+        <li class="intro"><a href="#" class="a1">품질마크소개</a>
+            <ul>
+                <li class="mark"><a href="#" class="a1">품질마크 개요</a></li>
+                <li><a href="#">인증절차</a></li>
+            </ul>
+        </li>
+        <li><a href="#">인증위원회</a></li>
+        <li><a href="#">인증심사기준</a></li>
+        <li class="intro"><a href="#">품질마크 심사 접수</a>
+            <ul>
+                <li><a href="#">신규심사</a></li>
+                <li><a href="#">갱신심사</a></li>
+            </ul>
+        </li>
+        <li><a href="#">진행상태 확인</a></li>
+        <li><a href="#">인증사이트 현황</a></li>
+        <li><a href="#">인증사이트 통계</a></li>
+    </ul>
+</body>
+</html>
