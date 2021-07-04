@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3단 박스모델</title>
+    <style type="text/css">
+    /* 전체 실제크기 가로 600px, 세로 600px
+    박스 3개 크기 동일 - 가로600px, 세로200px
+    안쪽여백 동일 - 20px
+    테두리선 동일 - 5px
+    바깥쪽 여백 동일 - 11px
+    전체여백 - 10px */
+    *{margin:0; padding:0;}
+    body{font-size:30px; color:#fff; font-weight:bold; width: 600px; height: 600px;}
+    #wrap{width: 578px; height: 578px; background-color: yellow; padding: 11px;}
+    #top{width: 528px; height: 150px; background-color: red; padding: 20px; border: 5px solid black;}
+    #middle{width:528px; height: 150px; background-color: green; padding: 20px; border: 5px solid black;}
+    #bottom{width:528px; height: 150px; background-color: blue; padding: 20px; border: 5px solid black;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="top">Top</div>
+        <div id="middle">Middle</div>
+        <div id="bottom">Bottom</div>
+    </div>
+</body>
+</html>

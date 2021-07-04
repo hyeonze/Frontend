@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스모델</title>
+    <style text="text/css">
+        *{padding:0; margin:0;}/* 전체선택자 : * 애스터리스크asterisk, 우선순위 0 점 */
+        body{font-size:30px; color:#fff; font-weight:bold;}
+        /* 박스모델 실제크기 : 가로400px, 세로400px
+        내용물width + 안쪽여백padding + 테두리선border + 바깥쪽여백margin */
+        /* 패딩 기준은 테두리선 */
+        #wrap{width:360px; height:360px; background-color:gray; padding: 20px;}
+        #top{width:310px; height:120px; background-color:red;
+            border: 5px solid #000; padding: 20px;
+            /* margin: 20px; */ margin-bottom: 20px;}/* 보더, 패딩만큼 내용물 크기를 줄여줌 */
+        /* 화면 위쪽 끝 맞물리면 margin이 안들어감 -> wrap에 padding 주기*/
+        #bottom{width:310px; height:120px; background-color:blue;
+            border:5px solid #000; padding: 20px;}
+        /* margin, padding 공통사항 */
+        /* padding = padding-top + padding-right + padding-bottom + padding-left */
+        /* 
+        padding:20px;               top,right,bottom,left
+        padding:20px 10px;          top bottom, right left
+        padding:20px 10px 5px;      top, right left, bottom
+        padding:20px 10px 5px 0;    top, right, bottom, left(시계방향)
+         */
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="top">Top</div>
+        <div id="bottom">
+            BottomBottomBottom<br />
+            BottomBottom<br />
+            BottomBottom<br />
+        </div>
+    </div>
+</body>
+</html>
