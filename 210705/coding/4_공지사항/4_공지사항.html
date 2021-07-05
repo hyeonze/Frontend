@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    /* common */
+    body,div,h3,ul,li,p{margin:0;padding:0;}
+    body{font-size:12px;font-family:Dotum,"돋움,sans-serif";}
+    ul,li{list-style:none;}
+    img{border:none;}
+    a:link,a:visited{text-decoration:none;}
+    a:hover,a:active,a:focus{text-decoration:underline;}
+    /* 공지사항 */
+    .tab{position:relative;width:306px;margin:0 auto;border:1px solid red;}
+    /* 이미지 다 안들어오면 width, height 지정해서 다 들어오게 */
+    .tab > h3{width:291px;height:24px;
+            padding-left:15px;/*text-indent*/padding-top:7px;/*line-height*/
+            margin-bottom: 7px;
+            background:yellow url(images/tab_bg.gif) no-repeat 0 0;}
+    .tab li{background: url(images/news_list.gif) no-repeat 6px 50%;
+            padding-left: 15px;line-height:1.5;}
+    /* 기준인 (조)부모에 position:relative; */
+    .tab li span{position:absolute; right:0;}
+    .tab .more{position:absolute;right:10px;top:10px;}
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <h3>공지사항</h3>
+        <ul>
+            <li><a href="#">제21회 웹 접근성 품질마크 ...</a><span>2020-12-30</span></li>
+            <li><a href="#">제21회 웹 접근성 품질마크 인증 사...</a><span>2020-12-30</span></li>
+            <li><a href="#">제21회 웹 접근성 품질마크 사용자심...</a><span>2020-12-22</span></li>
+            <li><a href="#">제21회 웹 접근성 품질마크 심사 일...</a><span>2020-12-23</span></li>
+        </ul>
+    </div>
+</body>
+</html>
