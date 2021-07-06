@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    /* 내용이 늘어날 경우 대응이 안됨 */
+    /* float된 요소를 감싸고 있는 부모요소에 높이 지정하는 방법
+        1.height 지정하기
+        2.overflow:hidden, overflow:auto
+        3.float 같이해주기
+        4.공갈div 만들어서 clear:both (태그 맨 밑에 추가)
+        5.:after{content:"";display:block;clear:both;}(가상요소만든 후 블록레벨요소로, 123번 안돼있을 시 주로사용) */
+    /* common */
+    body,div,h3,ul,li,p{margin:0;padding:0;}
+    body{font-size:12px;font-family:Dotum,"돋움",sans-serif;}
+    ul,li{list-style:none;background:url(images/blet_dot.gif) no-repeat 12px 50%;}
+    a{text-decoration:none;color:black;line-height: 150%;}
+    a:hover{text-decoration:underline;color:red;}
+    /*  */
+    .board_view{width:550px;margin:20px auto;background:yellow;}
+    .broadcast{width:500px;height:120px;border:1px solid #666;}
+    .notice{position: relative;}
+    .notice ul{position:absolute;right:40px;top:10px;}
+    .report{margin-right:30px;float:left;}
+    .expalin{float:right;}
+    .report p{position:absolute;left:160px;top:107px;}
+    .expalin p{position:absolute;left:1px;top:17px;}
+    </style>
+</head>
+<body>
+    <div class="board_view">
+        <div class="notice">
+           <h3><img src="images/notice.gif" alt="공지사항"></h3>
+           <ul>
+               <li><a href="#">[안내] 장애인 도서관 서비스 통신요금 바우처제도 참여...</a></li>
+               <li><a href="#">[안내] '제5회 부산 장애인 미디어 축제' 화면해설...</a></li>
+               <li><a href="#">[안내] 2020년 보조기기 시연회 안내</a></li>
+               <li><a href="#">[안내] 제3회 전국 시각장애인 어울림 걷기대회...</a></li>
+               <li><a href="#">[안내] 2020년 장애인 정보통신 보조기기 신청...</a></li>
+           </ul>
+        </div>
+        <div class="broadcast">
+           <div class="report">
+             <h3>보/도/자/료/및/성/명/서</h3>
+             <hr />
+             <ul>
+                <li><a href="#">[보도자료] 장애인과 비장애인이...</a></li>
+                <li><a href="#">[성명서] 한국장애인고용공단은 장...</a></li>
+                <li><a href="#">[성명서] 장애인고용공단 양경자...</a></li>
+                <li><a href="#">[보도자료] 한국시각장애인스포츠연...</a></li>
+                <li><a href="#">[보도자료] 시작장애인 엄마, 자...</a></li>
+             </ul>
+             <p class="more"><a href="#">전체보기</a></p>
+            </div>
+           <div class="explain">
+             <h3>화/면/해/설/방/송</h3>
+             <hr />
+             <ul>
+                 <li><a href="#">[편성표] 6월 5주 화면해설방송 안...</a></li>
+                 <li><a href="#">[편성표] 6월 4주 화면해설방송 안...</a></li>
+                 <li><a href="#">[편성표] 화면해설방송 안내 6월 14...</a></li>
+                 <li><a href="#">[편성표] 6월 2주 화면해설방송 안...</a></li>
+                 <li><a href="#">[편성표] 6월 1주 화면해설방송 안...</a></li>
+             </ul>
+             <p class="more"><a href="#">전체보기</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소</title>
+    <style type="text/css">
+    p{line-height:1.6;}
+    p:before{content:"문단시작";color:red;}
+    p:after{content:"문단끝";color:blue;}
+    /* 콜론 2개도 쓸 수 있음. 가상요소에 내용을 넣을 수도 있고, css적용도 가능 */
+    </style>
+</head>
+<body>
+<p>
+    가상의 콘텐츠를 이전before이나 이후after에 추가할 수 있는 선택자로 content속성에 원하는 문자열을 지정할 수 있다.
+</p>
+</body>
+</html>
