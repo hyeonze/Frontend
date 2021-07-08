@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6.travelzoo</title>
+<style type="text/css">
+body,div,h1,h2,h3,form,fieldset,p,ld,dt,dd,ul,li,address,hr{margin:0;padding:0;}
+body{font-size:12px;font-family:Dotum,"돋움",sans-serif}
+ul,li,ol{list-style:none;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+img,fieldset{border:none;}
+input,img{vertical-align:middle;}
+/* 블라인드클래스 */
+#skipNavi,.blind{position:absolute;left:0;top:0;width:0;height:0;font-size:0;line-height:0;text-indent:-9999px;overflow:hidden;visibility:hidden;}
+/* 읽을 필요 없는 것 */
+hr{display:none;}
+address{font-style: normal;}
+
+#wrap{width:820px;margin:0 auto;border:1px solid red;}
+#header{width:820px;border-bottom:3px solid #00f;}
+#header>h1{margin:10px 0;}
+#header>p{font-style:italic;}
+#container{width:820px;padding:10px 0;}
+#container>form{margin:10px 0 20px;padding:5px;border:1px solid #ccc;background:#eee;}
+
+.asia_pacific{float: left;width:250px;border:1px solid red;margin:0 30px 30px 0;}
+.asia_pacific dl,.americas dl,.europe dl{width:250px;margin:10px 0;}
+.asia_pacific dl:after,.americas dl:after,.europe dl:after{content:"";display:block;clear:both;}
+.asia_pacific dt,.americas dt,.europe dt{float: right;width:180px;}
+.asia_pacific dd.img,.americas dd.img,.europe dd.img{float:left;}
+.asia_pacific dd.txt,.americas dd.txt,.europe dd.txt{float:right;width:180px;}
+.americas{float: left;width:250px;border:1px solid red;margin-right:30px;}
+.europe{float: right;width:250px;border:1px solid red;}
+.asia{clear:both;border:1px solid red;}
+
+#footer{position:relative;padding:20px 5px;border:1px solid #ccc;background: #eee;}
+#footer li{display: inline;}
+#footer p{position: absolute;right:5px;top:20px;}
+</style>
+</head>
+<body>
+<!-- 본문바로가기 -->
+<div id="skipNavi"><a href="#container">본문바로가기</a></div>
+<!-- //본문바로가기 -->
+<hr />
+<div id="wrap">
+    <!-- header -->
+    <div id="header">
+        <h1><img src="images/logo.gif" alt="TRAVELZOO"></h1>
+        <p>The Deal Experts. Over 21 million Subscribers Worldwide. </p>
+    </div>
+    <!-- //header -->
+    <hr />
+    <!-- container -->
+    <div id="container">
+        <h2>Select Your Site</h2>
+        <form action="#" method="POST">
+            <fieldset>
+                <legend class="blind">select your site</legend>
+                <input type="checkbox" id="ckb" />
+                <label for="ckb">Make this selection my default Travelzoo site and skip this page in the future.</label>
+            </fieldset>
+        </form>
+        <div class="asia_pacific">
+            <h3>Asia Pacific</h3>
+            <dl>
+                <dt>Australia</dt>
+                <dd class="img"><img src="images/a.jpg" alt="Australia"></dd>
+                <dd class="txt"><a href="#">www.travelzoo.com.au</a></dd>
+            </dl>
+            <dl>
+                <dt>中国</dt>
+                <dd class="img"><img src="images/ca.jpg" alt="China"></dd>
+                <dd class="txt"><a href="#">cn.travelzoo.com</a></dd>
+            </dl>
+            <dl>
+                <dt>香港特區</dt>
+                <dd class="img"><img src="images/hong.jpg" alt="Hong Kong SAR"></dd>
+                <dd class="txt"><a href="#">www.travelzoo.com.hk</a></dd>
+            </dl>
+            <dl>
+                <dt>日本</dt>
+                <dd class="img"><img src="images/j.jpg" alt="japan"></dd>
+                <dd class="txt"><a href="#">www.travelzoo.co.jp</a></dd>
+            </dl>
+        </div>
+        <div class="americas">
+            <h3>Americas</h3>
+            <dl>
+                <dt>Canada</dt>
+                <dd class="img"><img src="images/canada.jpg" alt="Canada"></dd>
+                <dd class="txt"><a href="#">www.travelzoo.ca</a></dd>
+            </dl>
+            <dl>
+                <dt>U.S.A.</dt>
+                <dd class="img"><img src="images/usa.jpg" alt="U.S.A."></dd>
+                <dd class="txt"><a href="#">www.travelzoo.com</a></dd>
+            </dl>
+        </div>
+        <div class="europe">
+            <h3>Europe</h3>
+            <dl>
+                <dt>Deutschland</dt>
+                <dd class="img"><img src="images/germany.jpg" alt="Deutschland"></dd>
+                <dd class="txt"><a href="#">www.travelzoo.de</a></dd>
+            </dl>
+            <dl>
+                <dt>España</dt>
+                <dd class="img"><img src="images/spain.jpg" alt="España"></dd>
+                <dd class="txt"><a href="#">www.travelzoo.es</a></dd>
+            </dl>
+            <dl>
+                <dt>France</dt>
+                <dd class="img"><img src="images/fanace.jpg" alt="France"></dd>
+                <dd class="txt"><a href="#">www.travelzoo.fr</a></dd>
+            </dl>
+            <dl>
+                <dt>United Kingdom</dt>
+                <dd class="img"><img src="images/unitied.jpg" alt="United Kingdom"></dd>
+                <dd class="txt"><a href="#">www.travelzoo.co.uk</a></dd>
+            </dl>
+        </div>
+        <div class="asia">
+            <h3 class="blind">Asia</h3>
+            <dl>
+                <dt>台灣</dt>
+                <dd><a href="#">www.travelzoo.com.tw</a></dd>
+            </dl>
+            <dl>
+                <dt>Asia in English</dt>
+                <dd><a href="#">www.travelzoo.com/ap</a></dd>
+            </dl>
+        </div>
+    </div>
+    <!-- //container -->
+    <hr />
+    <!-- footer -->
+    <div id="footer">
+        <h3 class="blind">하단링크Follow Us</h3>
+        <ul>
+            <li>Follow Us :</li>
+            <li><img src="images/icon_facebook_12x12.gif" alt="Facebook"><a href="#">Facebook</a></li>
+            <li><img src="images/icon_twitter_12x12.gif" alt="Twitter"><a href="#">Twitter</a></li>
+            <li><a href="#"> Twitter |</a></li>
+            <li><a href="#">Privacy Policy |</a></li>
+            <li><a href="#">Disclaimer</a></li>
+        </ul>
+        <address>©2020 Travelzoo Inc. - All Rights Reserved.</address>
+        <p><img src="images/logo_fly_footer_compact.gif" alt="fly.com">&nbsp;&nbsp;Find cheap flights</p>
+    </div>
+    <!-- //footer -->
+</div>
+</body>
+</html>

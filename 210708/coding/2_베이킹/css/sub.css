@@ -1,0 +1,46 @@
+/* sub.css */
+/* common */
+body{font-size:12px;font-family:Dotum,"돋움",sans-serif;color:#666;text-align:center;}
+
+/* layout */
+#wrap{width:980px;margin:0 auto;text-align:left;border:1px solid red;}
+    #header{}
+    #container{width:980px;}
+    #container:after{content:"";display:block;clear:both;}
+        .snb{float:left;width:130px;border:1px solid green;padding:0 10px;}
+        #content{float:right;width:800px;}
+    #footer{}
+
+/* header */
+/* container */
+/* snb */
+.snb .side_logo{display:inline;margin:20px 0;}
+.snb > ul.nav > li{border-bottom:1px solid gray;}
+.snb h3{margin:20px 0 10px;}
+.snb input{width:100px;height:15px;margin:3px 0;}
+/* 속성선택자 input[속성="값"]  인풋 중에서 타입이 이미지인 것만*/
+.snb input[type="image"]{width:20px;height:20px;}
+/* content */
+/* 블로거 소개 */
+.bloger{width: 770px;}
+.bloger:after{content:"";display:block;clear:both;}
+.bloger dt{float:right;width:610px;padding-bottom:20px;font-size:120%;}
+.bloger dt strong{color:#fc9;}
+.bloger dd.img{float:left;}
+.bloger dd.txt{float:right;width:610px;line-height:150%}
+/* 질문과 답변 */
+.qna{width:770px;}
+.qna dt{background:url(../images/ico_q.gif) no-repeat 0 15;padding:15px 0 15px 20px;}
+.qna dd{background:url(../images/ico_a.gif) no-repeat 0 0;padding-left:20px;}
+/* 레시피 */
+#content h3{margin:10px 0;}
+div.recipe{}
+dl.float_L{float:left;width:345px;}
+dl.float_L dt{}
+dl.float_L dd.img{}
+dl.float_L dd.txt{}
+dl.float_R{float:right;width:360px;}
+dl.float_R dt{}
+dl.float_R dd.img{}
+dl.float_R dd.txt{}
+/* footer */
