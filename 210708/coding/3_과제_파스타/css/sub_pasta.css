@@ -22,7 +22,6 @@ body{font-size:12px;font-family:Dotum,"돋움",sans-serif;color:#666;text-align:
 #content > p{line-height:140%;letter-spacing:0.3px;}
 #content > p > img{float:left;}
 #content > .list{float:left;width:338px;height:433px;background: url(../images/tue_list_bg.gif) no-repeat;padding-top: 12px;}
-#content > .list:after{}
 #content > .list > h4{text-align: center;font-size: 22px;font-weight: bolder;}
 #content > .list > h4 > strong{color:orange;}
 #content > .list > ol{text-indent: 50px;margin-top:26px;float:left;}
