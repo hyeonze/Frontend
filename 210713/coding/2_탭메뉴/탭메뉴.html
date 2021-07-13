@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>탭메뉴</title>
+<script type="text/javascript" src="js/tab.js"></script>
+<style type="text/css">
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,caption,form,fieldset,legend,input{margin:0;padding:0;}
+body{font-size:12px;font-family:Dotum,"돋움",sans-serif;}
+img,fieldset{border:none;}
+li{list-style-type:none;}
+a{color:#666;text-decoration: none;}
+a:hover{color:#d06;text-decoration: underline;}
+
+/* float와 position:abs 같이 있어서 높이 px로 지정 */
+.tabMenu{position: relative;margin:10px;width:350px;height:200px;
+        background: url(images/ta_bg.gif) repeat-x 0 0;}
+.tabMenu dt{float:left;margin-right: 2px;}
+.tabMenu dd{display:none;position:absolute;left:0;top:25px;
+            width:350px;padding-top:10px;}
+.tabMenu dd.tab1{display:block;}
+.tabMenu li{background: url(images/tab_bul.gif) no-repeat 3px 50%;
+            padding:5px 0 5px 10px;border-bottom:1px solid #ccc;}
+.tabMenu li span{position: absolute;right:0;}
+.tabMenu .more{position: absolute;right:0;top:-20px;}
+</style>
+</head>
+<body>
+<dl id="tabMenu" class="tabMenu">
+    <dt><a href="#"><img src="images/ta_1_over.gif" alt="공지사항"></a></dt>
+    <dd class="tab1">
+        <ul>
+            <li><a href="#">공지사항</a><span>2020-12-30</span></li>
+            <li><a href="#">공지사항</a><span>2020-12-30</span></li>
+            <li><a href="#">공지사항</a><span>2020-12-30</span></li>
+            <li><a href="#">공지사항</a><span>2020-12-30</span></li>
+            <li><a href="#">공지사항</a><span>2020-12-30</span></li>
+        </ul>
+        <p class="more"><a href="#"><img src="images/tab_more.gif" alt="공지사항 더보기" /></a></p>
+    </dd>
+    <dt><a href="#"><img src="images/ta_2_out.gif" alt="입찰정보"></a></dt>
+    <dd>
+        <ul>
+            <li><a href="#">입찰정보</a><span>2020-12-30</span></li>
+            <li><a href="#">입찰정보</a><span>2020-12-30</span></li>
+            <li><a href="#">입찰정보</a><span>2020-12-30</span></li>
+            <li><a href="#">입찰정보</a><span>2020-12-30</span></li>
+            <li><a href="#">입찰정보</a><span>2020-12-30</span></li>
+        </ul>
+        <p class="more"><a href="#"><img src="images/tab_more.gif" alt="입찰정보 더보기" /></a></p>
+    </dd>
+    <dt><a href="#"><img src="images/ta_3_out.gif" alt="채용공고"></a></dt>
+    <dd>
+        <ul>
+            <li><a href="#">채용공고</a><span>2020-12-30</span></li>
+            <li><a href="#">채용공고</a><span>2020-12-30</span></li>
+            <li><a href="#">채용공고</a><span>2020-12-30</span></li>
+            <li><a href="#">채용공고</a><span>2020-12-30</span></li>
+            <li><a href="#">채용공고</a><span>2020-12-30</span></li>
+        </ul>
+        <p class="more"><a href="#"><img src="images/tab_more.gif" alt="채용공고 더보기" /></a></p>
+    </dd>
+</dl>
+<script type="text/javascript">
+    initTabMenu("tabMenu");
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2.가로메뉴</title>
+<script type="text/javascript" src="js/template_on.js"></script>
+<style type="text/css">
+body,ul,li{margin:0;padding:0;}
+body{font-size:12px;font-family:Dotum,"돋움",sans-serif;}
+ul,li{list-style:none;}
+img{border:none;}
+a{color:#666;text-decoration: none;}
+a:hover{text-decoration: underline;}
+
+.gnb{position: relative;}
+.gnb li{float:left;margin-right: 20px;}
+.gnb li ul{position: absolute;top:20px;display:none;}/*하위ul을 본문에서 분리*/
+.gnb li.menu4 ul{left:200px;}/*마지막 메뉴의 오버플로우 방지*/
+/* menu1~3도 클래스 잡아서 li갯수에 맞게 조절 */
+</style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <ul id="gnb" class="gnb">
+                <li><a href="#"><img src="images/gnb_menu_1.gif" alt="웹접근성이란?"></a>
+                    <ul>
+                        <li><a href="#">하위메뉴1</a></li>
+                        <li><a href="#">하위메뉴2</a></li>
+                        <li><a href="#">하위메뉴3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><img src="images/gnb_menu_2.gif" alt="웹접근성 품질마크"></a>
+                    <ul>
+                        <li><a href="#">하위메뉴1</a></li>
+                        <li><a href="#">하위메뉴2</a></li>
+                        <li><a href="#">하위메뉴3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><img src="images/gnb_menu_3.gif" alt="인터넷 웹 콘텐츠 접근성 지침"></a>
+                    <ul>
+                        <li><a href="#">하위메뉴1</a></li>
+                        <li><a href="#">하위메뉴2</a></li>
+                        <li><a href="#">하위메뉴3</a></li>
+                    </ul>
+                </li>
+                <li class="menu4"><a href="#"><img src="images/gnb_menu_4.gif" alt="게시판"></a>
+                    <ul>
+                        <li><a href="#">하위메뉴1</a></li>
+                        <li><a href="#">하위메뉴2</a></li>
+                        <li><a href="#">하위메뉴3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
