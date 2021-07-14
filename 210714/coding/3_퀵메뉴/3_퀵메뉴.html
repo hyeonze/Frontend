@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀵메뉴</title>
+    <script type="text/javascript" src="js/scroll.js"></script>
+    <style type="text/css">
+    body,div,h1,p,ul,li{margin:0;padding:0;}
+    ul{list-style: none;}
+    img{border:0;}
+    body{text-align:center;font-size: 12px;line-height: 1.2em;
+        font-family:Dotum,"돋움",sans-serif;}
+    #wrap{position:relative;width: 800px;margin:0 auto;text-align: left;}
+    #header{border: 1px solid blue;background: skyblue;}
+    #container{border: 1px solid red;background: pink;height: 2000px;}
+    #footer{border:1px solid green;background: #0f0;}
+    /* 퀵메뉴 */
+    .quick{position:absolute;left:810px;padding-top: 35px;
+        background: url(images/quick_bg.jpg) no-repeat;width:66px;height: 184px;}
+    .quick ul li img{padding-left: 20px;display: block;}
+    .quick ul li a{text-decoration: none;color:black;}
+    .quick ul li a:hover{text-decoration: none;color:green;}
+    .quick ul li.bg{background: url(images/bar.jpg) no-repeat 12px 0;}
+    .quick ul li{margin-bottom: 17px;padding-top:5px;}
+    .quick ul{text-align: center;}
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="header"><h1>header</h1></div>
+    <div id="container"><p>container</p></div>
+    <div id="footer"><p>footer</p></div>
+    <div id="quick" class="quick">
+        <ul>
+            <li><a href="#"><img src="images/q_icon.jpg" alt="응모신청">응모신청</a></li>
+            <li class="bg"><a href="#">모집요강</a></li>
+            <li class="bg"><a href="#">출품규정</a></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        initMoving(document.getElementById("quick"), 250, 66, 250);
+    </script>
+</div>
+</body>
+</html>
