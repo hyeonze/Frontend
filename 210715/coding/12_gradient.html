@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS3 : gradient</title>
+<style type="text/css">
+div{width: 200px;height: 200px;}
+/* 방향 top, left, bottom, right, top left, 45deg각도
+        to bottom, to right, to bottom right, 45deg 각도
+        시작색, 끝색 */
+.grad1{background: #f00;
+background:linear-gradient(to bottom,#f00,#00f);}
+.grad2{background: #f00;
+background:linear-gradient(to bottom right,#f00,#00f);}
+/* 0도가 6시 방향, 시계방향으로 */
+/* 방향,색상 위치,색상 위치 */
+.grad3{background: #f00;
+background:linear-gradient(45deg,#f00 0%,#0f0 50%, #00f 100%);}
+.grad4{background: #f00;
+background:linear-gradient(45deg,red 0%,orange 40%,yellow 50%, #0f0 60%, #00f 45%, navy 70%, purple 80%);}
+/* 모양은 circle(원형)과 ellipse(타원형,기본값) */
+.grad5{background: #f00;width:500px;height:300px;
+background:radial-gradient(#f00 0%, #0f0 50%, #00f 100%);}
+.grad6{background: #f00;width:500px;height:300px;
+background:radial-gradient(circle,#f00 0%, #0f0 50%, #00f 100%);}
+/* closest-side, contain그라데이션이 가장 가까운 면과 만남
+closest-corner 가장가까운 꼭지점까지 채움
+farthest-side 가장 멀리있는 면과 만남
+farthest-corner, cover 가장 멀리있는 꼭지점까지 채움 */
+.grad7{background:#f00;width:500px;height:300px;
+background: radial-gradient(closest-side at 30% 30%, red, yellow, green);}
+.grad8{background:#f00;width:500px;height:300px;
+background: radial-gradient(closest-corner at 30% 30%, red, yellow, green);}
+.grad9{background:#f00;width:500px;height:300px;
+background: radial-gradient(farthest-side at 30% 30%, red, yellow, green);}
+
+.grad10{background:#f00;
+background: repeating-linear-gradient(yellow 0px,yellow 20px,red 20px,red 40px);}
+.grad11{background:#f00;
+background: repeating-radial-gradient(yellow 0px,yellow 20px,red 20px,red 40px);}
+/* 그라디언트 자동생성사이트(http://www.colorzilla.com/gradient-editor) */
+</style>
+</head>
+<body>
+    <h1>그라데이션</h1>
+    <div class="grad1"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+    <div class="grad4"></div>
+    <div class="grad5"></div>
+    <div class="grad6"></div>
+    <div class="grad7"></div>
+    <div class="grad8"></div>
+    <div class="grad9"></div>
+    <div class="grad10"></div>
+    <div class="grad11"></div>
+    <div class="grad12"></div>
+    <div class="grad13"></div>
+</body>
+</html>

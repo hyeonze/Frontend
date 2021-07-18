@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>css3 : Transform</title>
+<style type="text/css">
+img{margin:100px;}
+/* 15도회전 */
+.rotate{transform:rotate(15deg);}
+/* scale(양쪽), scale(가로,세로), scaleX(가로), scaleY(세로) */
+.scale{transform: scale(0.5);}
+/* skew(x,y) 값이 하나만 있으면 y는0, skewX(각도), skewY(각도) */
+.skew{transform:skew(15deg,15deg);}
+/* 이동 translate(x,y) 값이 하나만 있으면 y는0, translateX(), translateY() */
+.translate{transform: translate(100px,100px);}
+</style>
+</head>
+<body>
+    <figure>
+        <img class="rotate" src="photo.jpg" alt=""/>
+        <img class="scale" src="photo.jpg" alt=""/>
+        <img class="skew" src="photo.jpg" alt=""/>
+        <img class="translate" src="photo.jpg" alt=""/>
+        <img class="origin" src="photo.jpg" alt=""/>
+        <img class="translateZ" src="photo.jpg" alt=""/>
+        <img class="rotateX" src="photo.jpg" alt=""/>
+    </figure>
+</body>
+</html>

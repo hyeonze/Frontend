@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>메뉴예제3_sol</title>
+<style type="text/css">
+body{font-size:12px;}
+ul{list-style: none;}
+li{float:left;width:8em;height:3em;border-right:1px solid #818181;
+    background: #c9c9c9;
+    background: linear-gradient(to bottom,#c9c9c9 0%,#a1a1a1 60%, #848484 100%);
+    text-align:center;line-height:3em;box-shadow: 1px 1px 1px #bbb;}
+/* border-top-left-radius:.5em 0 0 .5em;border-bottom-left-radius:.5em; */
+li:first-child{border-radius: .5em 0 0 .5em;}
+/* border-top-right-radius:.5em;border-bottom-right-radius:.5em; */
+li:last-child{border-radius: 0 .5em .5em 0;}
+li a{display:block;text-decoration:none;color:#292929;text-shadow:1px 1px 0 #ccc;}
+li:hover{background: #333;
+    background:linear-gradient(to bottom,#333 0%, #474747 60%, #4c4c4c 100%);}
+li:hover > a{color:#fff;text-shadow:0px 1px 0px #fff;}
+</style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">HTML5</a></li>
+        <li><a href="#">CSS3</a></li>
+        <li><a href="#">JQuery</a></li>
+        <li><a href="#">Mobile</a></li>
+        <li><a href="#">Profile</a></li>
+    </ul>
+</body>
+</html>
