@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>네비3</title>
+<style type="text/css">
+/* 하위메뉴 보일려면 자바스크립트 필요 */
+*{padding:0;margin:0;}
+ul{list-style-type: none;}
+body{font-weight: bold;font-size:14px;font-family:"굴림";line-height:40px;}
+nav{display:block;}
+nav > ul{position:absolute;width:500px;height:160px;margin: 30px;background: #39F;border-radius:10px;}
+nav > ul > li{margin-left:300px;}
+nav > ul > li > a{display:block; color:#fff;text-decoration: none;padding:0 30px;
+                text-shadow:1px 1px 1px #880000;background:#39F;}
+nav > ul > li:first-child > a{border-radius:0 10px 0 0;}
+nav > ul > li:last-child > a{border-radius:0 0 10px 0;}
+nav > ul > li:hover > a/*,nav > ul > li.on > a*/{text-shadow:1px 1px 1px #300;background: #36F;}
+nav > ul > li > ul{display:none;position:absolute;left:0;top:0;
+                width:260px;height:160px;background: #33F;
+                border-radius: 10px 0 0 10px;padding:0 20px;}
+nav > ul > li:hover > ul/*,nav > ul > li.on > ul*/{display:block;}
+
+nav > ul > li > ul a {color:#fff;text-decoration:none;
+                    text-shadow:1px 1px 1px #880000;}
+</style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="on"><a href="#">Home</a>
+                <ul><li><a href="#">home</a></li></ul>
+            </li>
+            <li><a href="#">웹 개발</a>
+                <ul><li><a href="#">웹 개발</a></li></ul>
+            </li>
+            <li><a href="#">게시판</a>
+                <ul><li><a href="#">게시판</a></li></ul>
+            </li>
+            <li><a href="#">프로필</a>
+                <ul><li><a href="#">프로필</a></li></ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

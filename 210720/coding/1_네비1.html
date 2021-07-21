@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style type="text/css">
+/* display는 transition안먹음. opacity로 지정.*/
+*{padding:0;margin:0;}
+ul{list-style-type: none;}
+body{font-weight: bold;font-size:14px;font-family: "굴림";}
+nav{display: block;}
+nav > ul{height: 40px;}
+nav > ul > li{position:relative;float:left;line-height: 40px;}
+nav > ul > li > a{display:block;padding:5px 25px;
+    background:#600;color:#fff;text-decoration: none;
+    transition:color 1s ease 0s;}
+nav > ul > li:hover > a{color:#f90;}
+
+nav > ul > li > ul{opacity: 0; position:absolute;left:0;
+                    transition: opacity 1s ease 0s;}
+nav > ul > li:hover > ul{opacity: 1;}
+
+nav > ul > li > ul > li{height:0; line-height: 0; background: #d8afaf;
+                        transition:all 1s ease 0s;}
+nav > ul > li:hover > ul > li{height:30px; line-height: 20px;padding:5px 0;}
+
+nav > ul > li > ul > li > a{display:block;width:180px;
+    padding:5px 25px;color:#900;text-decoration: none;
+    transition:color 1s ease 0s, background 1s ease 0s;}
+nav > ul > li > ul > li > a:hover{background-color: #900;color:#f90;}
+</style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">웹 개발</a>
+            <ul>
+                <li><a href="#">웹 디자인</a></li>
+                <li><a href="#">HTML5 + CSS3</a></li>
+                <li><a href="#">JQuery</a></li>
+                <li><a href="#">웹 + 모바일</a></li>
+            </ul>
+        </li>
+        <li><a href="#">게시판</a>
+            <ul>
+                <li><a href="#">Q & A</a></li>
+                <li><a href="#">방명록</a></li>
+            </ul>
+        </li>
+        <li><a href="#">프로필</a></li>
+    </ul>
+</nav>
+</body>
+</html>
