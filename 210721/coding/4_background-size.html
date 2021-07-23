@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>css3 : background-size</title>
+<style type="text/css">
+div{float:left;margin:30px;padding:10px 50px;
+    width:200px;height:100px;border:2px solid #06F;}
+p{font-size:12px;}
+/* 박스크기의 90%로 배경이미지가 나옴. 사이즈조절하면 배경크기도 맞춰짐. */
+.bg1{background: url(images/bg.png) no-repeat 100% 0;
+    resize:both;overflow:hidden;background-size: 90% 90%;}
+.bg2{resize:both;overflow:hidden;
+    background: url(images/bg1.jpg) no-repeat 100% 0,url(images/orange.jpg) repeat 0 0;
+    background-size: 100px 80px, 50px 30px;}
+.bg3{width:200px;height:200px;
+    background: url(images/bg1.jpg) no-repeat 0 0;
+    background-size: cover;/*꽉채우기*/}
+.bg4{width:200px;height:200px;
+    background: url(images/bg1.jpg) no-repeat 0 0;
+    background-size:contain;/*이미지 잘리지 않고 들어가게*/}
+.bg5{width:300px;height:200px;
+    background: url(images/bg1.jpg) no-repeat 0 0;}
+/* background-origin : border-box/padding-box(기본값)/content-box */
+.bg6{width:550px;height:25px;margin-bottom:20px;
+    border:15px double rgba(0,0,0,0.6);
+    background: url(images/bg1.jpg) no-repeat 0 0;
+    background-origin:border-box;}
+/* background-clip : border-box(기본값)/padding-box/content-box*/
+.bg6{width:550px;height:25px;margin-bottom:20px;
+    border:15px double rgba(0,0,0,0.6);
+    background:#e5cadd;
+    background-clip:padding-box;}
+</style>
+</head>
+<body>
+    <p><img src="images/bg.png" alt="" /></p>
+    <h3>배경 이미지 원본</h3>
+
+    <div class="bg1">
+        <p>배경 이미지를 <br /> div 크기의 <br> 90% 90%로 했을 때</p>
+    </div>
+    
+    <div class="bg2">
+        <p>배경 이미지를 <br /> 150px 120px 로 했을 때</p>
+    </div>
+
+    <div class="bg3">cover</div>
+    <div class="bg4">contain</div>
+    <div class="bg5">원본</div>
+    <div class="bg6">background-origin</div>
+    <div class="bg7">background-clip</div>
+</body>
+</html>

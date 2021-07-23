@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>폴라로이드 사진</title>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+<style type="text/css">
+figure{border:1px solid #666;padding:10px;background-color: white;
+    box-shadow:2px 2px 5px #444;width:300px;text-align: center;
+    font-family: 'Nanum Brush Script', cursive;color:green;font-weight: bolder;}
+figure figcaption{padding:15px 0 10px;}
+figure.t1{position:relative;top:50px;left:50px;transform: rotate(15deg);z-index:3;
+    transition: transform 1s ease-out 0s;}
+figure.t1:hover{transform:rotateY(180deg);}
+figure.t2{position:relative;transform: rotate(320deg) scale(0.5) translate(400px,100px);z-index:4;}
+figure.t3{position:relative;transform: rotate(-15deg) skew(15deg) translate(220px,-200px);}
+</style>
+</head>
+<body>
+    <figure class="t1">
+        <img src="d7.jpg" alt="" />
+        <figcaption>여름이 깊어가고 있었다</figcaption>
+    </figure>
+    <figure class="t2">
+        <img src="d7.jpg" alt="" />
+        <figcaption>여름이 깊어가고 있었다</figcaption>
+    </figure>
+    <figure class="t3">
+        <img src="d7.jpg" alt="" />
+        <figcaption>여름이 깊어가고 있었다</figcaption>
+    </figure>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS3 - transition</title>
+<style type="text/css">
+/* transition 속성값(property_duration_timingfunction_delay)
+property - 모든 속성 또는 일부 속성에 애니메이션 적용(all, background, color, height, width, transform)
+duration - 시작해서 끝날때 까지 시간, 초단위로 지정
+timingfunction - ease, linear 길이증가, ease-in 가속, ease-out 감속, ease-in-out, cubic-beizer 베이지어 곡선 등 중에서 선택
+    linear 일정한 간격으로 움직임
+    ease 처음에는 서서히 가속하고 마지막 부분에는 급격히 감속
+    ease-in 처음에는 천천히 시작하고 마지막에는 가속
+    ease-out 처음에는 최대속도로 시작하고 마지막 부분에는 감속
+    ease-in-out 처음에는 제로 속도에서 시작하고, 중간지점에서는 최고 속도로 움직이고, 마지막 부분에는 서서히 감속
+    cubic-bezier 직접 값을 입력해서 속도 조절
+delay - 시간만큼 지난 후 작동 -webkit-transition-delay:0.5s; */
+/* http://matthewlein.com/ceaser */
+/* 원본에 transition 추가로 애니메이션 적용*/
+.box{width:100px;height:100px;background: yellow;
+    transition:all 1s ease 0s;}
+.box:hover{width:200px;height:200px;
+    border-radius:100px;background: green;
+    transform: rotate(180deg);}
+
+.blue{width:100px;height: 50px;background-color: blue;margin:100px;
+    transition:width 3s cubic-bezier(0.680,-0.550,0.265,1.550) 0s;}
+.blue:hover{width:500px;}
+
+.red{width:100px;height: 50px;background-color: red;margin:100px;
+transform:translateX(0);transition:transform 3s cubic-bezier(1.000,-0.600,0.450,0.940) 0s;}
+.red:hover{transform:translateX(500px);}
+
+.green{width:100px;height:50px;background-color: green;margin:100px;
+transition: opacity 1s linear 0s;}
+.green:hover{opacity:0.3;}
+
+.timing_fun > div{float:left;width:100px;height:50px;
+    margin:5px 10px;padding:5px;border-radius:5px;
+    color:white;background-color: #006aff;
+    text-align: center;font-weight:bold;}
+.timing_fun > div.ease{transition:height 3s ease 0s;}
+.timing_fun > div.linear{transition:height 3s linear 0s;}
+.timing_fun > div.ease-in{transition:height 3s ease-in 0s;}
+.timing_fun > div.ease-out{transition:height 3s ease-out 0s;}
+.timing_fun > div.ease-in-out{transition:height 3s ease-in-out 0s;}
+.timing_fun:hover > div{height:400px;}
+</style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="green"></div>
+    <div class="timing_fun">
+        <div class="ease">ease</div>
+        <div class="linear">linear</div>
+        <div class="ease-in">ease-in</div>
+        <div class="ease-out">ease-out</div>
+        <div class="ease-in-out">ease-in-out</div>
+    </div>
+</body>
+</html>

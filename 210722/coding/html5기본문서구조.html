@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>html5 기본문서 구조</title>
+<!-- 조건주석문 : IE9 미만 접속시 주석 실행 -->
+<!-- [if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js
+    "></script>
+<![endif] -->
+</head>
+<body>
+<!-- html5 시멘틱 웹 [semantic web] : 의미가 더 명확해진다.
+header, footer, nav, section, article-재배포글, aside-퀵메뉴나 광고, (main) -->
+<div id="wrap">
+    <header>
+        <h1>제목</h1>
+        <h2>부제목</h2>
+        <nav class="gnb">
+            <h2>주메뉴</h2>
+            <ul>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+        <nav class="snb">
+            <h2>주메뉴</h2>
+            <ul>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+            </ul>
+        </nav>
+    <div id="content">
+        <section class="notice">
+            <h3>공지사항</h3>
+            <ul>
+                <li><a href="#">글제목</a></li>
+                <li><a href="#">글제목</a></li>
+                <li><a href="#">글제목</a></li>
+            </ul>
+            <p>공지사항 더보기</p>
+        </section>
+        <section class="qna">
+            <h3>QandA</h3>
+            <ul>
+                <li><a href="#">글제목</a></li>
+                <li><a href="#">글제목</a></li>
+                <li><a href="#">글제목</a></li>
+            </ul>
+            <p>QandA 더보기</p>
+        </section>
+        <article>
+            <h3>제목</h3>
+            <p>블로그 글</p>
+        </article>
+    </div>
+    <aside class="quick_menu">
+        <h3>바로가기</h3>
+        <ul>
+            <li><a href="#">퀵메뉴</a></li>
+            <li><a href="#">퀵메뉴</a></li>
+            <li><a href="#">퀵메뉴</a></li>
+        </ul>
+        <p></p>
+    </aside>
+    <footer>copyright(c)</footer>
+</div>
+</body>
+</html>

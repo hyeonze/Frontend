@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Square effect 4</title>
+<style type="text/css">
+/* common */
+.square{position: relative;transition: all 0.35s ease-in-out;box-sizing: border-box;}
+.square a{color: #333;}
+.square a:hover{text-decoration: none;}
+.square img{width: 100%;height: 100%;}
+/* square */
+.square{position: relative;width: 316px;height: 216px;border: 8px solid #fff;box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);}
+.square .info{position: absolute;top: 0;bottom: 0;left: 0;right: 0;text-align: center;backface-visibility: hidden;}
+/* square effect 4 */
+.square{overflow: hidden;position: relative;}
+.square .info{background: rgba(12, 34, 52, 0.6);}
+.square .mask1,.square .mask2{background: #1a4a72;background: rgba(26, 74, 114, 0.6);}
+.square .img{transition: all 0.35s ease-in-out;}
+.square .mask1,.square .mask2{position: absolute;background: #333333;background: rgba(0, 0, 0, 0.6);height: 361px;width: 361px;transition: all 0.35s ease-in-out;}
+.square .mask1{left: auto;right: 0;top: 0;transform: rotate(56.5deg) translateX(-180px);transform-origin: 100% 0%;}
+.square .mask2{top: auto;bottom: 0;left: 0;transform: rotate(56.5deg) translateX(180px);transform-origin: 0% 100%;}
+.square .info{background: #111111;height: 0;visibility: hidden;width: 361px;transform: rotate(-33.5deg) translate(-112px, 166px);transform-origin: 0% 100%;transition: all 0.35s ease-in-out 0.35s;}
+.square .info h3{text-transform: uppercase;color: #fff;text-align: center;font-size: 17px;padding: 10px;background: transparent;margin-top: 5px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);opacity: 0;transition: all 0.35s ease-in-out 0.35s;}
+.square .info p{font-style: italic;font-size: 12px;position: relative;color: #bbb;padding: 20px 20px 20px;text-align: center;opacity: 0;transition: all 0.35s ease-in-out 0.35s;}
+.square a:hover .mask1{transform: rotate(56.5deg) translateX(1px);}
+.square a:hover .mask2{transform: rotate(56.5deg) translateX(-1px);}
+.square a:hover .info{width: 300px;height: 120px;visibility: visible;top: 40px;transform: rotate(0deg) translate(0, 0);}
+.square a:hover .info h3,.square a:hover .info p{opacity: 1;}
+</style>
+</head>
+<body>
+<div class="square">
+    <a href="#">
+        <div class="img">
+            <img src="images/assets/rect/9.jpg" alt="img">
+        </div>
+        <div class="mask1"></div>
+        <div class="mask2"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div>
+    </a>
+</div>
+</body>
+</html>

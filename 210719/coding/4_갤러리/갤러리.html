@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>gallery</title>
+<style type="text/css">
+li{list-style: none;float:left;padding:5px;}
+.gallery{width: 450px;height: 300px;margin:0 auto;
+    border:10px solid #1D0C16;
+    background: #272229;
+    box-shadow:10px 10px 20px #272229;}
+.small:hover ~ .pic{display: inline;position:absolute;}
+.pic{display: none;transition:height 3s ease 0s;}
+</style>
+</head>
+<body>
+    <div class="gallery">
+        <ul>
+            <li>
+                <img src="images/ph1_s.jpg" alt="작은그림" class="small">
+                <img src="images/ph1.jpg" alt="큰그림" class="pic">
+            </li>
+            <li>
+                <img src="images/ph2_s.jpg" class="small">
+                <img src="images/ph2.jpg" class="pic">
+            </li>
+            <li>
+                <img src="images/ph3_s.jpg" class="small">
+                <img src="images/ph3.jpg" class="pic">
+            </li>
+            <li>
+                <img src="images/ph4_s.jpg" class="small">
+                <img src="images/ph4.jpg" class="pic">
+            </li>
+            <li>
+                <img src="images/ph5_s.jpg" class="small">
+                <img src="images/ph5.jpg" class="pic">
+            </li>
+            <li>
+                <img src="images/ph6_s.jpg" class="small">
+                <img src="images/ph6.jpg" class="pic">
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
