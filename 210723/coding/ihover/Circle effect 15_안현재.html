@@ -6,25 +6,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Circle effect 15</title>
 <style type="text/css">
-/* common */
-.circle{position:relative;transition:all 0.35s ease-in-out;box-sizing:border-box;}
-.circle a{color:#333;}/*링크글자색*/
-.circle a:hover{text-decoration: none;}/*링크밑줄제거*/
+.circle{position:relative;transition:all 0.35s ease-in-out;box-sizing:border-box;}/*테두리에도 에니메이션*/
+.circle a{color:#333;}
+.circle a:hover{text-decoration: none;}
 .circle img{width: 100%;height: 100%;}
 /* circle */
 .circle{position: relative;width: 220px;height: 220px;border-radius: 50%;}
 .circle .img{position: relative;width: 220px;height: 220px;border-radius: 50%;}
-.circle .img:before{position: absolute;display: block;content: '';width: 100%;height: 100%;border-radius: 50%;box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);transition: all 0.35s ease-in-out;}
+.circle .img:before{position: absolute;display: block;content: '';width: 100%;height: 100%;border-radius: 50%;box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);transition: all 0.35s ease-in-out;}/*테두리에도 에니메이션*/
 .circle .img img{border-radius: 50%;}
 .circle .info{position: absolute;top: 0;bottom: 0;left: 0;right: 0;text-align: center;border-radius: 50%;backface-visibility: hidden;}
 /* circle effect 15 */
-.circle .img{opacity: 1;visibility: visible;transform: scale(1) rotate(0);transition: all 0.35s ease-in-out;}
-.circle .colored .info{background: #1a4a72;}
-.circle .info{background: #333333;opacity: 0;visibility: hidden;transform: scale(0.5) rotate(-720deg);transition: all 0.35s ease-in-out 0.3s;}
+.circle .img{opacity: 1;visibility: visible;transform: scale(1) rotate(0);transition: all 0.35s ease-in-out;}/*1.애니메이션 적용*/
+.circle .info{background: #333333;opacity: 0;visibility: hidden;transform: scale(0.5) rotate(-720deg);transition: all 0.35s ease-in-out 0.3s;}/*2.대기시간 있는 애니메이션 적용*/
 .circle .info h3{color: #fff;text-transform: uppercase;position: relative;letter-spacing: 2px;font-size: 22px;margin: 0 30px;padding: 55px 0 0 0;height: 110px;text-shadow: 0 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.3);}
 .circle .info p{color: #bbb;padding: 10px 5px;font-style: italic;margin: 0 30px;font-size: 12px;border-top: 1px solid rgba(255, 255, 255, 0.5);}
-.circle a:hover .img{opacity: 0;visibility: hidden;transform: scale(0.5) rotate(720deg);}
-.circle a:hover .info{opacity: 1;visibility: visible;transform: scale(1) rotate(0);}
+.circle a:hover .img{opacity: 0;visibility: hidden;transform: scale(0.5) rotate(720deg);}/*1.호버시 이미지 회전하며 작아지며 사라짐*/
+.circle a:hover .info{opacity: 1;visibility: visible;transform: scale(1) rotate(0);}/*2.호버시 인포 회전하며 커지며 생겨남*/
 </style>
 </head>
 <body>
