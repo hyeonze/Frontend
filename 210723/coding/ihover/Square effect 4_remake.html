@@ -14,7 +14,18 @@
 .square{position: relative;width: 316px;height: 216px;border: 8px solid #fff;box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);}
 .square .info{position: absolute;top: 0;bottom: 0;left: 0;right: 0;text-align: center;backface-visibility: hidden;}
 
+.square{overflow: hidden;position: relative;}
 
+.square .mask1,.square .mask2{position: absolute;background: #333333;background: rgba(0, 0, 0, 0.6);height: 361px;width: 361px;transition: all 0.35s ease-in-out;}
+.square .mask1{left: auto;right: 0;top: 0;transform: rotate(56.5deg) translateX(-180px);transform-origin: 100% 0%;}/*위에서내려오는네모,1.애니메이션 적용*/
+.square .mask2{top: auto;bottom: 0;left: 0;transform: rotate(56.5deg) translateX(180px);transform-origin: 0% 100%;}/*아래서올라오는네모,2.애니메이션 적용*/
+.square .info{background: #111111;height: 0;visibility: hidden;width: 361px;transform: rotate(-33.5deg) translate(-112px, 166px);transform-origin: 0% 100%;transition: all 0.35s ease-in-out 0.35s;}/*글자배경은 높이0으로 안보이는상태,좌측기준반시계회전,3.대기시간있는 애니메이션 적용*/
+.square .info h3{text-transform: uppercase;color: #fff;text-align: center;font-size: 17px;padding: 10px;background: transparent;margin-top: 5px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);opacity: 0;transition: all 0.35s ease-in-out 0.35s;}/*4.대기시간있는 애니메이션 적용*/
+.square .info p{font-style: italic;font-size: 12px;position: relative;color: #bbb;padding: 20px 20px 20px;text-align: center;opacity: 0;transition: all 0.35s ease-in-out 0.35s;}/*4.대기시간있는 애니메이션 적용*/
+.square a:hover .mask1{transform: rotate(56.5deg) translateX(1px);}/*1.호버시 위에서회전된사각형내려옴*/
+.square a:hover .mask2{transform: rotate(56.5deg) translateX(-1px);}/*2.호버시 밑에서회전된사각형올라옴*/
+.square a:hover .info{width: 300px;height: 120px;visibility: visible;top: 40px;transform: rotate(0deg) translate(0, 0);}/*3.호버시 인포가 회전하며 생겨남*/
+.square a:hover .info h3,.square a:hover .info p{opacity: 1;}/*4.인포내부글자 생겨남*/
 </style>
 </head>
 <body>
