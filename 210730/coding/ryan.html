@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style type="text/css">
+body{background-color: #555555;}
+.ryan{position:absolute;top:50px;left:50px;width:120px;height:110px;background-color: #deb887;
+    border-radius: 50%;border:3px solid #111111;}
+
+.ryan .ear{position:absolute;left:calc(50% - 5px);width:10px;height:10px;
+    /* background-color: red; */border-radius: 50%;}
+.ryan .ear:before, .ryan .ear:after{content:"";position:absolute;left:calc(50% - 18px);width:36px;
+    height:36px;background-color: #deb887;border-radius: 50%;border:3px solid #111111;box-sizing:border-box;}
+.ryan .ear:before{margin-left:-40px;margin-top:-10px;z-index: -3;}
+.ryan .ear:after{margin-left:40px;margin-top:-10px;z-index: -3;}
+
+.ryan .face .eyebrows{position:absolute;left:calc(50% - 5px);top:40px;width:10px;height:10px;
+    /* background-color: red; */border-radius: 50%;}
+.ryan .face .eyebrows:before, .ryan .face .eyebrows:after{content:"";position:absolute;
+    left:calc(50% - 10px);width:20px;height:4px;background-color:#111111;border-radius: 30%;}
+.ryan .face .eyebrows:before{margin-left:-25px;transition: transform 0.2s ease-in-out;}
+a:hover .ryan .face .eyebrows:before{top:-2px;}
+.ryan .face .eyebrows:after{margin-left:25px;transition: transform 0.2s ease-in-out;}
+a:hover .ryan .face .eyebrows:after{transform: rotate(-30deg);}
+
+.ryan .face .eyes{position:absolute;left:calc(50% - 5px);top:50px;width:10px;height:10px;
+    /* background-color: red; */border-radius: 50%;}
+.ryan .face .eyes:before, .ryan .face .eyes:after{content:"";position:absolute;
+    left:calc(50% - 3px);width:6px;height:6px;background-color: #111111;border-radius: 50%;}
+.ryan .face .eyes:before{margin-left:-25px;}
+.ryan .face .eyes:after{margin-left:25px;transition: transform 0.2s ease-in-out;}
+a:hover .ryan .face .eyes:after{height:1px;transform: rotate(-15deg);}
+
+.ryan .face .nose{position:absolute;left:calc(50% - 5px);top:58px;width:10px;height:10px;
+    background-color:#111111;border-radius: 50%;z-index: 200;}
+.ryan .face .nose:after{content:"";position:absolute;left:calc(50% - 5px);top:9px;width:10px;height:12px;background-color:#ffffff;z-index:199 ;}
+
+.ryan .face .mouth{position:absolute;left:calc(50% - 5px);top:63px;width:10px;height:16px;
+    background-color:#ffffff;z-index: 100;}
+.ryan .face .mouth:before{content:"";position:absolute;
+    left:calc(50% - 10px);width:20px;height:20px;background-color:#ffffff;
+    border-radius: 50%;border:3px solid #111111;box-sizing:border-box;z-index:-1;margin-left:-5px;}
+.ryan .face .mouth:after{content:"";position:absolute;
+    left:calc(50% - 10px);width:20px;height:20px;background-color:#ffffff;
+    border-radius: 50%;border:3px solid #111111;box-sizing:border-box;z-index: -1;margin-left:5px;}
+</style>
+</head>
+<body>
+<a href="#">
+    <div class="ryan">
+            <div class="ear"></div>
+            <div class="face">
+                <div class="eyebrows"></div>
+                <div class="eyes"></div>
+                <div class="nose"></div>
+                <div class="mouth"></div>
+            </div>
+    </div>
+</a>
+</body>
+</html>

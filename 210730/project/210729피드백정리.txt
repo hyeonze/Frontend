@@ -1,0 +1,8 @@
+home / recommended 글씨 내리기(ok)
+home / hello,julieta 글씨크기 줄이기(ok)
+home / what do you want to eat? 글씨크기 줄이기(ok)
+home / 카테고리 아이콘 크기 줄이기(ok)
+liked / 내용추가 && 품절추가 && 아이콘 작게(ok)
+mypage / 내용추가
+order / 내용추가(ok)
+qna / 밑에 있는 글씨(채팅) 얇게 || 연하게(ok)

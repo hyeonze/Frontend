@@ -272,6 +272,51 @@ top-left-y top-right-y bottom-right-y bottom-left-y */
     left:calc(50% - 3px);top:4px;width:6px;height:6px;
     /* background: blue; */border-radius: 50%;
     box-shadow:-18px 0 0 0 #000,18px 0 0 0 #000;}
+
+/* 7.emoji_angry */
+.emoji_angry{background: linear-gradient(to bottom,#D5234C -10%, #FFDA6A 100%);
+    background-size: 100%;}
+.emoji_angry:after{content:'angry';}
+
+.emoji_angry .emoji_face{position:absolute;width:100%;height:inherit;
+    animation:angry-face 2s ease-in 0s infinite;}
+@keyframes angry-face{
+    35%,60%{transform:translateX(0) translateY(10px) scale(0.9);}
+
+    40%{transform:translateX(-5px) translateY(10px) scale(0.9);}
+    45%{transform:translateX(5px) translateY(10px) scale(0.9);}
+
+    50%{transform:translateX(-5px) translateY(10px) scale(0.9);}
+    55%{transform:translateX(5px) translateY(10px) scale(0.9);}
+}
+
+.emoji_angry .emoji_eyebrows{position:absolute;left:calc(50% - 3px);top:55px;
+    width:6px;height:6px;border-radius:50%;
+    /* background:#fff; */
+    box-shadow:-44px 5px 0 0 #000000,-7px 16px 0 0 #000000,
+    7px 16px 0 0 #000000,44px 5px 0 0 #000000;}
+.emoji_angry .emoji_eyebrows:before, .emoji_angry .emoji_eyebrows:after{content:'';
+    position:absolute;left:calc(50% - 25px); top:0;
+    width:50px;height:20px;
+    border:6px solid #000000;border-radius:50%;
+    box-sizing: border-box;
+    border-top-color:transparent;
+    border-right-color:transparent;
+    border-left-color:transparent;}
+.emoji_angry .emoji_eyebrows:before{margin-left:-25px;transform:rotate(15deg);}
+.emoji_angry .emoji_eyebrows:after{margin-left:25px;transform:rotate(-15deg);}
+
+.emoji_angry .emoji_eyes{position:absolute;left:calc(50% - 6px);top:70px;
+    width:12px;height:12px;border-radius:50%;
+    /* background:blue; */
+    box-shadow:25px 0 0 0 #000000,-25px 0 0 0 #000000;}
+
+.emoji_angry .emoji_mouth{position:absolute;left:calc(50% - 18px);bottom:15px;
+    width:36px;height:18px;background:#000;border-radius: 50%;
+    animation: angry-mouth 2s ease-in 0s infinite;}
+@keyframes angry-mouth{
+    25%, 50%{height:6px;bottom:25px;}
+}
 </style>
 </head>
 <body>

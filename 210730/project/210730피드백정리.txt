@@ -1,0 +1,13 @@
+* / 상단메뉴 아래 그림자 제거 && 배경색 연회색?(ok)
+home / Recommended 내림(ok)
+list / 여백처리 && 이름 한줄이면 가격위치 내림(ok)
+product / 가격수정 && 리뷰랑 즐찾사이 줄이기(ok)
+add / 옵션+가격+수량 정렬(ok)
+cart / 테두리제거 && 가격에 Total 넣기(ok)
+qna / 아이콘테두리(ok) 아이콘디자인(ok)
+chat / 아이콘테두리(ok) 아이콘디자인(ok)
+mypage / (아이콘간격 && 라운딩처리) || 링크참고해서 전체수정(ok)
+order/delivery / 테두리제거(ok)
+shipping / 테두리제거 && 테두리 일관성(ok)
+
+https://www.pinterest.co.kr/pin/295056213093530567/
