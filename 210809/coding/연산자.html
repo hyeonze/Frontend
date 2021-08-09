@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Javascript 연산자</title>
+<script type="text/javascript">
+//html문법검사에서 제외시키기
+//<![CDATA[
+    document.write("재미있는 자바스크립트" + "<br />");
+    //객체.메서드(); - 객체기반언어
+    //object.method();
+
+    var 변수명;
+
+    var num = 10;
+    var num = num/2;
+    document.write(num + "<br />");
+
+    //변수명 작성시 주의사항
+    //대,소문자 구분
+    //변수명 앞에 영문, _, $ 올수있음
+    //변수명에는 영문, 숫자, _, $
+    //숫자로시작x
+
+    var firstNum=100;
+    var nextNum=2;
+    var result = firstNum + nextNum;
+    document.write(result + "<br />");
+
+    //변수에 저장 가능한 데이터 타입
+    var txt1 = "자바스크립트"; // 문자형 String
+    var txt2 = '10'; // 큰or작은 따옴표 안에 입력하면 문자형
+
+    var num=10; // 숫자형 Number
+
+    var result = true; // 논리형 bool(참:true, 거짓:false)
+
+    var result = null; // 널형 null, 비어있음
+
+    //연산자 - 산술연산자,이항연산자 +,-,*,/,%(나머지)
+    var A=10;
+    var B=3;
+    var result;
+
+    result = A+B;//13
+    document.write(result + "<br />");
+
+    result = A-B;
+    document.write(result + "<br />");
+
+    result = A*B;
+    document.write(result + "<br />");
+
+    result = A/B;
+    document.write(result + "<br />");
+
+    result = A%B;
+    document.write(result + "<br />");
+
+    //비교연산자- 값:true참, false거짓
+    //A > B
+    //A>=B, A<B, A<=B, A==B 데이터타입일치x, A!=B,
+    //A===B 데이터타입일치, A!==B
+
+    var A=10;
+    var B=3;
+    var C='10';
+    var result;
+
+    result = A>B;//true
+    document.write(result + "<br />");
+
+    result = A<B;//false
+    document.write(result + "<br />");
+
+    result = A==B;//false
+    document.write(result + "<br />");
+
+    result = A!=B;//true
+    document.write(result + "<br />");
+
+    result = A==C;//true
+    document.write(result + "<br />");
+
+    result = A!=C;//false
+    document.write(result + "<br />");
+
+    result = A===C;//false
+    document.write(result + "<br />");
+
+    result = A!==C;//true
+    document.write(result + "<br />");
+
+    //대입연산자
+    //=, +=, -=, /=, %=
+    var numA = 10;
+    var numB = 20;
+
+    numA += 5; // numA=numA+5;
+    document.write(numA + "<br />"); // 15
+
+    numA -= 5; // numA=numA-5;
+    document.write(numA + "<br />"); // 10
+
+    numA *= 5; // numA=numA*5;
+    document.write(numA + "<br />"); // 50
+
+    numA /= 5;
+    document.write(numA + "<br />"); // 10
+
+    numB %= 3; // numA=numA%3;
+    document.write(numB + "<br />"); // 2
+
+    //증감연산자 ++1씩 증가, --1씩 감소
+
+    var numA = 10;
+    var numB = 20;
+
+    numA++;
+    document.write(numA + "<br />"); // 11
+
+    numB--;
+    document.write(numB + "<br />"); // 19
+
+    //논리연산자 ||논리합(or), &&논리곱(and), !논리부정 - true참1, false거짓0
+    // true || true -> true
+    // true || flase -> true
+    // false || false -> false
+
+    // true && true -> true
+    // true && false -> false
+    // false && flase -> false
+
+    var A = 10;
+    var B = 20;
+    var C = 30;
+    var D = 40;
+
+    var num1 = A>B;
+    var num2 = C>=D;
+
+    var a = num1 || num2;//false
+    document.write(a + "<br />");
+
+    var b = num1 && num2;//false
+    document.write(b + "<br />");
+
+    var c = !num1;//true
+    document.write(c + "<br />");
+
+    var num1 = A>=B;
+    var num2 = C<=D;
+
+    var d = num1 || num2;//true
+    document.write(d + "<br />");
+
+    var e = num1 && num2;//false
+    document.write(e + "<br />");
+
+    var f = !num1;//true
+    document.write(f + "<br />");
+
+    var num1 = A<=B;
+    var num2 = C<D;
+    var g = num1 || num2;//true
+    document.write(g + "<br />");
+    var h = num1 && num2;//true
+    document.write(h + "<br />");
+    var i = !num1;//false
+    document.write(i + "<br />");
+
+    //answp - 20대이고 여성이면 true
+    //prompt메서드(값이 문자열로 저장됨)
+    //prompt("질문내용","기본답변제시"); -당신의 성별은?, 여성
+    //prompt("질문내용","기본답변제시"); -당신의 나이는?, 20
+
+    var gender = prompt("당신의 성별은?","여성");
+    var age = prompt("당신의 나이는?","20");
+    var result = gender=="여성" && age>=20 && age<30;
+    document.write("결과:" + result + "<br />");
+
+    //국어, 영어, 수학 점수 입력받고,
+    //평균이 70이상이고 각과목점수가 60이상이면 true
+    //Number(prompt("문자열",""));
+    //Number()함수로 문자열->숫자 형변환
+
+    var kor = Number(prompt("국어점수는?",""));
+    var eng = Number(prompt("영어점수는?",""));
+    var math = Number(prompt("수학점수는?",""));
+    // var avg = (kor + eng + math)/3;
+    var result2 = kor>=60 && eng>=60 && math>=60 && (kor + eng + math)/3 >= 70;
+    // var result2 = avg >= 70 && kor>=60 && eng>=60 && math>=60;
+    document.write("결과:" + result2 + "<br />");
+
+    //문자 결합 연산자
+    //String() 문자열->숫자 형변환
+    //"문자" + "문자", "문자" + 숫자, String(숫자) + 숫자
+
+    var txt1 = "아름다운";
+    var txt2 = "우리강산";
+    document.write(txt1 + txt2 + "<br />");//아름다운우리강산
+
+    var txt3 = "은하철도";
+    var txt4 = 999;
+    document.write(txt3 + txt4 + "<br />");//은하철도999
+
+    var num1 = 200;
+    var num2 = 300;
+    var txt5 = String(num1);//'200'
+    document.write(num1 + num2 + txt5 + "<br />");//500200
+
+    var addText = "2002월드컵";
+    addText += " 대한민국";
+    addText += " 짝짝~짝짝짝~!!";
+    document.write(addText + "<br />");
+
+    // 조건 연산자, 삼항연산자, 조건식? 실행문1 : 실행문2;
+    // alert(""); 경고창
+    var num1=30;
+    var num2=20;
+
+    num1 >= num2 ? alert("참이다") : alert("거짓이다");
+
+    //confirm("내용"), 확인-true값반환, 취소-false값반환
+    var result = confirm("Do you like Javascript?");
+    var theText = result ? "good" : "No-good";
+
+    document.write(theText);
+//]]>
+</script>
+</head>
+<body>
+    
+</body>
+</html>
