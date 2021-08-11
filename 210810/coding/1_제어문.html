@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS - 제어문</title>
+<script type="text/javascript">
+//<![CDATA[
+    //조건문 if 만약~라면
+    /*
+        if(조건식){
+            실행문;
+        }
+    */
+    var myAge = 25;
+
+    if(myAge >= 20){
+        document.write("당신은 성인입니다." + "<br />")
+    }
+
+    //prompt를 이용해서 시험점수를 입력받고, 70점 이상이면 '합격'메세지 출력
+    //prompt의 반환값은 문자열
+    var point = Number(prompt("시험점수는?"));
+    
+    if(point >= 70){
+        document.write("합격" + "<br />");
+    }
+
+    /* if~else 문
+    if(조건식){
+        실행문1;
+    }else{
+        실행문2;
+    }
+    */
+
+    //나이가 20세 이상이고, 30세 미만일 경우 "통과", 그외는 "비통과"
+    var yourAge = Number(prompt("나이는?"));
+
+    if(yourAge >= 20 && yourAge < 30){
+        document.write("통과" + "<br />");
+    }else{
+        document.write("비통과" + "<br />");
+    }
+
+    /* if~else if문(else if는 여러개 올 수 있음)
+    if(조건식1){
+        실행문1;
+    }else if(조건식2){
+        실행문2;
+    }else{
+        실행문3;
+    }
+    */
+
+    //학점90점이상 A학점, 80점이상 B학점, 70점이상 C학점, 60점이상 D학점, 60점미만 F학점
+    var myNum = Number(prompt("점수는?"));
+
+    if(myNum >= 90){
+        document.write("A학점");
+    }else if(myNum >= 80){
+        document.write("B학점");
+    }else if(myNum >= 70){
+        document.write("C학점");
+    }else if(myNum >= 60){
+        document.write("D학점");
+    }else{
+        document.write("F학점");
+    }
+
+    /* swithch ~ case문, 지정한 변수에 저장된 데이터와 정확히 일치하는 경우 case
+
+    num = 3;
+
+    switch(num){
+    case 1:
+            실행문1;
+            break;
+    case 2:
+            실행문2;
+            break;
+    case 3:
+            실행문3;
+            break;
+    default:
+            실행문4;
+            break;
+    }
+    */
+
+    //지역을 입력하세요, 서울 02, 경기 031, 부산 051, 등록되지 않은 지역입니다
+    var myLocation = prompt("지역을 입력하세요.");
+
+    switch(myLocation){
+        case "서울" :
+            locationNum = "02";
+            break;
+        case "경기" :
+            locationNum = "031";
+            break;
+        case "부산" :
+            locationNum = "051";
+            break;
+        default :
+            alert("등록되지 않은 지역입니다.");
+            break;
+    }
+    document.write(myLocation + " 지역번호는 " + locationNum);
+//]]
+</script>
+</head>
+<body>
+    
+</body>
+</html>
