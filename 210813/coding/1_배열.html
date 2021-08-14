@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>배열 Array 객체</title>
+<script type="text/javascript">
+//<![CDATA[
+/*
+    배열 - 하나의 변수에 여러 개의 데이터를 저장
+
+    var 변수 = new Array();
+    변수[0] = "값1"
+    변수[1] = "값2"
+    변수[2] = "값3"
+
+    var 변수 = new Array(3);
+
+    var 변수 = [값1, 값2, 값3];
+
+    메서드
+    reverse() 역순 변환
+    slice(1,2) 인덱스 1~2 직전까지 반환
+    sort() 오름차순 정렬
+    join("구분자") 구분자로 데이터 연결(결과는배열x)
+    concat() 하나로 결합
+
+    shift() 첫인덱스0 데이터 삭제
+    pop() 마지막인덱스 데이터 삭제
+    unshift(값) 첫인덱스0 새데이터 중첩하여 추가
+    push(값) 마지막 인덱스에 새데이터 중첩하여 추가
+
+    length 갯수반환
+    splice(a,b) 인덱스 a에서부터 b개 데이터 삭제
+*/
+    var userName = new Array();
+    userName[0] = "강주형";
+    userName[1] = "김다은";
+    userName[2] = "김민지";
+    userName[3] = "김성주";
+    userName[4] = "김영진";
+    console.log(userName);
+
+    var idx = Math.floor(Math.random()*5);
+    document.write(userName[idx] + "<br />");
+
+    var theFood = ["자장면", "냉면", "갈비탕", "돈까스", "삼겹살"];
+    var FoodNum = Math.floor(Math.random()*5);
+    document.write(theFood[FoodNum] + "<br />");
+
+    var days = new Array("일","월","화","수","목","금","토");
+    console.log(days);
+    var today = new Date();
+    document.write(days[today.getDay()] + "<br />");
+    var nowDay = today.getDay();
+    document.write(days[nowDay] + "<br />");
+
+    var money = [100,100,200,50];
+    var total = 0;
+    for(k = 0; k < money.length; k++) total += money[k];
+    document.write(total + "<br />");
+
+    var theFood = ["자장면", "냉면", "갈비탕", "돈까스", "삼겹살"];
+    theFood.reverse();
+    console.log(theFood);
+
+    var theSubway = ["2호선","9호선","7호선","4호선","3호선"];
+    theSubway.sort();
+    console.log(theSubway);
+
+    var userName = ["김태희","전지현","송혜교","수지","아이유"];
+    var result = userName.slice(2,4);
+    console.log(result);
+
+    var Mountain1 = ["백두산","청계산","한라산","광교산","설악산"];
+    var Mountain2 = ["지리산","남산","북한산","관악산"];
+    var joinResult = Mountain1.concat(Mountain2);
+    console.log(joinResult);
+
+    var theProduct = ["냉장고","컴퓨터","선풍기","밥솥","핸드폰"];
+    var joinResult = theProduct.join("-");
+    console.log(joinResult);
+
+    var theSubway = ["2호선","9호선","7호선","4호선","3호선"];
+    var newLine1 = "1호선";
+    var newLine2 = "분당선";
+
+    console.log(theSubway);
+
+    theSubway.shift();//첫번째 제거
+    console.log(theSubway);
+
+    theSubway.pop(theSubway);//마지막 제거
+    console.log(theSubway);
+
+    theSubway.unshift(newLine1);//첫번째 추가
+    console.log(theSubway);
+
+    theSubway.push(newLine2);//마지막 추가
+    console.log(theSubway);
+
+    /* 로또번호 생성 */
+    var myLotto = [];//로또번호 저장
+    var aryLotto = [];//1~45까지 번호저장, aryLotto[0]=1이 저장됨
+    var idx = 0;
+
+    for(var i = 1; i < 46; ++i) aryLotto.push(i);//1~45 번호저장
+
+    while(myLotto.length < 6){
+        idx = Math.floor(Math.random()*aryLotto.length + 0);
+        myLotto.push(aryLotto[idx]);
+        aryLotto.splice(idx,1);//idx부터 1개 삭제
+    }
+    for(k=0;k<6;k++) document.write("번호" + k + ": " + myLotto[k] + "<br />");
+//]]>
+</script>
+</head>
+<body>
+
+</body>
+</html>
