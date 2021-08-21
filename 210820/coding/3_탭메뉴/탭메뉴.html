@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>탭메뉴</title>
+<style type="text/css">
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,caption,form,fieldset,legend,input{margin:0;padding:0;}
+body{font-size:12px;font-family:Dotum,"돋움",sans-serif;}
+img,fieldset{border:0;}
+li{list-style-type: none;}
+
+.tabMenu{position:relative;width:350px;height:200px;margin:10px;/*border:1px solid red;*/
+        background:url(images/ta_bg.gif) repeat-x 0 0;}
+.tabMenu dt{float:left;margin-right:2px;}
+.tabMenu dd{display:none;position:absolute;left:0;top:25px;width:350px;padding-top:10px;}
+.tabMenu dd:nth-of-type(1){display:block;}/*첫블록만보이게*/
+.tabMenu li{background:url(images/tab_bul.gif) no-repeat 3px 50%;
+            border-bottom:1px solid #ccc; padding: 5px 0 5px 10px;}
+.tabMenu a{color:#666;text-decoration: none;}
+.tabMenu a:hover{color:#d06;text-decoration: underline;}
+.tabMenu dd span{position: absolute;right:0;}
+.tabMenu dd .more{position: absolute;top:-20px;right:0px;}
+</style>
+<script type="text/javascript">
+//<![CDATA[
+window.onload = function(){
+    var myList = document.getElementById("tabMenu");//dl
+    var myTab = myList.getElementsByTagName("dt");//dt,dt,dt
+    var myDD = myList.getElementsByTagName("dd");//dd,dd,dd
+    console.log(myList);
+    console.log(myTab);
+    console.log(myDD);
+
+    for(var i = 0; i < myTab.length; i++){
+        myTab[i].children[0].onfocus = myTab[i].children[0].onclick = function(){//dt a를 포커싱하거나 클릭했을때(this)
+            //모든dd는 안보이게
+            for(var k = 0; k < myDD.length; k++){
+                myDD[k].style.display="none";
+            }
+            //클릭한 dd만 보이게
+            var theNext = this.parentNode.nextSibling;//dt뒤 공백문자
+            if(theNext.nodeType == 3) {theNext = theNext.nextSibling}//dd(공백문자 뒤에있는 형제)
+            theNext.style.display = "block";
+            //모두 회색 이미지
+            for(var k = 0; k < myTab.length; k++){
+                myTab[k].children[0].children[0].src = myTab[k].children[0].children[0].src.replace("_over.gif", "_out.gif");
+                //var theTab = myTab[k].children[0].children[0];//img
+                //theTab.src = theTab.src.replace("_over.gif", "_out.gif");
+            }
+            //클릭한거만 빨강 이미지
+            this.children[0].src = this.children[0].src.replace("_out.gif", "_over.gif");
+        }
+    }
+}
+//]]>
+</script>
+</head>
+<body>
+    <dl id="tabMenu" class="tabMenu">
+        <dt>
+            <a href="#"><img src="images/ta_1_over.gif" alt="공지사항"></a>
+        </dt>
+        <dd>
+            <ul>
+                <li><a href="#">공지사항</a><span>2020-12-30</span></li>
+                <li><a href="#">공지사항</a><span>2020-12-30</span></li>
+                <li><a href="#">공지사항</a><span>2020-12-30</span></li>
+                <li><a href="#">공지사항</a><span>2020-12-30</span></li>
+                <li><a href="#">공지사항</a><span>2020-12-30</span></li>
+            </ul>
+            <p class="more"><a href="#"><img src="images/tab_more.gif" alt="공지사항 더보기" /></a></p>
+        </dd>
+        <dt>
+            <a href="#"><img src="images/ta_2_out.gif" alt="입찰정보" /></a>
+        </dt>
+        <dd>
+            <ul>
+                <li><a href="#">입찰정보</a><span>2020-12-30</span></li>
+                <li><a href="#">입찰정보</a><span>2020-12-30</span></li>
+                <li><a href="#">입찰정보</a><span>2020-12-30</span></li>
+                <li><a href="#">입찰정보</a><span>2020-12-30</span></li>
+                <li><a href="#">입찰정보</a><span>2020-12-30</span></li>
+            </ul>
+            <p class="more"><a href="#"><img src="images/tab_more.gif" alt="입찰정보 더보기" /></a></p>
+        </dd>
+        <dt>
+            <a href="#"><img src="images/ta_3_out.gif" alt="채용공고" /></a>
+        </dt>
+        <dd>
+            <ul>
+                <li><a href="#">채용공고</a><span>2020-12-30</span></li>
+                <li><a href="#">채용공고</a><span>2020-12-30</span></li>
+                <li><a href="#">채용공고</a><span>2020-12-30</span></li>
+                <li><a href="#">채용공고</a><span>2020-12-30</span></li>
+                <li><a href="#">채용공고</a><span>2020-12-30</span></li>
+            </ul>
+            <p class="more"><a href="#"><img src="images/tab_more.gif" alt="채용공고 더보기" /></a></p>
+        </dd>
+    </dl>
+</body>
+</html>

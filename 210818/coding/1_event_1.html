@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>(9)이벤트 event_1</title>
+<script>
+//<![CDATA[
+/*
+이벤트 event
+onload 문서를 모두 불러오고 나서 실행
+onunload 문서 종료할때 발생
+ondbclick 더블클릭
+onclick 클릭
+onkeypress 키보드 눌렀을때
+onkeydown 키보드 눌렀을때
+onkeyup 키보드 누르고 땠을때
+onmouseover 대상에 마우스를 올렸을때
+onfocus 포커스 / onblur 포커스를 잃었을때
+onmouseout 마우스가 벗어났을때
+onsubmit 폼에서 submit 확인 버튼 눌렀을때
+onreset 폼에서 reset취소버튼 눌렀을때
+onchange 입력요소의 값이 바뀌고 포커스가 옮겨졌을때 발생
+onmousemove 마우스 움직일때
+onresize 브라우저 창을 조절할때마다 발생
+onerror 문서나 이미지를 불러올때 에러가 나면 발생
+onabort 문서를 불러오다가 중단되면 발생
+
+이벤트 - 웹브라우저에서 일어나는 모든 행동들을 이벤트
+이벤트핸들러 - 이벤트가 발생한 시점에서 함수를 호출하거나 스크립트를 실행하게 하는 요소
+*/
+function theFnc(){
+    alert("자바스크립트");
+}
+window.onload = function(){//바디내용먼저가져오기
+    var myBtn = document.getElementById("btn1");//button
+    //myBtn.onclick = function(){theFnc();}//인자값이 있을때는 이 방식 사용
+    myBtn.onclick = theFnc;//괄호 붙이면 자동실행
+}
+//]]>
+</script>
+</head>
+<body>
+<button id="btn1">버튼</button>
+</body>
+</html>

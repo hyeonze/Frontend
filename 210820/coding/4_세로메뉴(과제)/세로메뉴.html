@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>세로메뉴</title>
+<style type="text/css">
+body,p,h1,h2,h3,h4,h5,h6,ul,li,ol{margin:0;padding:0;}
+li{list-style:none;}
+body{font-size: 12px;font-family: "굴림",Gulim,sans-serif;margin:50px;}
+</style>
+<script type="text/javascript">
+//<![CDATA[
+//3_탭메뉴 참고해서 만들기
+//1.재료 ul, li, 하위ul 가져오기
+//2.하위ul 모두 안보이게(3_탭메뉴 에서 추가된 부분)
+//3.for문 사용 li하나하나 클릭했을 때
+//4.모든 하위ul은 안보이게, 내가 클릭한 li의 하위ul만 보이게
+//5.모든 이미지는 일반이미지 바꾸고(.gif), 내가 클릭한 li의 이미지만 빛나는걸로(_over.gif)
+window.onload = function(){
+    //재료가져오기
+    var myList = document.getElementById("gnb");//ul(1)
+    var myMenu = myList.children;//ul li(4)
+    var myUl = myList.getElementsByTagName("ul");//ul li ul(4)
+    console.log(myList);
+    console.log(myMenu);
+    console.log(myUl);
+
+    //하위ul안보이게
+    for(var i = 0; i < myUl.length; i++){
+        myUl[i].style.display = "none";
+    }
+
+    //for문 사용 li하나하나 클릭했을 때
+    for(var i = 0; i < myMenu.length; i++){
+        myMenu[i].children[0].onfocus = myMenu[i].children[0].onclick = function(){//this == li>a
+            var theNext = this.nextSibling;//this뒤 공백문자
+            for(j = 0; j < myUl.length; j++) myUl[j].style.display = "none";//일단 다 닫고
+            if(theNext.nodeType == 3) theNext = theNext.nextSibling;//ul
+            theNext.style.display = "block";//누른거는 보이고
+            for(j = 0; j < myMenu.length; j++){//일단 다 기본이미지
+                myMenu[j].children[0].children[0].src = myMenu[j].children[0].children[0].src.replace("_over.gif",".gif");
+                //var myImg = myMenu[j].children[0];
+                //myImg.src = myImg.src.replace("_over.gif",".gif");
+            }
+            this.children[0].src =  this.children[0].src.replace(".gif", "_over.gif");//클릭한거만 빛나는이미지
+        }
+    }
+}
+//]]>
+</script>
+</head>
+<body>
+    <ul id="gnb">
+        <li class="menu1">
+            <a href="#">
+                <img src="images/gnb01.gif" alt="협의회소개">
+            </a>
+            <ul>
+                <li><a href="#">인사말</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">사업안내</a></li>
+                <li><a href="#">조직현황</a></li>
+            </ul>
+        </li>
+        <li class="menu2">
+            <a href="#">
+                <img src="images/gnb02.gif" alt="협의회소식">
+            </a>
+            <ul>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">복지뉴스</a></li>
+                <li><a href="#">복지정보</a></li>
+                <li><a href="#">교육안내</a></li>
+            </ul>
+        </li>
+        <li class="menu3">
+            <a href="#">
+                <img src="images/gnb03.gif" alt="자료실">
+            </a>
+            <ul>
+                <li><a href="#">일반자료실</a></li>
+                <li><a href="#">협의회자료</a></li>
+            </ul>
+        </li>
+        <li class="menu4">
+            <a href="#">
+                <img src="images/gnb04.gif" alt="게시판">
+            </a>
+            <ul>
+                <li><a href="#">자유게시판</a></li>
+                <li><a href="#">현장의소리 Q&A</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

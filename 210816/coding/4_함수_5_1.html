@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>함수_5</title>
+<script type="text/javascript">
+//<![CDATA[
+//학생이름, 학번, 국어, 영어, 수학점수 prompt로 입력받고
+//합계, 평균, 학점 구하는 것은 함수 3개 만들어서
+//학점도 평균이 90점이상이면 A, 80점이상이면 B, ... 60점 미만이면 F학점
+//학생이름, 학번, 국어점수, 영어점수, 수학점수, 합계, 평균, 학점 출력
+window.onload = function(){
+    var name = prompt("이름을 입력하세요.");
+    var id = prompt("학번을 입력하세요.");
+    var kor = Number(prompt("국어점수를 입력하세요."));
+    var eng = Number(prompt("영어점수를 입력하세요."));
+    var math = Number(prompt("수학점수를 입력하세요."));
+
+    function total(s1, s2, s3){
+        var res = s1 + s2 + s3;
+        return (res);
+    }
+    function avg(tot){
+        var res = tot / 3;
+        return (res.toFixed(2));//소숫점 둘째 자리까지
+    }
+    function grade(avg){
+        if(avg >= 90) return ("A");
+        else if(avg >= 80) return ("B");
+        else if(avg >= 70) return ("C");
+        else if(avg >= 60) return ("D");
+        else return ("F");
+    }
+    var totalMy = total(kor, eng, math);
+    var avgMy = avg(totalMy);
+    var gradeMy = grade(avgMy);
+    var result = document.getElementById("Area");//div
+    result.innerHTML = "이름:"+name+"<br />학번:"+id+"<br />국어:"+kor+"<br />영어:"+eng+"<br />수학:"+math+"<br />합계:"+totalMy+"<br />평균:"+avgMy+"<br />학점:"+gradeMy;
+}
+//]]>
+</script>
+</head>
+<body>
+    <div id="Area"> </div>
+</body>
+</html>

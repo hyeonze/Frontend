@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>함수_6</title>
+<script type="text/javascript">
+//<![CDATA[
+window.onload = function(){
+var price1 = Number(document.getElementById("product1").value);
+var price2 = Number(document.getElementById("product2").value);
+var price3 = Number(document.getElementById("product3").value);
+
+function getTotal(a, b, c){
+    var ret = a + b + c;
+    return (ret);
+}
+function getSalePrice(a){
+    var ret = a * 0.7;
+    return (ret);
+}
+function inputTotal(){
+    document.getElementById("total").value = totalPrice;
+    return (false);
+}
+function inputSale(){
+    document.getElementById("sale").value = salePrice;
+    return (false);
+}
+var totalPrice = getTotal(price1, price2, price3);
+var salePrice = getSalePrice(totalPrice);
+var totalBtn = document.getElementById("totalBtn");
+var saleBtn = document.getElementById("saleBtn");
+totalBtn.onclick = inputTotal();
+saleBtn.onclick = inputSale();
+}
+//]]>
+</script>
+</head>
+<body>
+<h1>백화점 세일 계산기</h1>
+<p>모든 상품에 대해 30%세일을 하고 있습니다.</p>
+<form action="/" method="POST">
+    <fieldset>
+        <legend>세일 계산기</legend>
+        <ul>
+            <li>
+                <label for="product1">상품1</label>
+                <input type="text" id="product1">
+            </li>
+            <li>
+                <label for="product2">상품2</label>
+                <input type="text" id="product2">
+            </li>
+            <li>
+                <label for="product3">상품3</label>
+                <input type="text" id="product3">
+            </li>
+            <li>
+                <button id="totalBtn">합계</button>
+                <input type="text" id="total">
+            </li>
+            <li>
+                <button id="saleBtn">세일가</button>
+                <input type="text" id="sale">
+            </li>
+        </ul>
+    </fieldset>
+</form>
+</body>
+</html>

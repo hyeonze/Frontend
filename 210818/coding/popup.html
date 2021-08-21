@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>팝업창 popup.html</title>
+<style type="text/css">
+*{margin:0;padding: 0;}
+</style>
+</head>
+<body>
+    <p><img src="images/popup.jpg" alt="이달에 새로나온책" usemap="#pop" /></p>
+    <!-- map : 창닫기만 링크걸기, coords : 좌상단좌표,우하단좌표 -->
+    <map name="pop" id="pop">
+        <area shape="rect" coords="228,371,294,399" href="#" onclick="window.close();" alt="창 닫기">
+    </map>
+</body>
+</html>

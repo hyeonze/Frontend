@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>함수_2</title>
+<style type="text/css">
+*{margin:0;padding:0;}
+img{vertical-align: top;border:0;}
+ul{list-style:none;}
+div#bannerWarp{width:420px;height:68px;position:relative;}
+div.frame{width:400px;overflow: hidden;}
+ul#bannerList{width:2800px;position: relative;left: 0;}
+ul#bannerList:after{content:"";display: block;clear:both;}
+ul#bannerList li{float:left;width:100px;}
+.leftBtn{position:absolute;right: 5px;top:10px;}
+.rightBtn{position:absolute;right: 5px;top:40px;}
+</style>
+<script type="text/javascript">
+//<![CDATA[
+//return문 - 다른 실행문을 수행하지 않고 함수를 마침. 함수 호출문에 값을반환함.
+var num1 = 10;
+function theFnc(num2){//40
+    var sum = num1 + num2;//50
+    var mu1 = num1 + num2;//400
+
+    return sum;//return false; - 반환하지 않음(저번파일 내용)
+}
+var result = theFnc(40);
+document.write(result + "<br />");
+
+//재귀함수 - 함수안에 실행문에서 자기자신함수를 스스로 호출하는 함수
+// var i = 0;
+// function theTest(){
+//     i++;
+//     document.write("안녕하세요" + i + "<br />");
+//     if(i<10) theTest();
+// }
+// theTest();
+
+/*
+    지역변수 - 변수가 정의되어있는 함수 내에서만 쓴다.(우선호출),
+              함수내에서 선언하며 반드시 앞에 var키워드를 붙여 선언한다.
+    전역변수 - 현재페이지 내 자바스크립트 어디서든 사용가능
+              함수 바깥에 선언하거나 함수내에서 var없이 선언한다.
+*/
+// var Num;
+// function theFnc(){
+//     Num = 30;
+// }
+// theFnc();
+// console.log(Num);
+
+/**/
+var a = 10;
+var b = 20;
+
+function theT(){
+    var b = a + 200;
+    alert(b);
+}
+theT();//210(지역)출력
+console.log(b);//콘솔창에는 20(전역)이 출력됨
+
+/**/
+var Num = 0;
+var colWidth=-400;
+
+function myBanner(whichBtn){
+    var myBannerList = document.getElementById("bannerList");//ul
+
+    if(whichBtn == 'prevBtn'){
+        //prev
+        Num--;
+        if(Num<0) Num = 6;
+        myBannerList.style.left = (Num * colWidth) + "px";
+    }else{
+        //next
+        Num++;
+        if(Num>6) Num = 0;
+        myBannerList.style.left = (Num * colWidth) + "px";
+    }
+    return false;
+}
+//]]>
+</script>
+</head>
+<body>
+<div id="bannerWrap">
+    <div class="frame">
+        <ul id="bannerList">
+            <li><a href="#"><img src="images/s_img1-33.jpg" alt="배너1"></a></li>
+            <li><a href="#"><img src="images/s_img1-33.jpg" alt="배너1"></a></li>
+            <li><a href="#"><img src="images/s_img1-33.jpg" alt="배너1"></a></li>
+            <li><a href="#"><img src="images/s_img1-33.jpg" alt="배너1"></a></li>
+
+            <li><a href="#"><img src="images/s_img2-33.jpg" alt="배너2"></a></li>
+            <li><a href="#"><img src="images/s_img2-33.jpg" alt="배너2"></a></li>
+            <li><a href="#"><img src="images/s_img2-33.jpg" alt="배너2"></a></li>
+            <li><a href="#"><img src="images/s_img2-33.jpg" alt="배너2"></a></li>
+
+            <li><a href="#"><img src="images/s_img3-33.jpg" alt="배너3"></a></li>
+            <li><a href="#"><img src="images/s_img3-33.jpg" alt="배너3"></a></li>
+            <li><a href="#"><img src="images/s_img3-33.jpg" alt="배너3"></a></li>
+            <li><a href="#"><img src="images/s_img3-33.jpg" alt="배너3"></a></li>
+
+            <li><a href="#"><img src="images/s_img4-33.jpg" alt="배너4"></a></li>
+            <li><a href="#"><img src="images/s_img4-33.jpg" alt="배너4"></a></li>
+            <li><a href="#"><img src="images/s_img4-33.jpg" alt="배너4"></a></li>
+            <li><a href="#"><img src="images/s_img4-33.jpg" alt="배너4"></a></li>
+
+            <li><a href="#"><img src="images/s_img5-33.jpg" alt="배너5"></a></li>
+            <li><a href="#"><img src="images/s_img5-33.jpg" alt="배너5"></a></li>
+            <li><a href="#"><img src="images/s_img5-33.jpg" alt="배너5"></a></li>
+            <li><a href="#"><img src="images/s_img5-33.jpg" alt="배너5"></a></li>
+
+            <li><a href="#"><img src="images/s_img6-33.jpg" alt="배너6"></a></li>
+            <li><a href="#"><img src="images/s_img6-33.jpg" alt="배너6"></a></li>
+            <li><a href="#"><img src="images/s_img6-33.jpg" alt="배너6"></a></li>
+            <li><a href="#"><img src="images/s_img6-33.jpg" alt="배너6"></a></li>
+
+            <li><a href="#"><img src="images/s_img7-33.jpg" alt="배너7"></a></li>
+            <li><a href="#"><img src="images/s_img7-33.jpg" alt="배너7"></a></li>
+            <li><a href="#"><img src="images/s_img7-33.jpg" alt="배너7"></a></li>
+            <li><a href="#"><img src="images/s_img7-33.jpg" alt="배너7"></a></li>
+        </ul>
+    </div>
+    <a href="#" class="leftBtn" onclick="myBanner('prevBtn');">
+        <img src="images/left_arrow-33.png" alt="이전 왼쪽버튼" />
+    </a>
+    <a href="#" class="rightBtn" onclick="myBanner('nextBtn');">
+        <img src="images/right_arrow-33.png" alt="다음 오른쪽버튼" />
+    </a>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>(12)문서객체</title>
+<script type="text/javascript">
+//<![CDATA[
+/*
+DOM(Document Object Model) - 문서객체
+도식화
+최상위 노드 node - html
+요소 - 노드 node
+노드 Node - 요소(Element)노드1, 속성노드2, 텍스트노드(공백문자포함) 3
+
+선택자 -
+원거리 선택자 -
+id선택자 - 선택대상.getElementById("아이디명");
+요소명 선택자 - 선택대상.getElementsByTagName("태그명"); //배열
+
+근거리 선택자 - 특정 요소를 기준으로 상대적인 다른 요소를 선택할때
+
+parentNode - 선택한 요소를 기준으로 부모요소 선택
+childNodes - 선택한 요소 기준으로 자식 요소 선택
+childeren - 선택한 요소 기준으로 자식 요소 선택
+firstChild - 선택한 요소 기준으로 첫번째 자식요소 선택
+lastChild - 선택한 요소 기준으로 마기막 자식요소 선택
+previousSibling - 형제요소중 이전요소를 선택
+nextSibling - 형제요소중 다음요소를 선택
+tagName(속성) - 선택된 요소의 태그명을 반환
+nodeValue(속성) - 선택된 요소의 텍스트를 반환
+*/
+window.onload = function(){
+    var parentN = document.getElementById("list").parentNode;//div
+    console.log(parentN);//ul의 부모인 div가 콘솔창에 찍힘
+
+    var childN = document.getElementById("list").childNodes;//13개
+    console.log(childN);
+    //표준방식 브라우저 - 공백포함13개, 비표준방식IE8이하 브라우저 - 공백비포함6개
+    //엔터를 공백문자로 인식(ul후 엔터,li후 엔터,li후 엔터, ...)
+
+    var childrenN = document.getElementById("list").children;//6개
+    console.log(childrenN);
+
+    var firstChildN = document.getElementById("list").firstChild;//공백문자
+    console.log(firstChildN);
+
+    var childrenF = document.getElementById("list").children[0];//첫 li
+    console.log(childrenF);
+    
+    var lastChildN = document.getElementById("list").lastChild;//공백문자
+    console.log(lastChildN);
+
+    var lastNum = document.getElementById("list").children.length - 1;
+    var childrenL = document.getElementById("list").children[lastNum];//마지막 li
+    console.log(childrenL);
+
+    var prev = document.getElementById("title").previousSibling;//h2 앞 공백문자
+    if(prev.nodeType == 3) prev = prev.previousSibling;//3:텍스트노드, h1선택
+    console.log(prev);
+
+    var next = document.getElementById("title2").nextSibling;//공백문자
+    if(next.nodeType == 3) next = next.nextSibling;//ul
+    console.log(next);
+
+    var myObj = document.getElementById("title");//h2
+    myObj.style.color = "#f00";
+
+    var myList = document.getElementsByTagName("ul");//ul, ul
+    var myObj2 = myList[0].getElementsByTagName("li")[1];//두번째 li
+    myObj2.style.border = "solid 1px #f00";//보더적용
+
+    //id가 list인 ul에서 li를 찾고 그중에서 인덱스 3번째 li에 글씨색을 파란색으로 해라
+    var listZone = document.getElementById("list");//ul
+    var myObj3 = listZone.getElementsByTagName("li")[3];
+    myObj3.style.color = "blue";
+}
+//]]>
+</script>
+</head>
+<body>
+    <div>
+        <h1>선택자</h1>
+        <h2 id="title">원거리 선택자</h2>
+        <ul>
+            <li>getElementById</li>
+            <li>getElementsByTagName</li>
+        </ul>
+        <h2 id="title2">근거리 선택자</h2>
+        <ul id="list">
+            <li>parentNode</li>
+            <li>childNodes</li>
+            <li>children</li>
+            <li>firstChild</li>
+            <li>previousSibling</li>
+            <li>nextSibling</li>
+        </ul>
+    </div>
+</body>
+</html>

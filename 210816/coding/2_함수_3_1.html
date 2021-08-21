@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>함수_3</title>
+<script type="text/javascript">
+//<![CDATA[
+window.onload = function(){ // body먼저 읽은 후 실행
+    function iLoveJs(answer){
+        if(answer == 'yes'){
+            var yyy = ["멋집니다요!", "지금처럼 열심히~", "Good입니다"];
+            var num = Math.floor(Math.random()*3+0);
+            alert("와와! " + yyy[num]);
+        }else{
+            var nnn = ["그만 놀아요ㅠㅠ", "분발하세요>.<", "재미없어요ㅋㅋ"];
+            var num = Math.floor(Math.random()*3+0);
+            alert("참나! " + nnn[num]);
+        }
+        return false;
+    }
+
+    var y = document.getElementById("btnYes");
+    y.onclick = function(){iLoveJs("yes");}
+
+    var n = document.getElementById("btnNo");
+    n.onclick = function(){iLoveJs("no");}
+}
+//]]>
+</script>
+</head>
+<body>
+    <h1>당신은 자바스크립트를 너무 좋아하십니까?</h1>
+    <button id="btnYes">...네...</button>
+    <button id="btnNo">.아니오.</button>
+</body>
+</html>

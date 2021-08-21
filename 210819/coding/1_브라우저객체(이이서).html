@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script type="text/javascript">
+/*
+screen 객체 - 스크린(모니터)에 대한 속성을 제공
+속성
+availWidth - 사용가능한 스크린 가로 너비값 반환
+availHeight - 사용가능한 스크린 세로 높이값 반환, 작업 표시줄을 제외한 높이값
+availTop - 창이 위치할 수 있는 최상위의 위치값을 반환, 비IE계열 브라우저만 사용
+availLeft - 창이 위치할 수 있는 가장 좌측의 위치값을 반환, 비IE계열 브라우저만 사용
+*/
+document.write("스크린 너비값"+screen.availWidth+"<br />");
+document.write("스크린 높이값"+screen.availHeight+"<br />");
+document.write("스크린 가장 좌측 위치값"+screen.availLeft+"<br />");
+document.write("스크린 가장 상단 위치값"+screen.availTop+"<br />");
+document.write("스크린 너비값"+screen.width+"<br />");
+document.write("스크린 높이값"+screen.height+"<br />");
+document.write("색상수"+screen.colorDepth+"<br />");
+document.write("해상도"+screen.pixelDepth+"<br />");
+
+/*
+history 객체 - 브라우저로 방문한 페이지들의 정보를 제공, '이전', '다음', 등의 페이지
+이동을 위한 버튼을 만들 수 있다.
+
+go(값) - 값만큼 다음 또는 이전페이지로 이동 go(1), go(-1)
+back() - 이전페이지로 이동
+forward() - 다음페이지로 이동
+
+page1~3.html 참고
+*/
+</script>
+</head>
+<body>
+    
+</body>
+</html>

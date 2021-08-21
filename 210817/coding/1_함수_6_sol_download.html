@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>함수_6</title>
+<script type="text/javascript">
+//<![CDATA[
+window.onload = function(){
+
+    function reading(){
+        num01 = Number(document.getElementById("product1").value);
+        num02 = Number(document.getElementById("product2").value);
+        num03 = Number(document.getElementById("product3").value);
+
+    }
+
+    function getTotal(a,b,c){	
+		totalResult = a + b + c;
+		return totalResult;
+    }
+
+    function getSale(d,e,f){
+        saleResult = Math.floor((d+e+f) * 0.7);
+        return saleResult; 
+    }
+
+    var totalBtn = document.getElementById("totalBtn");//button
+    totalBtn.onclick = function(){
+        reading();
+        document.getElementById("total").value = getTotal(num01,num02,num03);
+        return false;
+    }
+
+    var saleBtn = document.getElementById("saleBtn");//button
+    saleBtn.onclick = function(){
+        reading();
+        document.getElementById("sale").value =  getSale(num01,num02,num03);
+        return false;
+    }
+
+}
+//]]>
+</script>
+</head>
+<body>
+    <h1>백화점 세일 계산기</h1>
+    <p>모든 상품에 대해 30% 세일을 하고 있습니다.</p>
+    <form action="/" method="post">
+        <fieldset>
+            <legend>세일 계산기</legend>
+            <ul>
+                <li>
+                    <label for="product1">상품1</label>
+                    <input type="text" id="product1"/>
+                </li>
+                <li>
+                    <label for="product2">상품2</label>
+                    <input type="text" id="product2"/>        
+                </li>
+                <li>
+                    <label for="product3">상품3</label>
+                    <input type="text" id="product3"/>        
+                </li>
+                <li>
+                    <button id="totalBtn">합계</button>
+                    <input type="text" id="total"/>
+                </li>
+                <li>
+                    <button id="saleBtn">세일가</button>
+                    <input type="text" id="sale">
+                </li>
+            </ul>
+        </fieldset>
+    </form>    
+</body>
+</html>

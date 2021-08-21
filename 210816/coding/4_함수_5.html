@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>함수_5</title>
+<script type="text/javascript">
+//<![CDATA[
+//prompt로 수량, 단가 입력
+//금액이 출력
+window.onload = function(){
+    function kumaek(q,c){
+        var kum = q * c;
+        return kum;
+    }
+    var su = prompt("수량");
+    var dan = prompt("단가");
+
+    var result = document.getElementById("Area");//div
+
+    result.innerHTML = "수량 : " + su + " 단가 : " + dan + " 금액 : " + kumaek(su, dan) + "원";
+}
+//]]>
+</script>
+</head>
+<body>
+
+    <div id="Area"> </div>
+</body>
+</html>

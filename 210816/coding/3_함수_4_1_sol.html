@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수_4</title>
+</head>
+<script>
+//<![CDATA[
+window.onload = function(){
+    function salePrice(){
+        var theOrg = document.getElementById("oPrice").value;//input
+        var thePrice = parseInt(theOrg * 0.7);
+        //alert(thePrice);
+
+        var myArea = document.getElementById("Area");//div
+        myArea.innerHTML = thePrice + "원 입니다."
+        return false;
+    }
+    var form = document.getElementById("Price");
+    //form.onsubmit = function(){return salePrice();}// 틀린부분!
+    form.onsubmit = salePrice;// 괄호 없으면 onsubmit시 실행, 괄호 있으면 바로실행(호출)
+}
+//]]>
+</script>
+<body>
+    <h1>백화점 세일 기간입니다.</h1>
+    <p>모든 상품에 대해 30%세일을 하고 있습니다.</p>
+    <form action="" method="post" id="Price">
+        <label for="oPrice">정상가</label>
+        <input type="text" name="price" id="oPrice" />
+        <button>세일가</button>
+    </form>
+    <div id="Area"> </div>
+</body>
+</html>

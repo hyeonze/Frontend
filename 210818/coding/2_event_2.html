@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>(9)이벤트 event_2</title>
+<script type="text/javascript">
+//<![CDATA[
+/*
+DOM (Document Object Model, 문서객체구조)
+
+Dom Level 0 -
+객체 하나와 이벤트 하나를 연결해서 작동,
+한 객체에 동시에 같은 이벤트를 두번이상 적용 안됨. 마지막에 적용된 이벤트만 실행
+*/
+/*
+function theFnc(){
+    alert("자바스크립트");
+}
+window.onload = function(){//실행안됨
+    var myBtn = document.getElementById("btn1");//button
+    myBtn.onclick = function(){theFnc();}
+}
+window.onload = function(){//실행됨
+    var myBtn = document.getElementById("btn2");//button
+    myBtn.onclick = function(){theFnc();}
+}
+*/
+
+/*
+Dom Level 2 - 한 객체에 같은 이벤트를 두 번 작동할 수 없는 Dom Level 0의 문제 해결
+이벤트대상객체.addEventListener("이벤트명",함수명,false)
+    window.addEventListener("load",clickBtn1,false);
+    window.addEventListener("load",clickBtn2,false);//일반적인 사용
+
+- 표준방식 브라우저
+- 비표준방식 브라우저(IE8이하)
+//IE8이하를 고려해야할 경우
+if(window.addEventListener){//표준방식 브라우저의 경우
+    표준 이벤트 등록 메서드;
+}else if(window.attachEvent){//비표준방식 브라우저(IE8이하)일 경우
+    비표준 이벤트 등록 메서드;
+}
+*/
+//함수로 따로 만들어 사용하기
+function theFnc(){
+    alert("자바스크립트");
+}
+function clickBtn1(){//주메뉴
+    var myBtn = document.getElementById("btn1");//button
+    myBtn.onclick = function(){theFnc();}
+}
+function clickBtn2(){//주메뉴
+    var myBtn = document.getElementById("btn2");//button
+    myBtn.onclick = function(){theFnc();}
+}
+window.addEventListener("load",clickBtn1,false);
+window.addEventListener("load",clickBtn2,false);
+//IE8이하 고려할 때
+if(window.addEventListener){//표준방식 브라우저
+    window.addEventListener("load",clickBtn1,false);
+    window.addEventListener("load",clickBtn2,false);
+    //이벤트대상객체.addEventListener("이벤트명",함수명,false)
+}else if(window.attachEvent){//비표준방식 브라우저
+    window.attachEvent("load",false);
+    window.attachEvent("load",false);
+    //이벤트대상객체.attachEvent("on이벤트명",함수명)
+}
+//]]
+</script>
+</head>
+<body>
+<button id="btn1">버튼1</button>
+<button id="btn2">버튼2</button>
+</body>
+</html>
