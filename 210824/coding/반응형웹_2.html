@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>반응형웹 : Mostly Fluid</title>
+<style type="text/css">
+*{margin:0;padding:0;}
+#wrap{width:100px;margin:0 auto;}
+#box_a{width:100%px;height:400px;background: #f1779e;}
+#box_c{float:left;width:50%;height:400px;background: #fcb354;}
+#box_b{float:left;width:50%;height:400px;background: #24bbaf;}
+
+@media screen and (max-width:1024px) {/* ~해상도 1024 pc크기 */
+    #wrap{width:90%;}
+}
+@media screen and (max-width:800px) {/* ~해상도 800 tablet크기 */
+    #wrap{width:100%;}
+}
+@media screen and (max-width:480px) {/* ~해상도 480 mobile크기 */
+    #box_b,#box_c{float:none;width:100%;}
+}
+/* media queri 미디어쿼리 참고사이트
+mediaquery.es
+troy.labs.daum.net
+responsinator.com
+material.io/resizer
+*/
+</style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="box_a"></div>
+        <div id="box_b"></div>
+        <div id="box_c"></div>
+    </div>
+</body>
+</html>

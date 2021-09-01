@@ -1,0 +1,10 @@
+상단 글귀(ux design aplication.. home about... 등)
+
+사진 띠 삭제 (ok)
+
+아이콘줄이고 전체정렬 (ok)
+
+
+예시
+about brand details screen getapp
+about brand appdetail screen

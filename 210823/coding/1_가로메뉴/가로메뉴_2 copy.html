@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>가로메뉴</title>
+<style type="text/css">
+*{padding:0;margin:0;}
+li{list-style-type: none;}
+li img{vertical-align: top;}
+.gnb{position: relative;width: 100%;}
+.gnb li{float: left;}
+.gnb li ul{position:absolute;left:0;top:40px;}
+.gnb li.m2 ul{left:100px;}
+.gnb li.m3 ul{left:200px;}
+.gnb li.m4 ul{left:300px;}
+.gnb li.m5 ul{left:400px;}
+.gnb li.m6 ul{left:500px;}
+.gnb li ul li{padding:0 15px;}
+</style>
+<script type="text/javascript">
+//<![CDATA[
+window.onload = function(){
+    var gnb = document.getElementById("gnb");//ul(1), gnb
+    var menuList = gnb.children;//ul li(6), menu1~6
+    var subMenu = gnb.getElementsByTagName("ul");//ul li ul(6), sub1~6
+
+    for(var i = 0; i < subMenu.length; i++){
+        subMenu[i].style.display = "none";//하위ul안보이게
+    }
+
+    for(var i = 0; i < menuList.length; i++){
+        //마우스 올렸을 때
+        menuList[i].children[0].onfocus = menuList[i].children[0].onmouseover = function(){//this == li a
+            for(j = 0; j < subMenu.length; j++){
+                subMenu[j].style.display = "none";//일단 다 안보이게
+            }
+            var nextNode = this.nextSibling;//this뒤 공백문자
+            if(nextNode.nodeType == 3) nextNode = nextNode.nextSibling;//ul
+            nextNode.style.display = "block";//누른거는보이게
+            for(j = 0; j < menuList.length; j++)
+                menuList[j].children[0].children[0].src = menuList[j].children[0].children[0].src.replace("_over.gif",".gif");
+            this.children[0].src = this.children[0].src.replace(".gif", "_over.gif");
+        }
+    }
+}
+//]]>
+</script>
+</head>
+<body>
+    <ul id="gnb" class="gnb">
+        <li class="m1">
+            <a href="#" id="m1">
+                <img src="images/gnb01.gif" alt="협의회소개">
+            </a>
+            <ul>
+                <li><a href="#">Sub1-1</a></li>
+                <li><a href="#">Sub1-2</a></li>
+                <li><a href="#">Sub1-3</a></li>
+            </ul>
+        </li>
+        <li class="m2">
+            <a href="#" id="m2">
+                <img src="images/gnb02.gif" alt="협의회소식">
+            </a>
+            <ul>
+                <li><a href="#">Sub2-1</a></li>
+                <li><a href="#">Sub2-2</a></li>
+                <li><a href="#">Sub2-3</a></li>
+            </ul>
+        </li>
+        <li class="m3">
+            <a href="#" id="m3">
+                <img src="images/gnb03.gif" alt="자료실">
+            </a>
+            <ul>
+                <li><a href="#">Sub3-1</a></li>
+                <li><a href="#">Sub3-2</a></li>
+                <li><a href="#">Sub3-3</a></li>
+            </ul>
+        </li>
+        <li class="m4">
+            <a href="#" id="m4">
+                <img src="images/gnb04.gif" alt="게시판">
+            </a>
+            <ul>
+                <li><a href="#">Sub4-1</a></li>
+                <li><a href="#">Sub4-2</a></li>
+                <li><a href="#">Sub4-3</a></li>
+            </ul>
+        </li>
+        <li class="m5">
+            <a href="#" id="m5">
+                <img src="images/gnb05.gif" alt="제주복지방">
+            </a>
+            <ul>
+                <li><a href="#">Sub5-1</a></li>
+                <li><a href="#">Sub5-2</a></li>
+                <li><a href="#">Sub5-3</a></li>
+            </ul>
+        </li>
+        <li class="m6">
+            <a href="#" id="m6">
+                <img src="images/gnb06.gif" alt="푸드뱅크">
+            </a>
+            <ul>
+                <li><a href="#">Sub6-1</a></li>
+                <li><a href="#">Sub6-2</a></li>
+                <li><a href="#">Sub6-3</a></li>
+            </ul>
+        </li>
+    </ul>
+        </li>
+    </ul>
+</body>
+</html>

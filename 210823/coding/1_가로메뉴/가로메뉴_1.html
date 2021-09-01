@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>가로메뉴</title>
+<style type="text/css">
+body,p,h1,h2,h3,h4,h5,h6,ul,li,ol{margin:0;padding:0;}
+li{list-style:none;float: left;}
+body{font-size: 12px;font-family: "굴림",Gulim,sans-serif;margin:50px;}
+#gnb{position:relative;}
+#gnb > li > ul{position:absolute;}
+</style>
+<script type="text/javascript">
+//<![CDATA[
+window.onload = function(){
+    var gnb = document.getElementById("gnb");//ul(1), gnb
+    var menuX = gnb.children;//ul li(6), menu1~6
+    var subX = gnb.getElementsByTagName("ul");//ul li ul(6), sub1~6
+
+    for(var i = 0; i < subX.length; i++) subX[i].style.display = "none";//하위ul안보이게
+    for(var i = 0; i < menuX.length; i++){
+        //마우스 올렸을 때
+        menuX[i].children[0].onfocus = menuX[i].children[0].onmouseover = function(){//this == li a
+            var spaceAfterA = this.nextSibling;//this뒤 공백문자
+            for(j = 0; j < subX.length; j++) subX[j].style.display = "none";//일단 다 안보이게
+            if(spaceAfterA.nodeType == 3) spaceAfterA = spaceAfterA.nextSibling;//ul
+            spaceAfterA.style.display = "block";//누른거는보이게
+            for(j = 0; j < menuX.length; j++)
+                menuX[j].children[0].children[0].src = menuX[j].children[0].children[0].src.replace("_over.gif",".gif");
+            this.children[0].src = this.children[0].src.replace(".gif", "_over.gif");
+        }
+        //큰li a - 마우스 땠을 때 안보이게 //onblur : 탭키 지나갔을 때
+        menuX[i].children[0].onblur = menuX[i].children[0].onmouseout = function(){
+            var spaceAfterA = this.nextSibling;//this뒤 공백문자
+            for(j = 0; j < subX.length; j++) subX[j].style.display = "none";//일단 다 안보이게
+            for(j = 0; j < menuX.length; j++)
+                menuX[j].children[0].children[0].src = menuX[j].children[0].children[0].src.replace("_over.gif",".gif");
+        }
+        //하위ul - onmouseenter 보이게(a에서 마우스 떼면 ul안보이는 문제 해결하기)
+
+        //하위ul - onmouseleave
+        subX[i].onmouseleave = function(){
+            var spaceAfterA = this.nextSibling;//this뒤 공백문자
+            for(j = 0; j < subX.length; j++) subX[j].style.display = "none";//일단 다 안보이게
+            for(j = 0; j < menuX.length; j++)
+                menuX[j].children[0].children[0].src = menuX[j].children[0].children[0].src.replace("_over.gif",".gif");
+        }
+    }
+}
+//]]>
+</script>
+</head>
+<body>
+    <!-- 온클릭아니고 onmouseover -->
+    <ul id="gnb">
+        <li class="menu1">
+            <a href="#">
+                <img src="images/gnb01.gif" alt="협의회소개">
+            </a>
+            <ul>
+                <li><a href="#">Sub1-1</a></li>
+                <li><a href="#">Sub1-2</a></li>
+                <li><a href="#">Sub1-3</a></li>
+            </ul>
+        </li>
+        <li class="menu2">
+            <a href="#">
+                <img src="images/gnb02.gif" alt="협의회소식">
+            </a>
+            <ul>
+                <li><a href="#">Sub2-1</a></li>
+                <li><a href="#">Sub2-2</a></li>
+                <li><a href="#">Sub2-3</a></li>
+            </ul>
+        </li>
+        <li class="menu3">
+            <a href="#">
+                <img src="images/gnb03.gif" alt="자료실">
+            </a>
+            <ul>
+                <li><a href="#">Sub3-1</a></li>
+                <li><a href="#">Sub3-2</a></li>
+                <li><a href="#">Sub3-3</a></li>
+            </ul>
+        </li>
+        <li class="menu4">
+            <a href="#">
+                <img src="images/gnb04.gif" alt="게시판">
+            </a>
+            <ul>
+                <li><a href="#">Sub4-1</a></li>
+                <li><a href="#">Sub4-2</a></li>
+                <li><a href="#">Sub4-3</a></li>
+            </ul>
+        </li>
+        <li class="menu5">
+            <a href="#">
+                <img src="images/gnb05.gif" alt="제주복지방">
+            </a>
+            <ul>
+                <li><a href="#">Sub5-1</a></li>
+                <li><a href="#">Sub5-2</a></li>
+                <li><a href="#">Sub5-3</a></li>
+            </ul>
+        </li>
+        <li class="menu6">
+            <a href="#">
+                <img src="images/gnb06.gif" alt="푸드뱅크">
+            </a>
+            <ul>
+                <li><a href="#">Sub6-1</a></li>
+                <li><a href="#">Sub6-2</a></li>
+                <li><a href="#">Sub6-3</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
