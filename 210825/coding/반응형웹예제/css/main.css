@@ -385,7 +385,7 @@ a:hover{color:#666;}
     .content2 h2.t1{position:absolute;right: 131px;top:0;}
     .content2 h2.t2{position:absolute;right: 11px;top:0;}
     .content2 > section > div{margin-top:37px;border-top:1px solid #aaa;}
-    .content2 > section > div.item1{display: none;}
+    .content2 > section > div.item2{display: none;}
 
     /* 새로나온 책 */
     .content2 > section > div article{width: 100%;margin-top: 40px;font-size: 13px;}

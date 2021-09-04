@@ -57,7 +57,7 @@ $(document).ready(function(){
         $(".content2 > section > div").hide();
         $(this).parent().next().show();
 
-        $(".content2 h2 img").each(function(){//img
+        $(".content2 h2 img").each(function(){//img, .each 메소드
             //js : 선택자.src = 선택자.src.replace("","");//img.attr("src","값");
             $(this).attr("src",$(this).attr("src").replace("_over.gif",".gif"));
         });
@@ -65,9 +65,23 @@ $(document).ready(function(){
         $(this).children().attr("src",$(this).children().attr("src").replace(".gif","_over.gif"));
     });
     //mycode 눌렀을때 원래div안보이고 클릭한div보이고
-    // $(".t2 a").bind("mouseover focus",function(){
+    // $(".t2 a").bind("click focus",function(e){
+    //     e.preventDefault();
     //     $(".item1").hide();//t1 div 안보이게
     //     $(".item2").show();
+
+    //     $(".t1 a img").attr("src",$(".t1 a img").attr("src").replace("_over.gif",".gif"));
+    //     $(".t2 a img").attr("src",$(".t2 a img").attr("src").replace("_over.gif",".gif"));
+    //     $(".t2 a img").attr("src",$(".t2 a img").attr("src").replace(".gif","_over.gif"));
+    // });
+    // $(".t1 a").bind("click focus",function(e){
+    //     e.preventDefault();
+    //     $(".item2").hide();
+    //     $(".item1").show();
+
+    //     $(".t1 a img").attr("src",$(".t1 a img").attr("src").replace("_over.gif",".gif"));
+    //     $(".t1 a img").attr("src",$(".t1 a img").attr("src").replace(".gif","_over.gif"));
+    //     $(".t2 a img").attr("src",$(".t2 a img").attr("src").replace("_over.gif",".gif"));
     // });
 
     /* 배너 */
