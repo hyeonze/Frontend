@@ -17,7 +17,7 @@ body{font-family: 'Orbitron',sans-serif;}
 #wrap.afternoon figure{background: url(../img/phone_afternoon.png) no-repeat 0 0;}
 
 #wrap.evening{background: url(../img/bg_evening.jpg) no-repeat 0 0;}
-#wrap.evening figure{background: url(../img/phone_evening.jpg) no-repeat 0 0;}
+#wrap.evening figure{background: url(../img/phone_evening.png) no-repeat 0 0;}
 #wrap.evening h1 a{background-image: url(../img/logo_w.png);}
 #wrap.evening .gnb li a{color: #fff;}
 #wrap.evening .sns li a{color: #fff;}
@@ -25,7 +25,7 @@ body{font-family: 'Orbitron',sans-serif;}
 #wrap.evening figure p{color: #fff;}
 
 #wrap.night{background: url(../img/bg_night.jpg) no-repeat 0 0;}
-#wrap.night figure{background: url(../img/phone_night.jpg) no-repeat 0 0;}
+#wrap.night figure{background: url(../img/phone_night.png) no-repeat 0 0;}
 #wrap.night h1 a{background-image: url(../img/logo_w.png);}
 #wrap.night .gnb li a{color:#fff;}
 #wrap.night .sns li a{color:#fff;}
@@ -52,7 +52,7 @@ header h1 a{display: block; width:90%;height:80px; background: url(../img/logo_b
 
 figure{position: absolute;right: -320px;top:200px;width: 1226px;height: 809px;
     background: url(../img/phone_morning.png) no-repeat 0 0;}
-figure p{overflow: hidden; position: absolute;left:137px;top:100px;width: 540px;height: 307px;border: 1px solid red;
+figure p{overflow: hidden; position: absolute;left:137px;top:100px;width: 540px;height: 307px;/*border: 1px solid red;*/
     font-size: 60px;font-weight: bold;color: #333;box-sizing: border-box;padding-top: 120px;padding-left: 50px;}
 figure p span{position: relative;z-index: 5;}
 

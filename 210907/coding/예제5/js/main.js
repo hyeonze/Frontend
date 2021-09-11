@@ -28,15 +28,27 @@ $(document).ready(function(){
     if(hr >= 6 && hr < 11){//아침이미지
         $("#wrap").removeClass();
         $("#wrap").addClass("moring");
+
+        $("section li").removeClass();
+        $("section li").eq(0).addClass("on");
     }else if(hr >= 11 && hr < 17){//점심 이미지
         $("#wrap").removeClass();
         $("#wrap").addClass("afternoon");
+
+        $("section li").removeClass();
+        $("section li").eq(1).addClass("on");
     }else if(hr >= 17 && hr < 20){//저녁 이미지
         $("#wrap").removeClass();
         $("#wrap").addClass("evening");
+        
+        $("section li").removeClass();
+        $("section li").eq(2).addClass("on");
     }else{//밤 이미지
         $("#wrap").removeClass();
         $("#wrap").addClass("night");
+
+        $("section li").removeClass();
+        $("section li").eq(3).addClass("on");
     }
 
     //section li 클릭
@@ -44,5 +56,8 @@ $(document).ready(function(){
         var className = $(this).children("a").text();
         $("#wrap").removeClass();
         $("#wrap").addClass(className);
+
+        $("section li").removeClass();
+        $(this).addClass("on");
     });
 });
