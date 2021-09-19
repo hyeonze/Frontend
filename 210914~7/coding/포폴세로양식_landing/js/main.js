@@ -25,50 +25,62 @@ $(document).ready(function(){
     $(window).scroll(function(){
         var scroll = $(this).scrollTop();//현재scroll위치값
         var ht = $(window).height();
-        //content1
-        if((scroll >= 0 * ht )&& (scroll < 1 * ht)){
-            $(".gnb li a").removeClass("on");
-            $(".gnb li a").eq(0).addClass("on");
-            $(".quick li a").removeClass("on");
-            $(".quick li a").eq(0).addClass("on");
-            //내용물 움직임 시작
-            $("#content1 > section").addClass("on");
-        }else{//움직임 취소
-            $("#content1 > section").removeClass("on");
+        for(var i = 0; i < 15; i++){
+            if((scroll >= i * ht )&& (scroll < (i + 1) * ht)){
+                $(".gnb li a").removeClass("on");
+                $(".gnb li a").eq(i).addClass("on");
+                $(".quick li a").removeClass("on");
+                $(".quick li a").eq(i).addClass("on");
+                //내용물 움직임 시작
+                $("#content"+(i+1)+" > section").addClass("on");
+            }else{//움직임 취소
+                $("#content"+(i+1)+" > section").removeClass("on");
+            }
         }
-        //content2
-        if((scroll >= 1 * ht )&& (scroll < 2 * ht)){
-            $(".gnb li a").removeClass("on");
-            $(".gnb li a").eq(1).addClass("on");
-            $(".quick li a").removeClass("on");
-            $(".quick li a").eq(1).addClass("on");
-            //내용물 움직임 시작
-            $("#content2 > section").addClass("on");
-        }else{//움직임 취소
-            $("#content2 > section").removeClass("on");
-        }
-        //content3
-        if((scroll >= 2 * ht )&& (scroll < 3 * ht)){
-            $(".gnb li a").removeClass("on");
-            $(".gnb li a").eq(2).addClass("on");
-            $(".quick li a").removeClass("on");
-            $(".quick li a").eq(2).addClass("on");
-            //내용물 움직임 시작
-            $("#content3 > section").addClass("on");
-        }else{//움직임 취소
-            $("#content3 > section").removeClass("on");
-        }
-        //content4
-        if((scroll >= 3 * ht )&& (scroll < 4 * ht)){
-            $(".gnb li a").removeClass("on");
-            $(".gnb li a").eq(3).addClass("on");
-            $(".quick li a").removeClass("on");
-            $(".quick li a").eq(3).addClass("on");
-            //내용물 움직임 시작
-            $("#content4 > section").addClass("on");
-        }else{//움직임 취소
-            $("#content4 > section").removeClass("on");
-        }
+        // //content1
+        // if((scroll >= 0 * ht )&& (scroll < 1 * ht)){
+        //     $(".gnb li a").removeClass("on");
+        //     $(".gnb li a").eq(0).addClass("on");
+        //     $(".quick li a").removeClass("on");
+        //     $(".quick li a").eq(0).addClass("on");
+        //     //내용물 움직임 시작
+        //     $("#content1 > section").addClass("on");
+        // }else{//움직임 취소
+        //     $("#content1 > section").removeClass("on");
+        // }
+        // //content2
+        // if((scroll >= 1 * ht )&& (scroll < 2 * ht)){
+        //     $(".gnb li a").removeClass("on");
+        //     $(".gnb li a").eq(1).addClass("on");
+        //     $(".quick li a").removeClass("on");
+        //     $(".quick li a").eq(1).addClass("on");
+        //     //내용물 움직임 시작
+        //     $("#content2 > section").addClass("on");
+        // }else{//움직임 취소
+        //     $("#content2 > section").removeClass("on");
+        // }
+        // //content3
+        // if((scroll >= 2 * ht )&& (scroll < 3 * ht)){
+        //     $(".gnb li a").removeClass("on");
+        //     $(".gnb li a").eq(2).addClass("on");
+        //     $(".quick li a").removeClass("on");
+        //     $(".quick li a").eq(2).addClass("on");
+        //     //내용물 움직임 시작
+        //     $("#content3 > section").addClass("on");
+        // }else{//움직임 취소
+        //     $("#content3 > section").removeClass("on");
+        // }
+        // //content4
+        // if((scroll >= 3 * ht )&& (scroll < 4 * ht)){
+        //     $(".gnb li a").removeClass("on");
+        //     $(".gnb li a").eq(3).addClass("on");
+        //     $(".quick li a").removeClass("on");
+        //     $(".quick li a").eq(3).addClass("on");
+        //     //내용물 움직임 시작
+        //     $("#content4 > section").addClass("on");
+        // }else{//움직임 취소
+        //     $("#content4 > section").removeClass("on");
+        // }
     });//scroll
 
     //header 없는 경우
