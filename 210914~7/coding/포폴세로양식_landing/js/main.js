@@ -26,7 +26,7 @@ $(document).ready(function(){
         var scroll = $(this).scrollTop();//현재scroll위치값
         var ht = $(window).height();
         for(var i = 0; i < 15; i++){
-            if((scroll >= i * ht )&& (scroll < (i + 1) * ht)){
+            if((scroll >= i * ht ) && (scroll < (i + 1) * ht)){
                 $(".gnb li a").removeClass("on");
                 $(".gnb li a").eq(i).addClass("on");
                 $(".quick li a").removeClass("on");
@@ -37,7 +37,17 @@ $(document).ready(function(){
                 $("#content"+(i+1)+" > section").removeClass("on");
             }
         }
-        // //content1
+        // if((scroll >= 14 * ht )&& (scroll < (14 + 1) * ht) + 361/1080 * ht){
+        //     $(".gnb li a").removeClass("on");
+        //     $(".gnb li a").eq(14).addClass("on");
+        //     $(".quick li a").removeClass("on");
+        //     $(".quick li a").eq(14).addClass("on");
+        //     //내용물 움직임 시작
+        //     $("#content"+(14+1)+" > section").addClass("on");
+        // }else{//움직임 취소
+        //     $("#content"+(14+1)+" > section").removeClass("on");
+        // }
+        // // //content1
         // if((scroll >= 0 * ht )&& (scroll < 1 * ht)){
         //     $(".gnb li a").removeClass("on");
         //     $(".gnb li a").eq(0).addClass("on");
@@ -83,6 +93,18 @@ $(document).ready(function(){
         // }
     });//scroll
 
+    $("#content14 section span").eq(1).mouseover(function(){
+        $("#content14 section span").eq(2).addClass("hover");
+    });
+    $("#content14 section span").eq(1).mouseout(function(){
+        $("#content14 section span").eq(2).removeClass("hover");
+    });
+    $("#content14 section span").eq(2).mouseover(function(){
+        $("#content14 section span").eq(1).addClass("hover");
+    });
+    $("#content14 section span").eq(2).mouseout(function(){
+        $("#content14 section span").eq(1).removeClass("hover");
+    });
     //header 없는 경우
     // $("#gnb li,#quick li").click(function(e){
     //     e.preventDefault();
@@ -90,4 +112,18 @@ $(document).ready(function(){
     //     var ht = $(window).height();
     //     $("html,body").stop().animate({"scrollTop":i * ht},1400);
     // });
+
+    //탑메뉴
+    $("#content1 section span").eq(6).click(function(){
+        $("body,html").stop().animate({"scrollTop":1502},1400,"swing");
+    });
+    $("#content1 section span").eq(7).click(function(){
+        $("body,html").stop().animate({"scrollTop":3707},1400,"swing");
+    });
+    $("#content1 section span").eq(8).click(function(){
+        $("body,html").stop().animate({"scrollTop":4958},1400,"swing");
+    });
+    $("#content1 section span").eq(9).click(function(){
+        $("body,html").stop().animate({"scrollTop":12960},1400,"swing");
+    });
 });
