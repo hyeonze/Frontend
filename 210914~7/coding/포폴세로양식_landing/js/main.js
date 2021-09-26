@@ -7,13 +7,13 @@ $(document).ready(function(){
     var ht = $(window).height();
     $("#container > div").height(ht);
     //마지막컨텐트 예외처리
-    $("#content14").height(ht + 361/1080 * ht);
+    $("#content15").height(ht + 361/1080 * ht);
 
     //리사이즈
     $(window).resize(function(){
         var ht = $(window).height();
         $("#container > div").height(ht);
-        $("#content14").height(ht + 361/1080 * ht);
+        $("#content15").height(ht + 361/1080 * ht);
     });
 
     //윈도우 시작시 초기실행(class on), 노헤더버전도추가하기
@@ -25,7 +25,7 @@ $(document).ready(function(){
     $(window).scroll(function(){
         var scroll = $(this).scrollTop();//현재scroll위치값
         var ht = $(window).height();
-        for(var i = 0; i < 15; i++){
+        for(var i = 0; i < 16; i++){
             if((scroll >= i * ht ) && (scroll < (i + 1) * ht)){
                 $(".gnb li a").removeClass("on");
                 $(".gnb li a").eq(i).addClass("on");
@@ -93,17 +93,17 @@ $(document).ready(function(){
         // }
     });//scroll
 
-    $("#content14 section span").eq(1).mouseover(function(){
-        $("#content14 section span").eq(2).addClass("hover");
+    $("#content15 section span").eq(1).mouseover(function(){
+        $("#content15 section span").eq(2).addClass("hover");
     });
-    $("#content14 section span").eq(1).mouseout(function(){
-        $("#content14 section span").eq(2).removeClass("hover");
+    $("#content15 section span").eq(1).mouseout(function(){
+        $("#content15 section span").eq(2).removeClass("hover");
     });
-    $("#content14 section span").eq(2).mouseover(function(){
-        $("#content14 section span").eq(1).addClass("hover");
+    $("#content15 section span").eq(2).mouseover(function(){
+        $("#content15 section span").eq(1).addClass("hover");
     });
-    $("#content14 section span").eq(2).mouseout(function(){
-        $("#content14 section span").eq(1).removeClass("hover");
+    $("#content15 section span").eq(2).mouseout(function(){
+        $("#content15 section span").eq(1).removeClass("hover");
     });
     //header 없는 경우
     // $("#gnb li,#quick li").click(function(e){
@@ -115,15 +115,15 @@ $(document).ready(function(){
 
     //탑메뉴
     $("#content1 section span").eq(6).click(function(){
-        $("body,html").stop().animate({"scrollTop":1502},1400,"swing");
+        $("body,html").stop().animate({"scrollTop":1502/15481*14.33*ht},1400,"swing");
     });
     $("#content1 section span").eq(7).click(function(){
-        $("body,html").stop().animate({"scrollTop":3707},1400,"swing");
+        $("body,html").stop().animate({"scrollTop":3707/15481*14.33*ht},1400,"swing");
     });
     $("#content1 section span").eq(8).click(function(){
-        $("body,html").stop().animate({"scrollTop":4958},1400,"swing");
+        $("body,html").stop().animate({"scrollTop":4958/15481*14.33*ht},1400,"swing");
     });
     $("#content1 section span").eq(9).click(function(){
-        $("body,html").stop().animate({"scrollTop":12960},1400,"swing");
+        $("body,html").stop().animate({"scrollTop":(14240)/15481*14.33*ht},1400,"swing");
     });
 });
