@@ -19,5 +19,5 @@ a{text-decoration:none;color:black;}
 #skipNavi,.blind{position:absolute;left:0;top:0;width:0;height:0;font-size:0;line-height:0;text-indent:-9999px;overflow:hidden;visibility:hidden;}
 
 /* width값이 %로 된 이미지들이 브라우저 폭이 줄 경우 비례를 맞추어 줄도록 하기위해 사용 */
-li img, dd img{vertical-align: top;}
-img{max-width: 100%;}
+/* li img, dd img{vertical-align: top;}
+img{max-width: 100%;} */

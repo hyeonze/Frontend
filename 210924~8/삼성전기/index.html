@@ -5,6 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>삼성전기</title>
+<link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
 <!-- 본문바로가기 -->
@@ -140,19 +141,19 @@
                             <li><a href="#">Tablet</a></li>
                             <li><a href="#">Wearable</a></li>
                             </ul>
+                            <div class="gnb_button">
+                                <a href="#" target="_blank" title="새 창으로 바로가기">
+                                    <strong>Product Search</strong>
+                                    <p>원하는 제품을 쉽고 빠르게 검색해 보세요.</p>
+                                </a>
+    
+                                <a href="#" target="_blank" title="새 창으로 바로가기">
+                                    <strong>Component Library</strong>
+                                    <p>시뮬레이션으로 제품을 한 눈에 파악해 보세요.</p>
+                                </a>
+                            </div>                            
                         </li>
                         </ul>
-                        <div>
-                            <a href="#" target="_blank" title="새 창으로 바로가기">
-                                <strong>Product Search</strong>
-                                <p>원하는 제품을 쉽고 빠르게 검색해 보세요.</p>
-                            </a>
-
-                            <a href="#" target="_blank" title="새 창으로 바로가기">
-                                <strong>Component Library</strong>
-                                <p>시뮬레이션으로 제품을 한 눈에 파악해 보세요.</p>
-                            </a>
-                        </div>
                     </li>
                     <li><a href="#">고객지원</a>
                         <ul>
@@ -162,8 +163,9 @@
                             <li><a href="#">문의하기</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Sales Partners</a></li>
-                        <li><a href="#">Buy Now</a></li>
+                        <li><a href="#">Sales Partners</a>
+                            <a href="#">Buy Now</a>
+                        </li>
                         <li><a href="#">인증서</a>
                             <ul>
                             <li><a href="#">FAQ</a></li>
@@ -177,17 +179,18 @@
                             <li><a href="#">기술문서</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">모조품에 대한 면책</a></li>
-                        <li><a href="#">B2Bi(EDI)</a></li>
-                        <li><a href="#">대금지불 안내</a></li>
-                        <li><a href="#">방문신청</a></li>
+                        <li><a href="#">모조품에 대한 면책</a>
+                            <a href="#">B2Bi(EDI)</a>
+                            <a href="#">대금지불 안내</a>
+                            <a href="#">방문신청</a>
+                        </li>
                         </ul>
                     </li>
                     </ul>
                 </nav>
-                <!-- 탭메뉴 -->
+                <!-- 탑메뉴 -->
                 <h3 class="blind">문의하기, SNS, 홈페이지 언어설정</h3>
-                <dl>
+                <dl class="topMenu">
                     <dt class="blind">탑메뉴</dt>
                     <dd><a href="#">문의하기</a></dd>
                     <dd><a href="#">SNS</a>
@@ -207,7 +210,7 @@
                     </dd>
                 </dl>
                 <!-- 검색 버튼 -->
-                <div><a href="#">검색</a></div>
+                <div class="btn_srch"><a href="#">검색</a></div>
             </div>
             <!-- //header_inner -->
         </div>
@@ -217,7 +220,7 @@
             <div class="srch_inner">
                 <form>
                 <fieldset>
-                <legend>통합 검색</legend>
+                <legend class="blind">통합 검색</legend>
                     <label for="srch" class="blind">검색어를 입력해주세요.</label>
                     <input type="search" id="srch" placeholder="검색어를 입력해주세요" />
                     <button type="button">검색 버튼</button>
@@ -229,14 +232,14 @@
                 <li><a href="#">사업장소개</a></li>
                 </ul>
                 </form>
-                <a href="#">통합검색 닫기</a>
             </div>
+            <a href="#" class="btn_srch_close">통합검색 닫기</a>
         </div>
     </header>
     <!-- //header -->
     <hr />
     <!-- section -->
-    <section>
+    <section class="main_visual">
         <ul class="slide_wrap">
         <li>
             <video muted autoplay loop poster="images/main_video_thum1.jpg">
@@ -429,7 +432,7 @@
     <!-- //site_all -->
     <hr />
     <!-- footer -->
-    <footer>
+    <footer id="footer">
         <!-- footer_inner -->
         <div class="footer_inner">
             <div>
