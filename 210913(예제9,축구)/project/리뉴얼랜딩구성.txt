@@ -1,0 +1,21 @@
+pc목업 ok - 컨셉 ok - 디자인 ok - pc(+모바일사이드) - 목업 (가이드?)
+
+pc목업
+첫화면 + 겉에 이미지
+
+컨셉(어바웃)
+BMW is a German multinational corporate manufacturer of luxury vehicles and motorcycles.
+The company was founded in 1916 as a manufacturer of airplane engines and has been manufacturing automobiles since 1929.
+Traditional internal combustion engine car manufacturers are facing a rapid transition to the electric vehicle era.
+In line with this, the introduction page of the i4, known as BMW's most important electric vehicle model, has been renewed in a future-oriented way.
+이 회사는 1916년 비행기 엔진 제조사로 설립되었고, 자동차 생산은 1929년부터 해왔다.
+전통적인 내연기관 자동차 제조사는 전기차시대로 급격한 전환기를 맞이하고 있다.
+이에 맞춰 BMW의 가장 중요한 전기차 모델로 알려진 i4의 소개페이지를 미래지향적으로 리뉴얼했다.
+
+디자인
+색상 + 폰트
+
+예제
+pc목업 - 컨셉 - 디자인(색상,폰트) - pc(+모바일사이드) - 목업4종
+pc목업 - 컨셉 - 디자인(색상,폰트,아이콘) - pc - 목업3종 - 날아가는페이지들
+pc목업 - 컨셉 - 디자인(색상,폰트) - pc(+모바일사이드) - 목업3종

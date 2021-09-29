@@ -1,0 +1,17 @@
+#wrap
+    #header
+        .header_wrap
+            .header_inner
+        .allMenu_box
+    #container
+        .content1
+        .content2
+        .content3
+        .content4
+        .content5
+        .content6
+        .content7
+    #footer
+        .footer_inner
+
+210928 레이아웃 피드백
