@@ -1,0 +1,99 @@
+@import url(reset.css);
+/* main.css */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto&display=swap');
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* common */
+body{font-size: 14px;font-family: 'Nunito Sans','S-CoreDream-4Regular',Helvetica,sans-serif;color:#333;letter-spacing: -0.5px;}
+li{list-style: none;}
+a{text-decoration: none;color: #333;}
+a:hover{text-decoration: none;color: #333;}
+
+/* layout */
+#wrap{width: 100%;}
+    #header{z-index: 40;position: relative;width: 100%;height: 80px;}
+        .header_wrap{position:absolute;left:0;top: 0;width: 100%;height: 80px;background-color: #fff;}
+            .header_inner{position: relative;width: 100%;height:80px;background-color:#fff;}
+    #container{width: 100%;display: none;}
+        .content1{height: 721px;}
+        .content2{height: 721px;background-color: #FFF5D9;}
+        .content3{height: 721px;background-color: #FFDCD1;}
+        .content4{height: 721px;background-color: #FFDCD1;}
+        .content5{height: 721px;background-color: #FFF5C6;}
+        .content6{height: 721px;background-color: #DEF1EE;}
+        .lower_banner{height: 212px;background-color: #9AD6CB;}
+    #footer{width: 100%;display: none;}
+        .foot_top{height: 300px;background-color: #3B2120;}
+        .foot_copyrights{height: 57px;background-color: #2D1817;}
+
+/* header */
+/* 로고 */
+h1.logo{display: none;position: absolute;left:107px;top:14px;}
+h1.logo a{display: block;width: 180px;height: 54.08px;
+    background: url(../images/logo.png) no-repeat 0 0;text-indent: -9999px;overflow: hidden;}
+
+/* 주메뉴 */
+nav.gnb{display: none;}
+nav.gnb > ul{position: absolute; left:380px;}
+nav.gnb > ul > li{display: inline-block;font-size: 18px;color:#401e20;font-weight: 600;
+    line-height: 80px;margin-right: 30px;letter-spacing: -0.5px;}
+nav.gnb > ul > li > div{position: absolute;left:-191px;font-size: 25px;display: none;margin-top: 10px;}
+nav.gnb > ul > li > div:after {content:"";position:absolute;width: 70px;height: 1px;right: -100px;
+    top: 50%;margin-top: -1px;background: rgba(10, 31, 50, 0.2);}
+nav.gnb > ul > li > ul{position: absolute;left: 36px;display: none;margin-top: 9px;}
+nav.gnb > ul > li:nth-of-type(1) > ul{left:61px;}
+nav.gnb > ul > li:nth-of-type(3) > ul{left:-14px;}
+nav.gnb > ul > li > ul > li{height: 35px; font-size: 20px;color: #333333;font-weight: 100;transition:all 0.5s;}
+
+/* 탑메뉴 */
+ul.topMenu{display: none;position: absolute;right: 24%;top:32px;}
+ul.topMenu > li{display:inline-block;width: 58px;text-align: center;}
+ul.topMenu > li:first-of-type:after{content: "";position:absolute;width: 2px;height:14px;background: #401e1e;top:calc(50% - 7px);right:55px;}
+ul.topMenu > li > a{font-size: 16px;font-family: 'Montserrat';font-weight:800;color:#401e1e;letter-spacing: -0.5px;}
+
+/* 프랜차이즈버튼 */
+div.btn_franchise{display: none;}
+div.btn_franchise > a{position:absolute;display:block;color: #f52334;width: 230px;height: 48px;border-radius: 24px;
+    text-align: center; line-height: 45px; font-size: 16px;font-weight: 700;border: 3px solid #f52334;
+    box-sizing: border-box;right:11%;top:calc(50% - 24px);}
+
+/* 전체메뉴버튼 */
+div.btn_allMenu{display: none;}
+div.btn_allMenu > a{position: absolute; width: 40px;height: 24px; text-indent: -9999px;overflow: hidden;
+    background: url(../images/btn_allMenu.png) no-repeat;right:calc(11% - 70px);top:calc(50% - 12px);}
+
+/* 전체메뉴박스 */
+nav.allMenu_box{position: absolute;float:left; width: 100%; height: 901.50px;background: #FFF5D9;}
+nav.allMenu_box h2{position: absolute;left:calc(50% - 111.5px);top:40px; width: 223px;height: 67px;
+    text-indent: -9999px;overflow: hidden;
+    background: url(../images/logo_origin.png) no-repeat 0 0;}
+nav.allMenu_box div{position: absolute;width: 66px;height: 67px;
+    text-indent: -9999px;overflow: hidden;right:49px;top:50px;
+    background: url(../images/btn_allMenu_close.png);}
+nav.allMenu_box > ul{position: absolute;top:167px;width: 100%;text-align: center;}
+nav.allMenu_box > ul > li{position: relative; display: inline-block;margin:0 16px;}
+nav.allMenu_box > ul > li > a{display: block; width: 258px;height: 80px;color: #FFF5D9;
+    text-align: center;font-size: 35px;font-weight: 600;line-height: 80px;background: #3C2121;}
+nav.allMenu_box > ul > li > ul:before{content: "";position: absolute;top:-10px; display: block; width: 258px;height: 80px;background: url(../images/allMenu_ring.png) no-repeat 48.5px -8px;}
+nav.allMenu_box > ul > li > ul{z-index: 5; position: absolute;width:250.26px;height: 520px; background: #fff;margin-top: 8px;
+    padding-top: 64px;box-sizing: border-box;border: 2px solid #3c2121;}
+/* nav.allMenu_box > ul > li > ul:after{content: '';z-index: -1;position: absolute;width: 245px;height: 510px;top: 17px;left: 4%;
+    background: #ffdcd1;border: 2px solid #3c2121;} */
+nav.allMenu_box > ul > li:after{content: '';position: absolute; width: 245px;height: 510px;top:107px;left:10px;
+    background: #ffdcd1;border: 2px solid #3c2121;}
+nav.allMenu_box > ul > li > ul > li{margin-bottom: 18px;}
+nav.allMenu_box > ul > li:nth-of-type(1) > ul > li{text-align: left;margin-left: 43px;}
+nav.allMenu_box > ul > li:nth-of-type(3) > ul > li{text-align: left;margin-left: 25px;}
+nav.allMenu_box > ul > li:nth-of-type(5) > ul > li{text-align: left;margin-left: 43px;}
+
+nav.allMenu_box > ul > li > ul > li > a{font-size: 28px;color: #3c2121;font-weight: 300;}
+/* quickMenu */
+.quickMenu{display: none;}

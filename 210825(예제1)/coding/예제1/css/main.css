@@ -56,7 +56,7 @@ a:hover{color:#666;}
     nav.gnb > div{width:100%;text-align:center;}
     nav.gnb > div a{display: block;height:26px;padding-top: 13px;color:#fff;
                     background: url(../images/btn_allmenu.png) no-repeat 50% 0;}
-    /* 전체메뉴 박스 */
+    /* 박스 */
     nav.allMenu_box{display: none; position:absolute;left:40px;top:204px;width:84%;padding-top: 10px;border:2px solid #369;
                     background-color: #fff;}
     nav.allMenu_box > ul{width:95%;margin:0 auto;}
