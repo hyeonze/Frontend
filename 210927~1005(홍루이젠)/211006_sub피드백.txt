@@ -1,0 +1,15 @@
+/* sub1 */
+L149 폼태그 닫힘없음 (ok)
+
+개인정보 수집 동의서 : div(overflow auto)로? (ok)
+<textarea id="privacy_information" cols="30" rows="5" name="개인정보 수집 동의서" readonly>
+
+<dt>개인정보 취급방침에 동의합니다 (ok)
+텍스트에리어 있는 dd안으로 택스트에리어 밑에 인풋 라벨 둘다
+
+매장명-성함 과 같이 한 줄에 두개 있는 것(dd속dl로) (ok)
+
+/* sub2 */
+L142 action method 빠짐 (ok)
+L156~ /th 오타 (ok)
+L164~ tbody tr 내부 th->td (ok)

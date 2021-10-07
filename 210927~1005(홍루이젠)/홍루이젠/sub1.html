@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>홍루이젠 공식 홈페이지 | 고객의 소리</title>
+<link rel="stylesheet" href="css/sub1.css" />
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/main.js"></script>
 </head>
 <body>
 <!-- 본문바로가기 -->
@@ -139,9 +142,9 @@
         <div id="content">
             <!-- information -->
             <div class="information">
-                <p>접수해주신 의견에 대해 정확하고 신속한 답변을<br />
+                <p>접수해주신 의견에 대해 <strong>정확하고 신속한 답변</strong>을<br />
                     드리도록 최선을 다하겠습니다.</p>
-                <span>고객의 소리 운영시간 : 9:00~18:00 (주말, 공휴일, 국경일 휴무)</span>
+                <p>고객의 소리 운영시간 : <span>9:00~18:00</span> <span>(주말, 공휴일, 국경일 휴무)</span></p>
                 <img src="../images/send_us_message.png" alt="SEND US MESSAGE!">
             </div>
             <!-- message -->
@@ -151,21 +154,23 @@
                     <legend class="blind">메세지 작성하기</legend>
                     <dl>
                     <dt><label class="blind" for="privacy_information">개인정보 수집 동의서</label></dt>
-                    <dd>
-                        <textarea id="privacy_information" cols="30" rows="5" name="개인정보 수집 동의서" readonly>
-                        회사는 비회원의 게시글 등록 시 콘텐츠 등록 및 고객 문의 응대 등을 원활하게 진행하기 위해 아래와 같은 개인정보를 수집하고 있습니다.
-
-                        - 수집항목: 이름, 비밀번호,닉네임,휴대폰번호,이메일,IP
-                        - 수집/이용목적: 게시글 접수 및 결과 회신
-                        - 이용기간: 개인정보 수집 및 이용목적 달성 시 까지
-                        
+                    <dd class="privacy_information">
+                        <div class="textbox">
+                        회사는 비회원의 게시글 등록 시 콘텐츠 등록 및 고객 문의 응대 등을 원활하게 진행하기 위해 아래와 같은 개인정보를 수집하고 있습니다.<br />
+                        <br />
+                        - 수집항목: 이름, 비밀번호,닉네임,휴대폰번호,이메일,IP<br />
+                        - 수집/이용목적: 게시글 접수 및 결과 회신<br />
+                        - 이용기간: 개인정보 수집 및 이용목적 달성 시 까지<br />
+                        <br />
                         원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 
                         단, 관계법령의 규정에 의하여 보전할 필요가 있는 경우 일정기간 동안 개인정보를 보관할 수 있습니다.
                         그 밖의 사항은 (주) 000 개인정보처리방침을 준수합니다.
-                        </textarea>
+                        </div>
+                        <input type="checkbox" id="privacy_agree" />
+                        <label for="privacy_agree">위의 개인정보 취급방침에 동의합니다</label>
                     </dd>
-                    <dt><label for="privacy_agree">위의 개인정보 취급방침에 동의합니다</label></dt>
-                    <dd><input type="checkbox" id="privacy_agree" /></dd>
+                    </dl>
+                    <dl class="form_main">
                     <dt>접수 구분</dt>
                     <dd>
                         <input type="radio" id="compliment" name="category" />
@@ -178,34 +183,47 @@
                         <input type="radio" id="service" name="type" />
                         <label for="service">서비스</label>
                     </dd>
-                    <dt><label for="store_name">매장명</label></dt>
-                    <dd>
-                        <input type="text" id="store_name" title="매장명" placeholder="강동역점" />
+                    <dd class="twin">
+                        <dl>
+                        <dt><label for="store_name">매장명</label></dt>
+                        <dd>
+                            <input type="text" id="store_name" title="매장명" placeholder="강동역점" />
+                        </dd>
+                        </dl>
+                        <dl>
+                        <dt><label for="user_name">성함</label></dt>
+                        <dd>
+                            <input type="text" id="user_name" title="성함" />
+                        </dd>
+                        </dl>
                     </dd>
-                    <dt><label for="user_name">성함</label></dt>
                     <dd>
-                        <input type="text" id="user_name" title="성함" />
-                    </dd>
-                    <dt><label for="user_phonenumber">연락처</label></dt>
-                    <dd>
-                        <input type="text" id="user_phonenumber" title="연락처" placeholder="-없이 입력하세요" />
-                    </dd>
-                    <dt>
-                        <label for="user_email">이메일</label>
-                        <label for="domain">메일종류</label>
-                    </dt>
-                    <dd>
-                        <input type="text" id="user_email" title="이메일" />
-                        <select id="domain" title="메일종류">
-                            <option value="직접입력" selected>직접입력</option>
-                            <option value="naver.com">naver.com</option>
-                            <option value="hanmail.net">hanmail.net</option>
-                            <option value="daum.net">daum.net</option>
-                            <option value="nate.com">nate.com</option>
-                            <option value="hotmail.com">hotmail.com</option>
-                            <option value="gmail.com">gmail.com</option>
-                            <option value="icloud.com">icloud.com</option>
-                        </select>
+                    <dd class="twin">
+                        <dl>
+                        <dt><label for="user_phonenumber">연락처</label></dt>
+                        <dd>
+                            <input type="text" id="user_phonenumber" title="연락처" placeholder="-없이 입력하세요" />
+                        </dd>
+                        </dl>
+                        <dl>
+                        <dt>
+                            <label for="user_email">이메일</label>
+                            <label for="domain" class="blind">메일종류</label>
+                        </dt>
+                        <dd>
+                            <input type="text" id="user_email" title="이메일" />
+                            <select id="domain" title="메일종류">
+                                <option value="직접입력" selected>직접입력</option>
+                                <option value="naver.com">naver.com</option>
+                                <option value="hanmail.net">hanmail.net</option>
+                                <option value="daum.net">daum.net</option>
+                                <option value="nate.com">nate.com</option>
+                                <option value="hotmail.com">hotmail.com</option>
+                                <option value="gmail.com">gmail.com</option>
+                                <option value="icloud.com">icloud.com</option>
+                            </select>
+                        </dd>
+                        </dl>
                     </dd>
                     <dt><label for="message_title">제목</label></dt>
                     <dd>
@@ -215,11 +233,11 @@
                     <dd>
                         <textarea id="message_content" cols="30" rows="10" name="상세내용" placeholder="내용을 입력하세요."></textarea>
                     </dd>
-                    <dt>첨부파일</dt>
+                    <dt>파일 첨부</dt>
                     <dd>
-                        <input type="text" disabled title="첨부파일" />
+                        <input type="text" disabled title="파일 첨부" />
                         <label for="attachfile">파일업로드</label>
-                        <input type="file" id="attachfile" />
+                        <!-- <input type="file" id="attachfile" /> -->
                     </dd>
                     <dt>답변 희망 수단</dt>
                     <dd>
@@ -240,6 +258,7 @@
                         <input type="submit" value="접수" title="접수하기 바로가기" />
                     </div>
                 </fieldset>
+                </form>
             </div>
         </div>
         <!-- //content -->

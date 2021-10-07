@@ -1,0 +1,151 @@
+@import url(reset.css);
+/* sub1.css */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto&display=swap');
+@font-face {font-family: S-CoreDream;
+	src: url(../font/S-Core_Dream/SCDream5.otf);}
+@font-face {font-family: S-CoreDream_l;
+    src: url(../font/S-Core_Dream/SCDream3.otf);}
+
+/* common */
+body{font-size: 14px;font-family: 'Nunito Sans','S-CoreDream',Helvetica,sans-serif;color:#3c2121;letter-spacing: -0.5px;}
+li{list-style: none;}
+a{text-decoration: none;color: #3c2121;}
+a:hover{text-decoration: none;color: #3c2121;}
+
+/* layout */
+#wrap{width: 100%;}
+    #header{z-index: 40;position: fixed;height: 80px;width: 100%;}
+        .header_wrap{display: none; z-index: 41; position: absolute; width: 100%;top:80px;height: 0px;border-bottom:1px solid #e4e4e4;}
+        .header_inner{position: fixed;width: 100%;height:80px;background-color:#fff;
+            background: #fff url(../images/bg_gnb01.jpg) no-repeat 740px 80px;}
+        /* .header_inner.on{height: 380px;} */
+    #container{position: relative;width: 100%;}
+        .spot{position: relative; width: 100%;height: 430px;background: #FBFBFB url(../images/arr_sub.png) no-repeat 260px 313px;}
+        #content{position: relative;width: 100%;}
+    #footer{width: 100%;}
+        .foot_top{position: relative;height: 280px;background-color: #3B2120;}
+        .foot_copyrights{position: relative;height: 57px;background-color: #2D1817;}
+
+/* header */
+/* 로고 */
+h1.logo{position: absolute;left:129px;top:14px;}
+h1.logo a{display: block;width: 180px;height: 54.08px;
+    background: url(../images/logo.png) no-repeat 0 0;text-indent: -9999px;overflow: hidden;}
+/* 주메뉴 */
+/* nav.gnb > h2{position: absolute;top:0;left:0;} */
+/* nav.gnb > ul > li:first-of-type > ul{display: block;} */
+/* nav.gnb > ul > li:first-of-type > div{display: block;} */
+nav.gnb > ul{position: absolute; left:395px;}
+nav.gnb > ul > li{display: inline-block;font-size: 18px;color:#401e20;font-weight: 400;
+    line-height: 80px;margin-right: 30px;letter-spacing: -0.5px;}
+nav.gnb > ul > li > div{display: none;position: absolute;left:-191px;font-size: 25px;margin-top: 10px;}
+nav.gnb > ul > li:hover > div{display: block;}
+nav.gnb > ul > li:hover > ul{display: block;}
+nav.gnb > ul > li > div:after {content:"";position:absolute;width: 70px;height: 1px;right: -100px;
+    top: 50%;margin-top: -1px;background: #0a1f32;}
+nav.gnb > ul > li > ul{position: absolute;display: none;left: 34px; margin-top: 5px;}
+nav.gnb > ul > li:nth-of-type(1) > ul{left:61px;}
+nav.gnb > ul > li:nth-of-type(3) > ul{left:-14px;}
+nav.gnb > ul > li > ul > li{height: 35px; font-size: 20px;color: #333333;font-family: 'S-CoreDream_l';}
+/* 탑메뉴 */
+ul.topMenu{position: absolute;right: 424px;top:28px;}
+ul.topMenu > li{display:inline-block;width: 65px;text-align: center;}
+ul.topMenu > li:first-of-type:after{content: "";position:absolute;width: 2px;height:14px;background: #401e1e;top:calc(50% - 7px);right:62px;}
+ul.topMenu > li > a{font-size: 16px;font-family: 'Montserrat';font-weight:700;color:#401e1e;}
+/* 프랜차이즈버튼 */
+div.btn_franchise > a{position:absolute;display:block;color: #f52334;width: 230px;height: 48px;border-radius: 24px;
+    text-align: center; line-height: 45px; font-size: 16px;font-weight: 700;border: 3px solid #f52334;
+    box-sizing: border-box;left:1486px;top:15px;}
+/* 전체메뉴버튼 */
+div.btn_allMenu > a{position: absolute; width: 40px;height: 24px; text-indent: -9999px;overflow: hidden;
+    background: url(../images/btn_allMenu.png) no-repeat;left:1750px;top:27px;}
+/* 전체메뉴박스 */
+nav.allMenu_box{position: absolute;left:-100%;float:left; width: 100%; height: 902px;background: #FFF5D9;}
+nav.allMenu_box.on{left:0;}
+nav.allMenu_box h2 a{position: absolute;left:calc(50% - 111.5px);top:40px; width: 223px;height: 67px;
+    text-indent: -9999px;overflow: hidden;
+    background: url(../images/logo_origin.png) no-repeat 0 0;}
+nav.allMenu_box div a{position: absolute;width: 66px;height: 67px;
+    text-indent: -9999px;overflow: hidden;right:49px;top:50px;
+    background: url(../images/btn_allMenu_close.png);}
+nav.allMenu_box > ul{position: absolute;top:167px;width: 100%;text-align: center;}
+nav.allMenu_box > ul > li{position: relative; display: inline-block;margin:0 16px;}
+nav.allMenu_box > ul > li > a{display: block; width: 258px;height: 80px;color: #FFF5D9;
+    text-align: center;font-size: 35px;font-weight: 600;line-height: 80px;background: #3C2121;}
+nav.allMenu_box > ul > li > ul{z-index: 5; position: absolute;top:72px; width:259px;height:0;/*549px;*/
+    padding-top:64px; background: url(../images/bg_allmenu.png) no-repeat;}
+nav.allMenu_box > ul > li > ul > li{padding-bottom: 18px;opacity: 0;}
+nav.allMenu_box > ul > li > ul > li:first-of-type{padding-bottom: 18px;opacity: 0;}
+nav.allMenu_box > ul > li:nth-of-type(1) > ul > li{text-align: left;margin-left: 43px;}
+nav.allMenu_box > ul > li:nth-of-type(3) > ul > li{text-align: left;margin-left: 25px;}
+nav.allMenu_box > ul > li:nth-of-type(5) > ul > li{text-align: left;margin-left: 43px;}
+nav.allMenu_box > ul > li > ul > li > a{font-size: 28px;font-weight: 300;}
+
+/* container */
+/* spot */
+.spot{position: relative;width: 100%;}
+.spot > h2{position: absolute;left:349px;top:281px;font-size: 70px;color: #3b2120;font-weight: 700;letter-spacing: -3.5px;}
+/* .content */
+/* information */
+.information{position: relative;width: 100%;background: url(../images/round_arrow.png) no-repeat 1207px 248px;}
+.information > p:first-of-type{font-size: 35px;color: #333;text-align: center;letter-spacing: -2px;line-height: 1.4;font-family: 'S-CoreDream_l';margin-top: 98px;}
+.information > p:first-of-type > strong:before{content:"";position: absolute;top:32px;width: 304px;height: 14px;background: #ffe59b;transition: all 0.5s 0.2s;z-index:-1;}
+.information > p:first-of-type > strong{font-weight: 600;font-family:'S-CoreDream';}
+.information > p:nth-of-type(2){position: relative; font-family: 'Noto Sans KR', sans-serif;font-size: 20px;color: #401e20;text-align: center;margin-top: 32px;margin-bottom: 62px;}
+.information > p:nth-of-type(2) > span:first-of-type{color: #f52334;letter-spacing: 0;}
+.information > p:nth-of-type(2) > span:last-of-type{color: #888;letter-spacing: 0;}
+.information > img{position: relative;left: 640px;margin-bottom: 46px;}
+/* message */
+.message .textbox{position: relative;width: 100%;left: 551px;width: 778px;height: 130px;border: 1px solid #d6d6d6;font-family: "Noto Sans KR";color: #778b9c;font-size: 16px;overflow: auto;padding: 45px 20px;}
+.privacy_information > label{position:relative;color: #333;font-size: 16px;left: 550px;top:21px;}
+.privacy_information > input{position:relative;left: 550px;top:21px;}
+.privacy_information > input[type=checkbox]{display:none; }
+.privacy_information > input[type=checkbox] + label{display: inline-block; cursor: pointer; line-height: 22px; padding-left: 28px; background: url('../images/check_off.png') left/22px no-repeat; }
+.privacy_information > input[type=checkbox]:checked + label{ background-image: url('../images/check_on.png');}
+.message dt{font-size: 20px;color: #333;font-weight: 600;letter-spacing: -1px;}
+dl.form_main{position: relative;left: 539px;top: 146px;}
+dl.form_main > dt:nth-of-type(1){margin-bottom: 18px;}
+dl.form_main > dt:nth-of-type(3){margin-bottom: 18px;}
+dl.form_main > dt:nth-of-type(6){margin-bottom: 18px;}
+dl.form_main > dd > input[type=radio]{display: none;}
+dl.form_main > dd > input[type=radio] + label{display: inline-block; cursor: pointer;font-family: 'Noto Sans KR', sans-serif;font-size: 16px; columns: #666; line-height: 22px; padding-left: 28px;margin-right: 44px; background: url('../images/check_off.png') left/22px no-repeat; }
+dl.form_main > dd > input[type=radio]:checked + label{ background-image: url('../images/radio_on.png');}
+dl.form_main > dd{margin-bottom: 70px;}
+.twin > dl{display: inline-block;}
+.twin > dl > dd > input{width: 389px;height: 48px;margin-right: 32px;font-size: 16px;color: rgba(141, 141, 141, 0.8);border: none;border-bottom: 2px solid #333;line-height: 1.6;outline: none;vertical-align: middle;}
+.twin input[id=user_email]{width: 235px;}
+.twin select[id=domain]{position: relative;left:-13px;top:3px;border: none;color: rgba(141, 141, 141, 0.8);font-size: 16px;font-family: Malgun Gothic,"맑은 고딕",AppleGothic,Dotum,"돋움",sans-serif;border-bottom: 2px solid #333;outline: none;width: 136px;height: 48px;appearance: none;background: url(../images/select_bg.png) no-repeat 90% center;}
+dl.form_main > dd.twin > dl > dd{margin-bottom: -16px;}
+dl.form_main > dd > input[type=text]{width:610px;height: 48px;margin-right: 32px;font-size: 16px;color: rgba(141, 141, 141, 0.8);border: none;border-bottom: 2px solid #333;line-height: 1.6;outline: none;vertical-align: middle;background-color: #fff;}
+dl.form_main > dd > input[id=message_title]{width:810px;height: 48px;margin-right: 32px;font-size: 16px;color: rgba(141, 141, 141, 0.8);border: none;border-bottom: 2px solid #333;line-height: 1.6;outline: none;vertical-align: middle;background-color: #fff;}
+dl.form_main > dd > input[type=password]{width:389px;height: 48px;margin-right: 32px;font-size: 16px;color: rgba(141, 141, 141, 0.8);border: none;border-bottom: 2px solid #333;line-height: 1.6;outline: none;vertical-align: middle;}
+.message textarea{border:none;width:810px;border-bottom: 2px solid #333;color: rgba(141, 141, 141, 0.8);padding: 10px 0;height: auto;line-height: 1.6;font-size: 16px;font-family: Malgun Gothic,"맑은 고딕",AppleGothic,Dotum,"돋움",sans-serif;}
+dl.form_main > dd > label[for=attachfile]{position: relative;top:8px; display: inline-block;width: 181px;height: 54px;border-radius: 30px;background: #3c2121;color: #fff;text-align: center;font-size: 16px;line-height: 3.3;font-family: Malgun Gothic,"맑은 고딕",AppleGothic,Dotum,"돋움",sans-serif;}
+dl.form_main > dd > input[type=file]{display: none;}
+dl.form_main > .btn{position: relative;display: inline-block;left: 154px;margin-bottom: 280px;}
+dl.form_main > .btn > input{width:250px;height:60px;color: #f52334; background: #fff;border: none;line-height: 55px;font-size: 18px;font-weight: 700;text-align: center;box-sizing: border-box;border: 3px solid #f52334;border-radius: 36px;}
+dl.form_main > .btn > input:last-child{color: #fff;background:#f52334;margin-left: 9px;}
+
+/* footer */
+/* #footer{display: none;} */
+#footer .foot_top > p{position: absolute;left: 727px;top: 80px;height: 140px;border-left:1px solid #624d4d;border-right:1px solid #624d4d;padding:0 145px;}
+#footer .foot_top > p > a{display: inline-block; width: 175px;height: 140px;}
+#footer .foot_top ul.main_list{position: absolute;left:261px;top:86px;}
+#footer .foot_top ul.main_list > li{display: inline-block;margin-right: 20px;}
+#footer .foot_top ul.main_list > li:nth-of-type(4){margin-left: 574px;}
+#footer .foot_top ul.main_list > li > a{font-size: 25px;color: #fff;line-height: 1.4;}
+#footer .foot_top > address{position: absolute;font-size: 15px;font-family: 'Noto Sans KR', sans-serif;font-weight: 300;color:#b8b0b0;line-height: 140%; left:261px;top:152px;opacity: 0.9;}
+#footer .foot_top > ul.sns{position: absolute;left:1300px;top:162px;}
+#footer .foot_top > ul.sns > li{display: inline-block;margin-right: 21px;}
+#footer .foot_copyrights > p{position: absolute;height: 57px;line-height: 57px;font-family: 'Roboto', sans-serif;font-size: 14px;color: rgba(255, 255, 255, 0.5);width: 100%;text-align: center;}
+/* quickMenu */
+ul.quickMenu{position: fixed;right: 42px;bottom: 110px;text-indent: -9999px;overflow: hidden;}
+.quickMenu > li:first-of-type{width: 57px;height: 57px;border-radius: 50%; background: #f62334 url(../images/quick_icon01.png) no-repeat 50% 50%;background-size:35%;margin-bottom: 26px;}
+.quickMenu > li:last-of-type{width: 57px;height: 57px;border-radius: 50%; background: #f62334 url(../images/quick_icon02.png) no-repeat 50% 50%;background-size:35%;}
