@@ -14,8 +14,8 @@ $(document).ready(function(){
     });
 
     $("nav.gnb").bind("mouseleave blur",function(){
-        $(".header_wrap").stop().animate({"height":"70px"},300,"linear");
-        $(".gnb>ul>li").removeClass("on");
+        // $(".header_wrap").stop().animate({"height":"70px"},300,"linear");
+        // $(".gnb>ul>li").removeClass("on");
     });
 
     // 검색박스

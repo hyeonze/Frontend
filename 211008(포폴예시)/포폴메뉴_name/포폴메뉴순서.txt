@@ -1,0 +1,9 @@
+1. 메인
+2. skill & profile
+3. 삼성전기 - 웹표준,웹접근성,크로스브라우징 검사
+4. cjone - 반응형웹
+5. 앱디자인 & 코딩 - 앱코딩 링크+flex box, 랜딩코딩,
+6. 반응형웹디자인 - 랜딩,pc,tablet,mobile 디자인만
+7. pure css -페이스북 이모지, 라이언, 어피치 등
+8. flex box - 카카오톡(React.js)
+9. contact
