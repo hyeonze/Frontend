@@ -1,0 +1,30 @@
+@import url(reset.css);
+/* main.css */
+/*
+font-family: 'NanumGothicLight';
+font-family: 'NanumGothic';
+font-family: 'NanumGothicBold';
+font-family: 'NanumGothicExtraBold';
+*/
+/* common */
+body{font-size: 14px;font-family: 'NanumGothic', Arial, sans-serif;letter-spacing: -1px;}
+a{text-decoration: none;}
+@font-face {
+    font-family:cj_onluone_medium;
+    src: url(../font/CJ_ONLYONE_Medium.ttf);
+}
+
+/* Mobile 0~767 */
+@media screen and (max-width:767px) {
+
+}
+
+/* Tablet 크기 768~1023*/
+@media screen and (min-width:768px) and (max-width:1023px) {
+
+}
+
+/* PC 크기 1024~최대*/
+@media screen and (min-width:1024px) {
+
+}
