@@ -1,0 +1,69 @@
+@import url(reset.css);
+/* main.css */
+
+body{font-family: "돋움",dotum,sans-serif;font-size: 12px;color: #000;}
+a{color: #666;text-decoration: none;}
+
+/* 움직이는 캐릭터 */
+.character{z-index: 10;position: fixed;left:50%;bottom: 50px;transform: translateX(-50%);
+    width: 155px;height: 176px;background-image: url(../img/right.png);}
+
+.character.on{animation: walk 0.5s steps(3,start) infinite;}
+.character.left{background-image: url(../img/left.png);}
+
+@keyframes walk{
+    0%{background-position: 0 0;}
+    100%{background-position: -465px 0;}
+}
+
+#container{position: fixed;width: 1000vw;height: 100vh;background: #00f;font-size: 50px;color: #fff;}
+#container > div{float: left;width: 100vw;height: 100vh;/* 100vw:viewport 넓이 100%, 100vh:viewport 높이 100% */
+    background: rgba(255,0,0,0.4);}
+
+#container > div >section{position: relative;}
+#container > div >section > span{display: block;text-align: left;}
+
+/* content1 */
+#content1 > section > h2{position: absolute;left:0;top:100px;opacity: 0;
+    transform: translateY(200px);transition: all 1s ease-in-out 0s;}
+#content1 > section > span:nth-of-type(1){position:absolute;left:0;top:200px;opacity: 0;
+    transform: translateY(200px);transition: all 1s ease-in-out 0s;}
+#content1 > section > span:nth-of-type(2){position:absolute;left:0;top:300px;opacity: 0;
+    transform: translateY(200px);transition: all 1s ease-in-out 0s;}
+#content1 > section > span:nth-of-type(3){position:absolute;left:0;top:400px;opacity: 0;
+    transform: translateY(200px);transition: all 1s ease-in-out 0s;}
+
+#content1 > section.on > h2{transform: translateY(0);opacity: 1;}
+#content1 > section.on > span:nth-of-type(1){transform: translateY(0);opacity: 1;}
+#content1 > section.on > span:nth-of-type(2){transform: translateY(0);opacity: 1;}
+#content1 > section.on > span:nth-of-type(3){transform: translateY(0);opacity: 1;}
+
+/* content2 */
+#content2 > section > h2{position: absolute;left:0;top:100px;opacity: 0;
+    transform: translateY(200px);transition: all 1s ease-in-out 0s;}
+#content2 > section > span:nth-of-type(1){position:absolute;left:0;top:200px;opacity: 0;
+    transform: translateY(200px);transition: all 1s ease-in-out 0s;}
+#content2 > section > span:nth-of-type(2){position:absolute;left:0;top:300px;opacity: 0;
+    transform: translateY(200px);transition: all 1s ease-in-out 0s;}
+#content2 > section > span:nth-of-type(3){position:absolute;left:0;top:400px;opacity: 0;
+    transform: translateY(200px);transition: all 1s ease-in-out 0s;}
+
+#content2 > section.on > h2{transform: translateY(0);opacity: 1;}
+#content2 > section.on > span:nth-of-type(1){transform: translateY(0);opacity: 1;}
+#content2 > section.on > span:nth-of-type(2){transform: translateY(0);opacity: 1;}
+#content2 > section.on > span:nth-of-type(3){transform: translateY(0);opacity: 1;}
+
+/* content3 */
+#content3 > section > h2{position: absolute;left:0;top:100px;opacity: 0;
+    transform: translateY(200px);transition: all 1s ease-in-out 0s;}
+#content3 > section > span:nth-of-type(1){position:absolute;left:0;top:200px;opacity: 0;
+    transform: translateY(200px);transition: all 1s ease-in-out 0s;}
+#content3 > section > span:nth-of-type(2){position:absolute;left:0;top:300px;opacity: 0;
+    transform: translateY(200px);transition: all 1s ease-in-out 0s;}
+#content3 > section > span:nth-of-type(3){position:absolute;left:0;top:400px;opacity: 0;
+    transform: translateY(200px);transition: all 1s ease-in-out 0s;}
+
+#content3 > section.on > h2{transform: translateY(0);opacity: 1;}
+#content3 > section.on > span:nth-of-type(1){transform: translateY(0);opacity: 1;}
+#content3 > section.on > span:nth-of-type(2){transform: translateY(0);opacity: 1;}
+#content3 > section.on > span:nth-of-type(3){transform: translateY(0);opacity: 1;}
