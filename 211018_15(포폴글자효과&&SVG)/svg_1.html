@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>svg</title>
+<style type="text/css">
+/*
+SVG(Scalable Vector Graphics)는 벡터(vector) 이미지를 표현하기 위한 포맷으로 w3c에서 만든 벡터 이미지 표준.
+*/
+.st0{fill:none;stroke:#231F20;stroke-miterlimit:10;
+    stroke-dasharray: 3000;/* path의 길이(length) */
+    stroke-dashoffset: 0;
+    animation:dash 5s linear infinite;}
+@keyframes dash {
+    0%{stroke-dashoffset: 3000;}
+    100%{stroke-dashoffset: 0;}
+}
+/* stroke-dasharray
+도형 윤곽선을 그리는데 사용되는 dash간격 및 패턴
+stroke-dasharray:10,5 일 경우 drawn이 10이고 gap이 5이다.
+
+stroke-dashoffset
+dash 패턴 거리 지정
+stroke-dashoffset:값일 경우 값만큼 제외하고 stroke를 시작한다. */
+img{opacity: 1;animation: ani 5s forwards;}/*애니메이션 종료 후 이미지로 덮기*/
+
+@keyframes ani {
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+ </style>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+$(function(){
+    var pathes = $('#Layer_1').find('path');
+    pathes.each(function(i,path){
+
+        //각 path의 길이(length)를 구한다.
+        var total_length = path.getTotalLength();
+        console.log(total_length);
+    });
+});
+</script>
+</head>
+<body>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    viewBox="0 0 841.89 595.28" style="enable-background:new 0 0 841.89 595.28;" xml:space="preserve">
+<path class="st0" d="M285.42,497.62c-75.68-37.07-147.44-82.14-213.69-134.23c-24.98-19.64-50.62-42.57-57.4-73.61
+   c-6.07-27.81,4.44-56.61,18.35-81.45c45.85-81.88,132.4-139.61,225.61-150.48c46.11-5.38,92.85,0.08,138.43,8.92
+   c25.56,4.96,51.05,11.03,75.04,21.14c89.76,37.82,149.12,131.15,160.84,227.84c3.62,29.89,3.02,61.23-9.26,88.72
+   c-12.28,27.49-38.18,50.32-68.22,52.22c-13.42,0.85-26.74-2.39-39.77-5.72c-117.51-30.1-233.73-71.32-334.29-139.16
+   c-8.57-5.78-17.22-11.96-22.9-20.6c-8.3-12.64-9.04-29.24-4.52-43.67c4.52-14.43,13.79-26.96,24.27-37.86
+   c18.01-18.72,40.1-33.49,64.28-42.97c11.5-4.51,23.8-7.86,36.09-6.64c9.92,0.99,19.29,4.91,28.44,8.87
+   c18.4,7.98,36.64,16.37,54.68,25.14c19.21,9.34,38.76,19.56,52.35,36.03c16.88,20.46,22.33,47.74,27.24,73.81
+   c2.31,12.29,4.42,25.87-2.03,36.59c-8.5,14.12-27.69,16.8-44.17,16.29c-23.84-0.74-48.19-5.21-68.43-17.83
+   c-32.41-20.21-49.19-57.51-64.05-92.69c-2.45-5.81-4.95-11.88-4.63-18.18c0.35-6.75,3.96-12.99,8.63-17.88
+   c15.44-16.18,42.26-18.22,61.98-7.67c19.72,10.55,32.44,31.55,36.78,53.49c2.93,14.78-0.69,34.39-15.39,37.69
+   c-9.87,2.21-19.49-4.5-26.42-11.86c-4.79-5.09-9.17-10.95-10.58-17.79c-1.42-6.85,0.84-14.84,6.83-18.44"/>
+</svg>
+<img src="" alt="" />
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>글자 효과</title>
+<style type="text/css">
+section{position: relative;width: 100%;height: 700px;/*height: 100%;*/background: #f00;}
+
+div.text{position: absolute;left:0;width: 50%;padding: 5% 13% 5% 6%;font-family: 'Open Sans', sans-serif;
+    background: #000;color:#fff;box-sizing: border-box;}
+
+div.text > h3{position: relative;opacity: 0;display: inline-block;padding: 0 2px;margin-bottom: 13%;
+    font-size: 48px;font-weight: 600;letter-spacing: -2px;
+    background: rgba(21,170,251,0.5);}
+div.text > p{opacity: 0;position: relative;margin-bottom: 13%;font-size: 18px;}
+div.text > a{overflow: hidden;position: relative;opacity: 0;
+    display: inline-block;width: 140px;height: 52px;
+    border: 1px solid #11aafb;
+    border-image-source: linear-gradient(to right, #fff, #11aafb);
+    border-image-slice: 1;
+    /* border-image-repeat: ; */
+    color: #fff;text-decoration: none;font-size: 18px;line-height: 52px;text-align: center;}
+div.text > a > div{position: absolute;left:-150%;top:0;width: 100%;height: 100%;
+    background: linear-gradient(45deg,#fff,#11aafb);}
+
+div.text > h3:before{content: "";position: absolute;left: 0;top: 0;width: 100%;height: 100%;
+    background: #15aafb;transform: scaleX(0);}
+div.text > p:before{content: "";position: absolute;left: 0;top: 0;width: 100%;height: 100%;
+    background: rgba(255, 255, 255, 0.7);transform: translateX(0);}
+div.text > a:before{content: "";position: absolute;left: 0;top: 0;width: 100%;height: 100%;
+    background: linear-gradient(45deg,#fff,#11aafb);transform: scaleX(0);}
+@keyframes ani1{
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    51%{opacity: 1;}
+    100%{opacity: 1;}
+}
+
+@keyframes ani2{
+    0%{transform-origin: left;transform: scaleX(0);}
+    50%{transform-origin: left;transform: scaleX(1);}
+    51%{transform-origin: right;transform: scaleX(1);}
+    100%{transform-origin: right;transform: scaleX(0);}
+}
+@keyframes ani3{
+    0%{transform-origin: right;transform: scaleX(0);}
+    50%{transform-origin: right;transform: scaleX(1);}
+    51%{transform-origin: left;}
+    100%{transform-origin: left;transform: scaleX(0);}
+}
+section.on div.text > h3{animation: ani1 0.6s cubic-bezier(0.87,0.02,0,0.97) 0.2s forwards;}
+section.on div.text > h3:before{animation: ani2 0.6s cubic-bezier(0.87,0.02,0,0.97) 0.2s forwards;}
+
+section.on div.text > p{animation: ani1 0.6s cubic-bezier(0.87,0.02,0,0.97) 0.5s forwards;}
+section.on div.text > p:before{animation: ani2 0.6s cubic-bezier(0.87,0.02,0,0.97) 0.5s forwards;}
+
+section.on div.text > a{animation: ani1 0.6s cubic-bezier(0.87,0.02,0,0.97) 0.7s forwards;}
+section.on div.text > a:before{animation: ani2 0.6s cubic-bezier(0.87,0.02,0,0.97) 0.7s forwards;}
+section.on div.text > a:hover{z-index: 10;color: #000;}
+section.on div.text > a:hover > div{left:0;z-index: -1;}
+
+
+div.img{opacity: 0;position: absolute;right: 0;top:50%;width: 50%;transform: translateY(-50%);text-align: right;}
+div.img:before{content: "";position: absolute;left:0;top:0;width: 100%;height: 100%;
+    background: rgba(255,255,255,0.5);transform:scaleX(0);}
+div.img:after{content: "";position: absolute;left: 0;top:0;width: 100%;height: 100%;
+    background: #11aafb;transform:scaleX(0);opacity: .5;}
+
+section.on div.img{animation: ani1 0.6s cubic-bezier(0.87,0.02,0,0.97) 0.2s forwards;}
+section.on div:before{animation: ani2 0.6s cubic-bezier(0.87,0.02,0,0.97) 0.2s forwards;}
+section.on div:after{animation: ani3 0.6s cubic-bezier(0.87,0.02,0,0.97) 0.7s forwards;}
+</style>
+</head>
+<body>
+    <div id="content1">
+        <section class="on">
+            <div class="text">
+                <h3>Rorem Ipsum</h3>
+                <p><span></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <a href="#">more view<div class="hover"></div></a>
+            </div>
+            <div class="img"><img src="img.jpg" alt="" /></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

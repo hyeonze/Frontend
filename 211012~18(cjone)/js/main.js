@@ -111,7 +111,7 @@ $("a.loop").html(loop);
             $(".banner_roll a").removeClass("on");
             $(".banner_roll a").eq($bnnNum).addClass("on");
         });
-
+    });
 
         /* 오토배너 */
         function autoBanner(){
@@ -170,7 +170,6 @@ $("a.loop").html(loop);
                 $(".banner_roll a").eq($bnnNum).addClass("on");
             });
 
-        });
 
         //모바일 기기의 방향을 전환(가로/세로)할 때 화면의 너비가 달라지는 것에 대비해서 항상 바른 위치에 있도록 애니메이션 적용
         $("body>section").bind("orientationchange",function(){
@@ -186,7 +185,7 @@ $("a.loop").html(loop);
             $(".prev").trigger("click");
         });
     });//괄호처리 잘못됨 디버깅하기
-    /*퀵메뉴 이미지 */
+    /* 퀵메뉴 이미지 */
     var quick1 = "";
     for(var i = 0;i < 20; i++){
         if(i < 10){
@@ -237,6 +236,92 @@ $("a.loop").html(loop);
         //마우스를 땟을때
         $(this).find("span").children().css({"animation":"none"});
     });
+
+
+
+    // content3
+    // 마우스 올렸을때
+    $(".content3_inner > div > ul > li").hover(function(){
+        $(this).addClass("on");
+    },function(){
+        $(this).removeClass("on");
+    });
+
+    // 대분류
+    $(".content3_inner > ul > li > a").bind("click focus",function(e){
+        e.preventDefault();
+        $(".content3_inner > ul > li").removeClass("on");
+        $(this).parent().addClass("on");
+
+        var idx = $(this).parent().index();
+
+        $(".content3_inner > div > ul > li").hide();
+
+        switch(idx){
+            case 0:
+                $(".content3_inner > div > ul > li").show();
+                break;
+            case 1:
+                $(".content3_inner > div > ul").find(".ent").show();
+                break;
+            case 2:
+                $(".content3_inner > div > ul").find(".shop").show();
+                break;
+            case 3:
+                $(".content3_inner > div > ul").find(".dinner").show();
+                break;
+            case 4:
+                $(".content3_inner > div > ul").find(".box").show();
+                break;
+        }
+
+
+    });
+
+    // 패밀리 사이트
+    $(".family_site").click(function(e){
+        e.preventDefault();
+        $(this).toggleClass("on");
+
+        if($(this).hasClass("on")){
+            $(this).children("a").attr("title","닫기");
+        }else{
+            $(this).children("a").attr("title","열기");
+        }
+    });
+
+
+    /* 스크롤 이벤트 */
+    $(window).scroll(function(){
+        var scroll = $(this).scrollTop();
+        //console.log(scroll);
+        //top
+        if(scroll < 200){
+            $("div.top").removeClass("on ab");
+        }
+
+        if(scroll >= 200 && scroll < 2800){
+            $("div.top").removeClass("ab");
+            $("div.top").addClass("on");
+        }
+
+        if(scroll >= 2800){
+            $("div.top").addClass("ab");
+        }
+
+        // 도넛
+        $(".doughnut_Left_L").css({"top":71+scroll*0.5});//휙휙 안바뀌게 스크롤값의 배수로
+        $(".doughnut_Left_s").css({"top":796+scroll*1.1});
+        $(".combine_Left").css({"top":1726-scroll*0.1});
+
+        $(".doughnut_Center_M").css({"top":722+scroll*0.1});
+        $(".doughnut_Center_s").css({"top":991+scroll*1.1});
+
+        $(".doughnut_right_M").css({"top":365+scroll*0.5});
+        $(".doughnut_right_s").css({"top":947+scroll*0.1});
+        $(".combine_right").css({"top":-300+scroll*0.7});
+    });
+
 
 
 });
