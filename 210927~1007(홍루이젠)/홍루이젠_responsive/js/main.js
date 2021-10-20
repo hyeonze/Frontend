@@ -62,6 +62,11 @@ $(document).ready(function(){
         $(".header_inner").stop().animate({"height":"80"},500,"linear");
         $(".header_wrap").css({"display":"none"});
     });
+    //태블릿 브랜드버튼
+    $(".btn_brand_tablet").click(function(){
+        $("ul.btn_brand_tablet > li:first-of-type").toggleClass("on");
+        $("ul.btn_brand_tablet > li:last-of-type").toggleClass("on");
+    });
 
     /* container */
     /* content1 */
