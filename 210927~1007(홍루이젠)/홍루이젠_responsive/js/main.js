@@ -25,6 +25,10 @@ $(document).ready(function(){
             $(".allMenu_box > ul > li > ul > li").stop().animate({"opacity":"0"},500,"linear");
         },500);
     });
+    //태블릿 전체메뉴 하위메뉴
+    $("nav.allMenu_box > ul.allMenu > li").click(function(){
+        $(this).toggleClass("on");
+    });
     //.gnb하위메뉴
     $("nav.gnb > ul > li").eq(0).bind("mouseover focus",function(){
         $(".header_inner").stop().animate({"height":"380"},500,"linear");

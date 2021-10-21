@@ -79,15 +79,37 @@ nav.allMenu_box.on{left:0;}
 nav.allMenu_box h2 a{position: absolute;left:calc(50% - 111.5px);top:40px; width: 223px;height: 67px;
     text-indent: -9999px;overflow: hidden;
     background: url(../images/logo_origin.png) no-repeat 0 0;}
-nav.allMenu_box div.btn_colse a{display: none;}
-nav.allMenu_box > ul.allMenu{position: absolute;top:277px;width: 100%;text-align: center;}
-nav.allMenu_box > ul.allMenu > li{position: relative; display: inline-block;width: 90%;height: 0px;margin-bottom: 20px;}
-nav.allMenu_box > ul.allMenu > li:nth-child(1){height: 240px;}
-nav.allMenu_box > ul.allMenu > li:nth-child(3){height: 380px;}
-nav.allMenu_box > ul.allMenu > li:nth-child(4){height: 200px;}
-nav.allMenu_box > ul.allMenu > li:nth-child(5){height: 280px;}
+nav.allMenu_box div.btn_colse a{position: absolute;right:25px;top:25px;width: 35px;height: 35px; text-indent: -9999px;overflow: hidden;background: url(../images/btn_allMenu_close.png);background-size: contain;}
+nav.allMenu_box > ul.allMenu{z-index: 9;position: absolute;top:277px;width: 100%;text-align: center;}
+nav.allMenu_box > ul.allMenu > li{position: relative; display: inline-block;width: 90%;height: 70px;}
+nav.allMenu_box > ul.allMenu > li:nth-child(1).on{height: 280px;}
+nav.allMenu_box > ul.allMenu > li:nth-child(1).on > ul{display: block;}
+nav.allMenu_box > ul.allMenu > li:nth-child(1).on > a{color:#ffe6a0;background: #3c2121;}
+nav.allMenu_box > ul.allMenu > li:nth-child(3).on{height: 420px;}
+nav.allMenu_box > ul.allMenu > li:nth-child(3).on > ul{display: block;}
+nav.allMenu_box > ul.allMenu > li:nth-child(3).on > a{color:#ffe6a0;background: #3c2121;}
+nav.allMenu_box > ul.allMenu > li:nth-child(4).on{height: 240px;}
+nav.allMenu_box > ul.allMenu > li:nth-child(4).on > ul{display: block;}
+nav.allMenu_box > ul.allMenu > li:nth-child(4).on > a{color:#ffe6a0;background: #3c2121;}
+nav.allMenu_box > ul.allMenu > li:nth-child(5).on{height: 320px;}
+nav.allMenu_box > ul.allMenu > li:nth-child(5).on > ul{display: block;}
+nav.allMenu_box > ul.allMenu > li:nth-child(5).on > a{color:#ffe6a0;background: #3c2121;}
 nav.allMenu_box > ul.allMenu > li > a{font-size: 23px;color: #3c2121;padding: 12px;background: #ffe6a0;display: block;}
-nav.allMenu_box > ul.allMenu > li > ul{text-align: left;}
+nav.allMenu_box > ul.allMenu > li:nth-child(1) > a:before,nav.allMenu_box > ul.allMenu > li:nth-child(3) > a:before,nav.allMenu_box > ul.allMenu > li:nth-child(4) > a:before,
+nav.allMenu_box > ul.allMenu > li:nth-child(5) > a:before{content: "";z-index: 10;position: absolute;right:22px;top:28px;display: inline-block;width: 22px;height: 1px; background: #3c2121;}
+nav.allMenu_box > ul.allMenu > li:nth-child(1) > a:after,nav.allMenu_box > ul.allMenu > li:nth-child(3) > a:after,nav.allMenu_box > ul.allMenu > li:nth-child(4) > a:after,
+nav.allMenu_box > ul.allMenu > li:nth-child(5) > a:after{content: "";z-index: 10;position: absolute;right:33px;top:17px;display: inline-block;width: 1px;height: 22px; background: #3c2121;}
+nav.allMenu_box > ul.allMenu > li > ul:before{content: "";display: inline-block;width: 161px;height: 42px;position: absolute;left: 180px;top:50px;background:url(../images/allMenu_ring.png) no-repeat 0 0;}
+nav.allMenu_box > ul.allMenu > li > ul{text-align: left;display: none;}
+/* nav.allMenu_box > ul.allMenu > li > ul:after{content: "";z-index: -1;display: inline-block;position: absolute; width: 100px;height: 100px;background: #fff;} */
+nav.allMenu_box > ul.allMenu > li:nth-child(1) > ul > li:nth-child(1):before{content: "";display: inline-block;width: 505px;height: 160px;position: absolute;left:0;top:70px;box-sizing: border-box;border:2px solid #3c2121; background: #fff;z-index: -1;}
+nav.allMenu_box > ul.allMenu > li:nth-child(1) > ul > li:nth-child(1):after{content: "";display: inline-block;width: 505px;height: 160px;position: absolute;left:9px;top:79px;box-sizing: border-box;border:2px solid #3c2121; background: #ffdcd1;z-index: -2;}
+nav.allMenu_box > ul.allMenu > li:nth-child(3) > ul > li:nth-child(1):before{content: "";display: inline-block;width: 505px;height: 310px;position: absolute;left:0;top:70px;box-sizing: border-box;border:2px solid #3c2121; background: #fff;z-index: -1;}
+nav.allMenu_box > ul.allMenu > li:nth-child(3) > ul > li:nth-child(1):after{content: "";display: inline-block;width: 505px;height: 310px;position: absolute;left:9px;top:79px;box-sizing: border-box;border:2px solid #3c2121; background: #ffdcd1;z-index: -2;}
+nav.allMenu_box > ul.allMenu > li:nth-child(4) > ul > li:nth-child(1):before{content: "";display: inline-block;width: 505px;height: 140px;position: absolute;left:0;top:70px;box-sizing: border-box;border:2px solid #3c2121; background: #fff;z-index: -1;}
+nav.allMenu_box > ul.allMenu > li:nth-child(4) > ul > li:nth-child(1):after{content: "";display: inline-block;width: 505px;height: 140px;position: absolute;left:9px;top:79px;box-sizing: border-box;border:2px solid #3c2121; background: #ffdcd1;z-index: -2;}
+nav.allMenu_box > ul.allMenu > li:nth-child(5) > ul > li:nth-child(1):before{content: "";display: inline-block;width: 505px;height: 200px;position: absolute;left:0;top:70px;box-sizing: border-box;border:2px solid #3c2121; background: #fff;z-index: -1;}
+nav.allMenu_box > ul.allMenu > li:nth-child(5) > ul > li:nth-child(1):after{content: "";display: inline-block;width: 505px;height: 200px;position: absolute;left:9px;top:79px;box-sizing: border-box;border:2px solid #3c2121; background: #ffdcd1;z-index: -2;}
 nav.allMenu_box > ul.allMenu > li > ul > li{margin-bottom: 10px;margin-left: 20px;}
 nav.allMenu_box > ul.allMenu > li > ul > li:first-of-type{margin-top: 54px;}
 nav.allMenu_box > ul.allMenu > li > ul > li > a{font-size: 18px;}
@@ -104,7 +126,7 @@ nav.allMenu_box > ul.allMenu_tablet > li:first-child > ul > li:last-child > a{di
 nav.allMenu_box > ul.follow{position:absolute;bottom: 50px;}
 nav.allMenu_box > ul.follow > li{position: relative;font-size: 20px;color: #333;display: inline-block;width: 598px;text-align: center;}
 nav.allMenu_box > ul.follow > li > ul{position: relative;top:20px;}
-nav.allMenu_box > ul.follow > li > ul > li{display: inline-block;width: 50px;height: 50px;text-indent: -9999px;overflow: hidden;margin:0 5px;}
+nav.allMenu_box > ul.follow > li > ul > li{display: inline-block;width: 50px;height: 50px;text-indent: -9999px;overflow: hidden;margin:0 5px;cursor: pointer;}
 nav.allMenu_box > ul.follow > li > ul > li:nth-of-type(1){background:url(../images/insta.png) no-repeat 0 0;background-size: cover;}
 nav.allMenu_box > ul.follow > li > ul > li:nth-of-type(2){background:url(../images/facebook.png) no-repeat 0 0;background-size: cover;}
 nav.allMenu_box > ul.follow > li > ul > li:nth-of-type(3){background:url(../images/youtube.png) no-repeat 0 0;background-size: cover;}
