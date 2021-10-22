@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>justify-content</title>
+<style>
+*{margin:0;padding: 0;list-style: none;}
+
+ul{display: flex;justify-content: flex-start; border:1px solid red;}
+/*  플렉스 항목을 주축 방향으로 배치할때
+    justify-content:flex-start, flex-end, center, space-btween, space-around */
+/* flex-start : 주축기준 앞쪽에 배치(가로주축-좌측 / 세로주축-상단) */
+/* flex-end : 주축기준 끝쪽에 배치(가로주축-우측 / 세로주축-하단) */
+/* center : 주축기준 가운데에 배치(가운데정렬) */
+/* space-btween : 주축에 꽉차게 정렬(박스간 간격동일) */
+/* space-around : 주축에 꽉차게 정렬(박스 좌우공백동일) */
+li{width: 100px;height: 100px;background-color: aqua;margin: 8px;}
+</style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</body>
+</html>

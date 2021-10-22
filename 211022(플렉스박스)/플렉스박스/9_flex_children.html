@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>flex:grow,shrink,basis</title>
+<style>
+*{margin:0;padding: 0;list-style: none;}
+
+ul{display: flex;border:1px solid red;}
+li{width: 100px;height: 100px;background-color: aqua;margin: 8px;}
+
+ul:nth-of-type(1) li:nth-child(1){flex: 1 1 200px;}
+ul:nth-of-type(1) li:nth-child(2){flex-grow: 1;flex-shrink: 10;flex-basis: 200px;}
+ul:nth-of-type(1) li:nth-child(3){flex-grow: 1;flex-shrink: 1;flex-basis: 200px;}
+ul:nth-of-type(1) li:nth-child(4){flex-grow: 1;flex-shrink: 1;flex-basis: 200px;}
+ul:nth-of-type(1) li:nth-child(5){flex-grow: 1;flex-shrink: 1;flex-basis: 200px;}
+/* 플렉스항목의 크기 조절
+flex:flex-grow flex-shrink flex-basis(풀옵 사용 흔하진 않음. 주로 두번째 예시처럼 숫자하나 입력)
+flex-grow : 플렉스 항목의 너비를 얼마나 늘릴지 숫자로 지정.
+flex-shrink : 플렉스 항목의 너비를 얼마나 줄일지 숫자로 지정. 0이면 축소안됨.(숫자 크면 많이 줄어듦)
+flex-basis : 플렉스 항목의 기본 크기를 지정. width 속성처럼 기본 너비를 지정할 수 있고, 0이나 auto를 지정가능.
+             0일 경우 flex-grow, flex-shrink의 인수 값을 함께 사용하고 auto일 경우 플렉스 항목의 너비값을 사용.
+flex;initial : 항목의 width/height 값에 의해 크기가 결정되는데 플렉스 컨테이너의 공간이 부족할 경우, 최소크기까지 줄임.
+flex:auto : 항목의 width/height 값에 의해 크기가 결정되지만(크기유지) 플렉스 컨테이너의 공안에 따라 늘어나거나 줄임. */
+ul:nth-of-type(2) li:nth-child(1){flex:5;}/*혼자5배크기로보임*/
+ul:nth-of-type(2) li:nth-child(2){flex:1;}
+ul:nth-of-type(2) li:nth-child(3){flex:1;}
+ul:nth-of-type(2) li:nth-child(4){flex:1;}
+ul:nth-of-type(2) li:nth-child(5){flex:1;}
+</style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>

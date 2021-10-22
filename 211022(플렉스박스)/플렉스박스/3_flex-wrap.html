@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>flex-wrap</title>
+<style>
+*{margin:0;padding: 0;list-style: none;}
+
+ul{display: flex;flex-wrap: wrap;border:1px solid red;}
+/* 적용전 : 공간 좁아질 때 플렉스박스가 같이 좁아짐 */
+/* 적용후 : 공간 좁아질 때 플렉스박스 줄바꿈 */
+/* 플렉스항목을 한줄 또는 여러 줄로 배치
+    flex-wrap:nowrap 기본값, wrap, wrap-reverse */
+/* wrap-reverse : 하위 줄이 메인이 됨 */
+li{width: 100px;height: 100px;background-color: aqua;margin: 8px;}
+</style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</body>
+</html>

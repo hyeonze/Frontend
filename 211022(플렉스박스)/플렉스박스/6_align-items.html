@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>align-items</title>
+<style>
+*{margin:0;padding: 0;list-style: none;}
+
+ul{height: 1000px; display: flex;flex-direction: row;/*기본값*/
+    align-items: stretch;border:1px solid red;}
+/*  플렉스 항목을 교차축 기준으로 배치할때
+    align-items:stretch(기본값), flex-start, flex-end, center, baseline */
+/* flex-start : 교차축 시작점에 붙음 */
+/* flex-end : 교차축 끝점에 붙음 */
+/* stretch : 자식요소가 늘어남(자식의 크기지정 안했을 경우) */
+/* baseline : font-size에 상관없이 글자 끝 기준 정렬 */
+li{width: 100px;/*height: 100px;*/ background-color: aqua;margin: 8px;}
+</style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</body>
+</html>

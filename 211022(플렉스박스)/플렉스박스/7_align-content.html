@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>align-content</title>
+<style>
+*{margin:0;padding: 0;list-style: none;}
+
+ul{height: 1000px;display: flex;flex-direction: row;flex-wrap: wrap;
+    align-content:flex-start;border:1px solid red;}
+/*  플랙스 항목이 여러줄로 표시될때(wrap) 교차죽 기준의 배치방법 지정
+    align-content:felx-start(기본값), flex-end, center, space-between, space-around */
+/* felx-start : 교차축 시작점에 */
+/* felx-end : 교차축 끝점에 */
+/* center : 교차축 가운데에 */
+/* space-between : 사이공간 같게 */
+/* space-around : 앞뒤공백 같게 */
+li{width: 100px;height: 100px;background-color: aqua;margin: 8px;}
+</style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>6</li>
+        <li>6</li>
+        <li>6</li>
+        <li>6</li>
+        <li>6</li>
+        <li>6</li>
+        <li>6</li>
+        <li>6</li>
+        <li>6</li>
+        <li>6</li>
+    </ul>
+</body>
+</html>
