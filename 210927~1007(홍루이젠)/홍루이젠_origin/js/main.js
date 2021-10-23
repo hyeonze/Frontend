@@ -127,11 +127,11 @@ $(document).ready(function(){
     //.mainlist
     $(".content3 > div.main_list > dl > dd").bind("mouseover focus",function(){
         var i = $(this).parent().index();
-        $(".main_list>dl:nth-of-type("+(i+1)+")>dt").stop().animate({"opacity":"1","top":"273"},300,"linear");
+        $(".content3 .main_list>dl:nth-of-type("+(i+1)+")>dt").stop().animate({"opacity":"1","top":"273"},300,"linear");
     });
     $(".content3 > div.main_list > dl > dd").bind("mouseout blur",function(){
         var i = $(this).parent().index();
-        $(".main_list>dl:nth-of-type("+(i+1)+")>dt").stop().animate({"opacity":"0","top":"467"},300,"linear");
+        $(".content3 .main_list>dl:nth-of-type("+(i+1)+")>dt").stop().animate({"opacity":"0","top":"467"},300,"linear");
     });
     //.slide_arr
     var $bnnNum3 = 0;
