@@ -577,7 +577,7 @@ nav.allMenu_box > ul.follow > li > ul > li:nth-of-type(3){background:url(../imag
 /* content3 */
 .content3 h2{position:absolute;font-family: 'Montserrat', sans-serif;font-size: 50px;color: #f52334;font-weight: 900;letter-spacing: -0.5px;left:calc(50% - 171px);top:125px;
     display: inline-block;border-bottom:4px solid #f52334;padding-bottom: 5px;}
-.content3 h2:after{content:"";z-index: 6; position: absolute;left:-220px;top:100px; display:inline-block;width: 328px;height: 98px; background: url(../images/event.png) no-repeat;background-size: 70%;}
+.content3 h2:after{content:"";z-index: 6; position: absolute;left:calc(50% - 401px);top:100px; display:inline-block;width: 328px;height: 98px; background: url(../images/event.png) no-repeat;background-size: 70%;}
 .content3 > div.main_list:before{z-index: 5; content: "";position: absolute;width: 2606px;height: 707px;left:-2508px;top: 230px;background: #FFDCD1;}
 .content3 > div.main_list{width: 4176px;}
 .content3 > div.main_list:after{z-index: 4;content: "";position: absolute;width: 2606px;height: 707px;left:900px;top: 230px;background: #FFDCD1;}
@@ -714,9 +714,9 @@ nav.gnb > ul > li:nth-of-type(1) > div > ul{left:61px;}
 nav.gnb > ul > li:nth-of-type(3) > div > ul{left:-14px;}
 nav.gnb > ul > li > div > ul > li{height: 35px; font-size: 20px;color: #333333;font-family: 'S-CoreDream_l';}
 /* 탑메뉴 */
-ul.topMenu{position: absolute;right: 424px;top:28px;}
+ul.topMenu{position: absolute;/*right: 424px;*/left:1351px;top:28px;}
 ul.topMenu > li{display:inline-block;width: 65px;text-align: center;}
-ul.topMenu > li:first-of-type:after{content: "";position:absolute;width: 2px;height:14px;background: #401e1e;top:calc(50% - 7px);right:62px;}
+ul.topMenu > li:first-of-type:after{content: "";position:absolute;width: 2px;height:14px;background: #401e1e;top:calc(50% - 7px);left:68px;}
 ul.topMenu > li > a{font-size: 16px;font-family: 'Montserrat';font-weight:700;color:#401e1e;}
 /* 프랜차이즈버튼 */
 div.btn_franchise > a{position:absolute;display:block;color: #f52334;width: 230px;height: 48px;border-radius: 24px;
