@@ -129,6 +129,11 @@ $(document).ready(function(){
             $width = 350;
             $(".content2 .main_list > ul").stop().animate({"left":-$bnnNum2 * $width + 170},300,"linear");
         }
+        if($bnnNum2 < 7 && window_wid < 768){
+            $bnnNum2++;
+            $width = 350;
+            $(".content2 .main_list > ul").stop().animate({"left":-$bnnNum2 * $width + 170},300,"linear");
+        }
     });
     $(".content2 .slide_arr > div:last-of-type").click(function(e){
         e.preventDefault();
@@ -139,6 +144,11 @@ $(document).ready(function(){
             $(".content2 .main_list > ul").stop().animate({"left":$bnnNum2 * (-$width) + 270},300,"linear");
         }
         if($bnnNum2 <= 6 && $bnnNum2 > 0 && window_wid < 1024 && window_wid > 768){
+            $bnnNum2--;
+            $width = 350;
+            $(".content2 .main_list > ul").stop().animate({"left":-$bnnNum2 * $width + 170},300,"linear");
+        }
+        if($bnnNum2 <= 7 && $bnnNum2 > 0 && window_wid < 768){
             $bnnNum2--;
             $width = 350;
             $(".content2 .main_list > ul").stop().animate({"left":-$bnnNum2 * $width + 170},300,"linear");
@@ -172,7 +182,12 @@ $(document).ready(function(){
         }
         if($bnnNum3 < 6 && window_wid < 1024 && window_wid > 768){
             $bnnNum3++;
-            $width = 399 + 9;
+            $width = 408;
+            $(".content3 .main_list > dl").stop().animate({"left":-$bnnNum3 * $width + 98},300,"linear");
+        }
+        if($bnnNum3 < 7 && window_wid < 768){
+            $bnnNum3++;
+            $width = 408;
             $(".content3 .main_list > dl").stop().animate({"left":-$bnnNum3 * $width + 98},300,"linear");
         }
     });
@@ -186,8 +201,13 @@ $(document).ready(function(){
         }
         if($bnnNum3 <= 6 && $bnnNum3 > 0 && window_wid < 1024 && window_wid > 768){
             $bnnNum3--;
-            $width = 399 + 9;
+            $width = 408;
             $(".content3 .main_list > dl").stop().animate({"left":$bnnNum3 * (-$width) + 98},300,"linear");
+        }
+        if($bnnNum3 <= 7 && $bnnNum3 > 0 && window_wid < 768){
+            $bnnNum3--;
+            $width = 408;
+            $(".content3 .main_list > dl").stop().animate({"left":-$bnnNum3 * $width + 98},300,"linear");
         }
     });
     /* content4 */
@@ -237,6 +257,11 @@ $(document).ready(function(){
             $width = 350;
             $(".content6 .main_list > ul").stop().animate({"left":-$bnnNum4 * $width + 123},300,"linear");
         }
+        if($bnnNum4 < 4 && window_wid < 768){
+            $bnnNum4++;
+            $width = 350;
+            $(".content6 .main_list > ul").stop().animate({"left":-$bnnNum4 * $width + 123},300,"linear");
+        }
     });
     $(".content6 .slide_arr > div:last-of-type").click(function(e){
         e.preventDefault();
@@ -247,6 +272,11 @@ $(document).ready(function(){
             $(".content6 .main_list > ul").stop().animate({"left":$bnnNum4 * (-$width) + 270},300,"linear");
         }
         if($bnnNum4 <= 3 && $bnnNum4 > 0 && window_wid < 1024 && window_wid > 768){
+            $bnnNum4--;
+            $width = 350;
+            $(".content6 .main_list > ul").stop().animate({"left":$bnnNum4 * (-$width) + 123},300,"linear");
+        }
+        if($bnnNum4 <= 4 && $bnnNum4 > 0 && window_wid < 768){
             $bnnNum4--;
             $width = 350;
             $(".content6 .main_list > ul").stop().animate({"left":$bnnNum4 * (-$width) + 123},300,"linear");
