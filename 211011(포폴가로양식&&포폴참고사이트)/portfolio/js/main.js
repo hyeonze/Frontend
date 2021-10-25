@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
     //윈도우 시작하면 화면 맨위로 이동
-    $("body,html").stop().animate({"scrollTop":0},1500,"swing");
+    // $("body,html").stop().animate({"scrollTop":0},1500,"swing");
 
     var wt = $(window).width();
     var ht = $(window).height();
