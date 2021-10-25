@@ -6,18 +6,24 @@
 /* font-family: 'Roboto', sans-serif; */
 
 body{font-family: 'Roboto','Noto Sans KR',sans-serif;font-size: 20px;color: #000;}
-a{color: #666;text-decoration: none;}
+a{color: #000;text-decoration: none;}
 
 /* header */
 #header > header > h1{z-index: 10; position: fixed;text-indent: -9999px;overflow: hidden;width: 100px;height: 31px;left:calc(50% - 50px); bottom:74px;background: url(../images/logo.png);}
 #header > header > nav.gnb{z-index: 10; position:fixed;left: 49px;top:calc(50% - 185px);}
-#header > header > nav.gnb ul{}
 #header > header > nav.gnb ul li{font-weight: bold;margin-bottom: 58px;}
 
 /* container */
-#container{position: fixed;width: 1000vw;height: 100vh;background: #00f;font-size: 50px;color: #fff;}
-#container > div{float: left;width: 100vw;height: 100vh;/* 100vw:viewport 넓이 100%, 100vh:viewport 높이 100% */
-    background: rgba(255,0,0,0.4);}
+#container{position: fixed;width: 1000vw;height: 100vh;font-size: 50px;color: #000;}
+#container > div{float: left;width: 100vw;height: 100vh;/* 100vw:viewport 넓이 100%, 100vh:viewport 높이 100% */}
 
-#container > div >section{position: relative;}
-#container > div >section > span{display: block;text-align: left;}
+#container > div > section{position: relative;}
+#container > div > section > span{display: block;text-align: left;}
+
+/* content1 */
+#content1 > section > span:nth-of-type(1){position: absolute;font-weight: bold;left:225px;top:194px;}
+#content1 > section > span:nth-of-type(2){position: absolute;font-weight: bold;left:225px;top:320px;}
+#content1 > section > span:nth-of-type(2) > strong{color: #4850FF;font-weight: bold;}
+#content1 > section > span:nth-of-type(3){position: absolute;width: 326px;height: 100px;text-indent: -9999px;overflow: hidden;right:100px;top:calc(50vh - 50px);background: url(../images/logo_content1.png) no-repeat 0 0;}
+#content1 > section > span:nth-of-type(4){position: absolute;left:px;top:px;background: url(../images/arr_content1.png) no-repeat 0 0;}
+#content1 > section > span:nth-of-type(5){z-index: -1;position: absolute;left:calc(50vw - 205px);top:calc(50vh - 305px);}
