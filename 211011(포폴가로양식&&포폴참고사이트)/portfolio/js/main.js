@@ -78,5 +78,25 @@ $(document).ready(function(){
             var scrollNow = $(document).scrollTop();
             $(window).scrollTop(scrollNow - 50);
         }
-    })
+    });
+
+    //content2
+    var $btn_content2 = document.getElementsByClassName("btn_content2");
+    var $article1 = document.getElementsByClassName("article1");
+    var $article2 = document.getElementsByClassName("article2");
+
+    $btn_content2[0].onclick = function(e){
+        e.preventDefault();
+        this.firstChild.style.background = "rgba(72, 80, 255, 1)";
+        $btn_content2[1].firstChild.style.background = "rgba(72, 80, 255, 0.5)";
+        $article1[0].style.display = "block";
+        $article2[0].style.display = "none";
+    }
+    $btn_content2[1].onclick = function(e){
+        e.preventDefault();
+        this.firstChild.style.background = "rgba(72, 80, 255, 1)";
+        $btn_content2[0].firstChild.style.background = "rgba(72, 80, 255, 0.5)";
+        $article1[0].style.display = "none";
+        $article2[0].style.display = "block";
+    }
 });
