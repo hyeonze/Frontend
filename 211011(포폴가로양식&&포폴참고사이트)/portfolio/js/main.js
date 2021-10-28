@@ -46,7 +46,28 @@ $(document).ready(function(){
 
         }else{//움직임 취소
             $("#content1 > section").removeClass("on");
-    }
+        }
+
+        //content2
+        if(scrollTop >= wt * 1){//내용물 움직임 시작
+            $("#content2 > section").addClass("on");
+        }else{//움직임 취소
+            $("#content2 > section").removeClass("on");
+        }
+
+        //content3
+        if(scrollTop >= wt * 2){//내용물 움직임 시작
+            $("#content3 > section").addClass("on");
+        }else{//움직임 취소
+            $("#content3 > section").removeClass("on");
+        }
+
+        //content4
+        if(scrollTop >= wt * 3){//내용물 움직임 시작
+            $("#content4 > section").addClass("on");
+        }else{//움직임 취소
+            $("#content4 > section").removeClass("on");
+        }
 
     // gnb
     window.addEventListener('scroll', function(){
@@ -57,23 +78,31 @@ $(document).ready(function(){
         if($scroll_pos < 1 * $scroll_max){
             for(i = 0; i < $gnb_a.length; i++){
             $gnb_a[i].style.color = "#000";
+            $gnb_a[i].style.opacity = "0.5";
             }
             $gnb_a[0].style.color = "#4850FF";
+            $gnb_a[0].style.opacity = "1";
         }else if($scroll_pos >= 1 * $scroll_max && $scroll_pos < 2 * $scroll_max){
             for(i = 0; i < $gnb_a.length; i++){
                 $gnb_a[i].style.color = "#000";
+                $gnb_a[i].style.opacity = "0.5";
             }
             $gnb_a[1].style.color = "#4850FF";
+            $gnb_a[1].style.opacity = "1";
         }else if($scroll_pos >= 2 * $scroll_max && $scroll_pos < 3 * $scroll_max){
             for(i = 0; i < $gnb_a.length; i++){
                 $gnb_a[i].style.color = "#000";
+                $gnb_a[i].style.opacity = "0.5";
             }
             $gnb_a[2].style.color = "#4850FF";
+            $gnb_a[2].style.opacity = "1";
         }else if($scroll_pos >= 3 * $scroll_max && $scroll_pos < 4 * $scroll_max){
             for(i = 0; i < $gnb_a.length; i++){
                 $gnb_a[i].style.color = "#000";
+                $gnb_a[i].style.opacity = "0.5";
             }
             $gnb_a[3].style.color = "#4850FF";
+            $gnb_a[3].style.opacity = "1";
         }
     });
 
@@ -133,10 +162,10 @@ $(document).ready(function(){
         $("#content2 > section > .article2 > dl:first-of-type > dd:nth-of-type(3) > span").stop().animate({"width":"106.4"},500,"linear");
         $("#content2 > section > .article2 > dl:first-of-type > dd:nth-of-type(4) > span").stop().animate({"width":"106.4"},500,"linear");
         $("#content2 > section > .article2 > dl:first-of-type > dd:nth-of-type(5) > span").stop().animate({"width":"30.4"},500,"linear");
-        $("#content2 > section > .article2 > dl:last-of-type > dd:nth-of-type(1) > span").stop().animate({"width":"106.4"},500,"linear");
-        $("#content2 > section > .article2 > dl:last-of-type > dd:nth-of-type(2) > span").stop().animate({"width":"106.4"},500,"linear");
-        $("#content2 > section > .article2 > dl:last-of-type > dd:nth-of-type(3) > span").stop().animate({"width":"76"},500,"linear");
-        $("#content2 > section > .article2 > dl:last-of-type > dd:nth-of-type(4) > span").stop().animate({"width":"76"},500,"linear");
+        $("#content2 > section > .article2 > dl:last-of-type > dd:nth-of-type(1) > span").stop().animate({"width":"76"},500,"linear");
+        $("#content2 > section > .article2 > dl:last-of-type > dd:nth-of-type(2) > span").stop().animate({"width":"76"},500,"linear");
+        $("#content2 > section > .article2 > dl:last-of-type > dd:nth-of-type(3) > span").stop().animate({"width":"106.4"},500,"linear");
+        $("#content2 > section > .article2 > dl:last-of-type > dd:nth-of-type(4) > span").stop().animate({"width":"106.4"},500,"linear");
     }
 
     var $gnb_a = document.getElementsByClassName("gnb_a");
