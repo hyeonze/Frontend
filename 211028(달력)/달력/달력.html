@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>달력_js</title>
+<style>
+*{margin:0;padding:0;}
+#calendar{width: 400px;text-align: center;border:1px solid red;}
+li{display:inline-block;padding:5px;font-size: 20px;}
+a{text-decoration: none;}
+table{margin: 0 auto;margin-top: 10px; border-collapse: collapse;}
+th,td{width: 50px;height: 50px;border: 1px solid #000;}
+</style>
+<script>
+var today = new Date();
+var nowYear = today.getFullYear(); // 2021
+var nowMonth = today.getMonth(); // 9(10월)
+var nowDay = today.getDate(); // 28
+
+function prevMonth(){ // 월 감소하는 함수
+    nowMonth--;
+    if(nowMonth < 0){
+        nowYear--;
+        nowMonth = 11;
+    }
+    calendarFunc();
+}
+
+function nextMonth(){ // 월 증가하는 함수
+    nowMonth++;
+    if(nowMonth > 11){
+        nowYear++;
+        nowMonth = 0;
+    }
+    calendarFunc();
+}
+
+function calendarFunc(){
+    var firstDay = new Date(nowYear, nowMonth, 1); // 2021.10.1
+    var blankNum = firstDay.getDay(); // 금요일(5) //일~토(0~6), 1일 앞 빈칸갯수와 같음
+    console.log(blankNum);
+
+    var totDay = [31,28,31,30,31,30,31,31,30,31,30,31];
+    if((nowYear % 4 == 0 && nowYear % 100 != 0) || nowYear % 400 == 0){ // 윤년 : 100년째 제외한 4년마다, 400년째
+        totDay[1] = 29;
+    }
+    var total = totDay[nowMonth]; // 이달의 전체일수
+
+    var rowNum = Math.ceil((blankNum + total) / 7); // 필요한 행(6)
+
+    var theTag = " ";
+    theTag += "<h1>" + nowYear + "년</h1>";
+    theTag += '<ul><li><a href="#" onclick="prevMonth()"> &lt;&lt; </a></li>';
+    theTag += '<li>' + (nowMonth + 1) + '월</li>';
+    theTag += '<li><a href="#" onclick="nextMonth()"> &gt;&gt; </a></li></ul>';
+
+    theTag += "<table>"
+    theTag += "<tr>";
+    theTag += "<th style='color:red;'>일</th> <th>월</th> <th>화</th> <th>수</th> <th>목</th> <th>금</th> <th style='color:blue;'>토</th>";
+    theTag += "</tr>";
+
+    var num = 1;
+    for(var i = 1; i <= rowNum; i++){ // 6행
+        theTag += "<tr>";
+        for(var col = 1; col <= 7; col++){ // 7열
+            if((i == 1 && col <= blankNum) || num > total){ // i첫행
+                theTag += "<td></td>"; // 빈칸
+            }else{
+                //theTag += "<td>" + num + "</td>";
+                var theColor = "";
+                var bgColor = "";
+                if(col == 1) theColor = ' style="color:red;"';
+                if(col == 7) theColor = ' style="color:blue;"';
+
+                if(num == nowDay){bgColor = ' style="background-color:yellow;"';}
+
+                theTag += '<td' + bgColor + theColor + '>' + num + '</td>';
+                num++;
+            }
+        }
+        theTag += "</tr>";
+    }
+
+    theTag += "</table>";
+
+    document.getElementById("calendar").innerHTML = theTag;// $("#calendar").html(theTag);
+}
+window.addEventListener("load",calendarFunc,false);
+</script>
+</head>
+<body>
+    <div id="calendar"></div>
+</body>
+</html>

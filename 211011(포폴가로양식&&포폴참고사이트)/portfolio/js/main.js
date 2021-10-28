@@ -9,7 +9,7 @@ $(document).ready(function(){
     $("#container > div").width(wt);//뷰포트(css)로 해도 됨
 
     //container 가로크기 만큼 body의 높이값 지정
-    var Length = $("#container > div").length;//10
+    var Length = $("#container > div").length;
     var containerWid = wt * Length;
     $("body").height(containerWid);
 
@@ -46,25 +46,54 @@ $(document).ready(function(){
 
         }else{//움직임 취소
             $("#content1 > section").removeClass("on");
-        }
-        
-        //content2
-        if(scrollTop >= wt * 1){
+    }
 
-            //내용물 움직임 시작
-            $("#content2 > section").addClass("on");
-        }else{//움직임 취소
-            $("#content2 > section").removeClass("on");
-        }
+    // gnb
+    window.addEventListener('scroll', function(){
+        var $scroll_pos = window.scrollY;
+        var $scroll_max = document.documentElement.clientWidth;
+        var $gnb_a = document.getElementsByClassName("gnb_a");
 
-        //content3
-        if(scrollTop >= wt * 2){
-
-            //내용물 움직임 시작
-            $("#content3 > section").addClass("on");
-        }else{//움직임 취소
-            $("#content3 > section").removeClass("on");
+        if($scroll_pos < 1 * $scroll_max){
+            for(i = 0; i < $gnb_a.length; i++){
+            $gnb_a[i].style.color = "#000";
+            }
+            $gnb_a[0].style.color = "#4850FF";
+        }else if($scroll_pos >= 1 * $scroll_max && $scroll_pos < 2 * $scroll_max){
+            for(i = 0; i < $gnb_a.length; i++){
+                $gnb_a[i].style.color = "#000";
+            }
+            $gnb_a[1].style.color = "#4850FF";
+        }else if($scroll_pos >= 2 * $scroll_max && $scroll_pos < 3 * $scroll_max){
+            for(i = 0; i < $gnb_a.length; i++){
+                $gnb_a[i].style.color = "#000";
+            }
+            $gnb_a[2].style.color = "#4850FF";
+        }else if($scroll_pos >= 3 * $scroll_max && $scroll_pos < 4 * $scroll_max){
+            for(i = 0; i < $gnb_a.length; i++){
+                $gnb_a[i].style.color = "#000";
+            }
+            $gnb_a[3].style.color = "#4850FF";
         }
+    });
+
+    //content2
+    if(scrollTop >= wt * 1){
+
+        //내용물 움직임 시작
+        $("#content2 > section").addClass("on");
+    }else{//움직임 취소
+        $("#content2 > section").removeClass("on");
+    }
+
+    //content3
+    if(scrollTop >= wt * 2){
+
+        //내용물 움직임 시작
+        $("#content3 > section").addClass("on");
+    }else{//움직임 취소
+        $("#content3 > section").removeClass("on");
+    }
 
     });//scroll
 
@@ -91,6 +120,7 @@ $(document).ready(function(){
         $btn_content2[1].firstChild.style.background = "rgba(72, 80, 255, 0.5)";
         $article1[0].style.display = "block";
         $article2[0].style.display = "none";
+        $("#content2 > section > .article2 > dl > dd > span").css({"width":"0"});
     }
     $btn_content2[1].onclick = function(e){
         e.preventDefault();
@@ -98,5 +128,34 @@ $(document).ready(function(){
         $btn_content2[0].firstChild.style.background = "rgba(72, 80, 255, 0.5)";
         $article1[0].style.display = "none";
         $article2[0].style.display = "block";
+        $("#content2 > section > .article2 > dl:first-of-type > dd:nth-of-type(1) > span").stop().animate({"width":"136.8"},500,"linear");
+        $("#content2 > section > .article2 > dl:first-of-type > dd:nth-of-type(2) > span").stop().animate({"width":"121.6"},500,"linear");
+        $("#content2 > section > .article2 > dl:first-of-type > dd:nth-of-type(3) > span").stop().animate({"width":"106.4"},500,"linear");
+        $("#content2 > section > .article2 > dl:first-of-type > dd:nth-of-type(4) > span").stop().animate({"width":"106.4"},500,"linear");
+        $("#content2 > section > .article2 > dl:first-of-type > dd:nth-of-type(5) > span").stop().animate({"width":"30.4"},500,"linear");
+        $("#content2 > section > .article2 > dl:last-of-type > dd:nth-of-type(1) > span").stop().animate({"width":"106.4"},500,"linear");
+        $("#content2 > section > .article2 > dl:last-of-type > dd:nth-of-type(2) > span").stop().animate({"width":"106.4"},500,"linear");
+        $("#content2 > section > .article2 > dl:last-of-type > dd:nth-of-type(3) > span").stop().animate({"width":"76"},500,"linear");
+        $("#content2 > section > .article2 > dl:last-of-type > dd:nth-of-type(4) > span").stop().animate({"width":"76"},500,"linear");
+    }
+
+    var $gnb_a = document.getElementsByClassName("gnb_a");
+    var $vw = screen.width;
+
+    $gnb_a[0].onclick = function(e){
+        e.preventDefault();
+        window.scrollTo({top:0, left:0, behavior:'smooth'});
+    }
+    $gnb_a[1].onclick = function(e){
+        e.preventDefault();
+        window.scrollTo({top:1.5 * $vw, left:0, behavior:'smooth'});
+    }
+    $gnb_a[2].onclick = function(e){
+        e.preventDefault();
+        window.scrollTo({top:2.9 * $vw, left:0, behavior:'smooth'});
+    }
+    $gnb_a[3].onclick = function(e){
+        e.preventDefault();
+        window.scrollTo({top:4.5 * $vw, left:0, behavior:'smooth'});
     }
 });
