@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화살표 함수</title>
+<script>
+    //선언적 함수(선언-호출, 호출-선언 둘 다 가능)
+    compute(10,100);
+    function compute(a,b){
+        var x = a;
+        var y = b;
+        var result = x / y;
+        console.log(result);
+    }
+    compute(10, 100);
+
+    //익명 함수(선언-호출 만 가능)
+    //compute2();//결과안나옴
+    var compute2 = function(a,b){
+        var x = a;
+        var y = b;
+        var result2 = x * y;
+        console.log(result2);
+    }
+    compute2(0.5, 10);
+
+    //즉시실행 함수(선언과 동시에 실행 함수, 재호출 불가, 한번만 실행)
+    (function(a, b){
+        var sum = a * b;
+        console.log(sum);
+    })(10, 5);
+
+    var instant = (function(){//익명함수로 선언된 즉시실행함수
+        console.log('즉시실행함수');
+    })();
+
+    //매개변수의 개수가 정해지지 않은 함수?
+    //arguments객체는 인자값을 저장해주는 객체
+    function showSubject(){
+        for(i = 0; i < arguments.length; i++){
+            console.log(arguments[i]);
+        }
+    }
+    showSubject('html', 'css', 'js', 'jquery');
+
+
+    function TheFnc(a, b){
+        return a * b;
+    }
+    console.log( TheFnc(2,5) );
+    //ES6 화살표함수 - fucntion 키워드 생략, {}생략, return생략
+    var TheFnc = function(a, b){//선언적함수를 익명함수로 바꿈
+        return a * b;
+    }
+    console.log( TheFnc(2,5) );
+
+    var TheFnc = (a,b) => a * b;//익명함수형태에서 키워드생략, 실행문 한줄일경우 중괄호생략(화살표로), 리턴생략
+    console.log( TheFnc(2,5) );
+
+    var TheFnc = () => 1 * 2;//매개변수 없는 경우
+    console.log( TheFnc() );
+
+    var TheFnc = () => {
+        //실행문 여려개인 경우
+        //중괄호로 묶어줌
+    };
+
+    function TheFnc2(c,d){
+        var sum = c + d;
+        return sum;
+    }
+    console.log(TheFnc2(10, 5));
+
+    var TheFnc2 = (c, d) => {
+        var sum = c + d;
+        return sum;
+    }
+    console.log(TheFnc2(10,5));
+</script>
+</head>
+<body>
+    
+</body>
+</html>

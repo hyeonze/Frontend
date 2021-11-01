@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>객체 생성자 함수, 프로토타입, for in문</title>
+<script>
+//객체 생성자 함수(object constructor function), 붕어빵틀
+function Info(a, b){//주로 대문자 시작
+    this.subject = a;
+    this.credit = b;
+    // this.printOut = function(){//객체 만들때마다 메모리 소모 발생 : 프로토타입 사용
+    //     return this.subject + ', ' + this.credit + '학점';
+    // };
+};
+//prototype
+Info.prototype.printOut = function(){
+        return this.subject + ', ' + this.credit + '학점';
+}
+
+var sub1 = new Info('html', 1);//sub1 붕어빵
+console.log(sub1.subject);//html
+console.log(sub1.credit);//1
+console.log(sub1.printOut());//html, 1
+
+var sub2 = new Info('css', 2);//sub2 붕어빵
+console.log(sub2.subject);//css
+console.log(sub2.credit);//2
+console.log(sub2.printOut());//css, 2
+
+//for in문, 객체일때
+var infos = {
+    subject:'js',
+    credit:3,
+    days:20,
+    tuition:1000
+};
+
+for(info in infos){
+    console.log(info + ':' + infos[info]);
+}
+</script>
+</head>
+<body>
+    
+</body>
+</html>

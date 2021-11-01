@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>grid_2</title>
+<style>
+.wrap{width: 600px;display: grid;grid-template-rows: 50px 150px 50px;
+    grid-template-columns: 30% 70%;grid-gap:10px;}
+.wrap > div{padding: 10px;font-size: 20px;background-color: aqua;}
+.header{grid-column: 1 / -1;/*grid-column-start: 1;grid-column-end: 3;*/
+    grid-row-start :1;grid-row-end: 2;}
+/*snb와 content는 지정안해줘도 완성되긴 함*/
+.snb{grid-column-start: 1;grid-column-end: 2;
+    grid-row-start: 2;grid-row-end: 3;}
+.content{grid-column-start: 2;grid-column-end: 3;
+    grid-row-start: 2;grid-row-end: 3;}
+.footer{grid-column: 1 / -1;/*grid-column-start: 1;grid-column-end: 3;*/
+    grid-row-start: 3;grid-row-end: 4;}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <div class="header">header</div>
+    <div class="snb">snb</div>
+    <div class="content">content</div>
+    <div class="footer">footer</div>
+</div>
+</body>
+</html>

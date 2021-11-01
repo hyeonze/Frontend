@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ES6변수 : let, const</title>
+<script>
+var num1 = 10;
+var num1 = 20;
+document.write(num1);//20이 출력됨
+//var 변수를 중복 선언 가능
+
+
+let num2 = 10;
+//let num2 = 20;//오류 발생(콘솔창 확인)
+document.write(num2);
+//let 변수는 중복 선언 불가(let의 탄생 배경. 중복선언 방지.)
+
+const DIVISION_VALUE = 100;
+//const DIVISION_VALUE = 200;//중복선언 불가
+//DIVISION_VALUE = 1000;//상수(값 변경 불가)
+
+// let cm = prompt('cm을 입력하세요','');
+// let m = cm / DIVISION_VALUE;
+// document.write(m + 'm입니다.');
+
+//함수 레벨 스코프(var, 함수 안이냐 밖이냐)와 블록 레벨 스코프(let, 블록 안이냐 밖이냐)
+//전역변수, 지역변수
+
+var kor = 90;//전역변수
+function getScore(){
+    kor = 100;//전역변수(var붙여야 지역변수)
+    console.log(kor);//100출력
+}
+getScore();
+console.log(kor);//100출력
+
+var kor = 90;//전역변수
+function getScore(){
+    var kor = 100;//지역변수
+    console.log(kor);//100출력
+}
+getScore();
+console.log(kor);//90출력
+
+var num3 = 10;//전역변수
+{
+    var num3 = 20;//전역변수(함수 안이 아님!)
+    console.log(num3);//20
+}
+console.log(num3);//20
+
+let num4 = 100;//전역변수
+{
+    let num4 = 20;//지역변수(블록 안임!)
+    console.log(num4);//20
+}
+console.log(num4);//100
+
+const num5 = 10;//전역변수
+{
+    const num5 = 30;//지역변수(블록 안임!)
+    console.log(num5);//30
+}
+console.log(num5);//10
+
+var num6 = 70;//전역변수
+if(num6===70){
+    var sum = 50;//전역변수(함수 안이 아님!)
+}
+console.log(sum);//50
+
+let num7 = 90;//전역변수
+if(num7===90){
+    let sum2 = 100;//지역변수(블록 안임!)
+}
+console.log(sum2);//에러
+</script>
+</head>
+<body>
+    
+</body>
+</html>
